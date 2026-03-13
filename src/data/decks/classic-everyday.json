@@ -1,0 +1,17 @@
+[
+  { "id": "ce-001", "word": "Bicycle", "tabooWords": ["ride", "wheels", "pedal", "bike", "helmet"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-002", "word": "Coffee", "tabooWords": ["cup", "mug", "drink", "caffeine", "morning"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-003", "word": "Garden", "tabooWords": ["plants", "flowers", "yard", "soil", "grow"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-004", "word": "Pillow", "tabooWords": ["head", "sleep", "bed", "soft", "case"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-005", "word": "Camera", "tabooWords": ["photo", "picture", "lens", "flash", "shoot"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-006", "word": "Key", "tabooWords": ["lock", "door", "unlock", "car", "house"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-007", "word": "Book", "tabooWords": ["read", "pages", "cover", "words", "library"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-008", "word": "Chair", "tabooWords": ["sit", "seat", "legs", "table", "furniture"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-009", "word": "Rain", "tabooWords": ["water", "clouds", "wet", "umbrella", "storm"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-010", "word": "Guitar", "tabooWords": ["music", "strings", "play", "instrument", "band"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-011", "word": "Mirror", "tabooWords": ["reflection", "see", "yourself", "glass", "image"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-012", "word": "Bread", "tabooWords": ["eat", "toast", "sandwich", "flour", "loaf"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-013", "word": "Phone", "tabooWords": ["call", "text", "mobile", "apple", "screen"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-014", "word": "Lamp", "tabooWords": ["light", "bulb", "shade", "dark", "read"], "difficulty": "easy", "category": "everyday" },
+  { "id": "ce-015", "word": "Shoes", "tabooWords": ["feet", "wear", "laces", "sneakers", "walk"], "difficulty": "easy", "category": "everyday" }
+]

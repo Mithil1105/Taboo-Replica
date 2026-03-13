@@ -1,0 +1,42 @@
+[
+  {
+    "id": "classic-everyday",
+    "name": "Classic Everyday",
+    "description": "Common words for a quick and easy start. Perfect for all ages.",
+    "category": "Classic",
+    "difficulty": "Easy",
+    "colorTag": "lilac",
+    "icon": "Sparkles",
+    "cardCount": 15,
+    "filePath": "/data/decks/classic-everyday.json",
+    "isPremium": false,
+    "isActive": true
+  },
+  {
+    "id": "movies-popculture",
+    "name": "Movies & Pop Culture",
+    "description": "From blockbuster hits to internet memes. Test your screen smarts.",
+    "category": "Entertainment",
+    "difficulty": "Medium",
+    "colorTag": "blue",
+    "icon": "Clapperboard",
+    "cardCount": 15,
+    "filePath": "/data/decks/movies-popculture.json",
+    "isPremium": false,
+    "isActive": true
+  },
+  {
+    "id": "nsfw",
+    "name": "Midnight",
+    "description": "18+ only. Mature themes and adult content. Play at your own discretion.",
+    "category": "Midnight",
+    "difficulty": "Medium",
+    "colorTag": "midnight",
+    "icon": "Moon",
+    "cardCount": 76,
+    "filePath": "/data/decks/nsfw.json",
+    "isPremium": false,
+    "isActive": true,
+    "ageRating": "18+"
+  }
+]

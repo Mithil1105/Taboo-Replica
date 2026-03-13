@@ -1,0 +1,17 @@
+[
+  { "id": "mpc-001", "word": "The Matrix", "tabooWords": ["Keanu Reeves", "red pill", "blue pill", "Neo", "simulation"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-002", "word": "Harry Potter", "tabooWords": ["wizard", "scar", "Hogwarts", "magic", "wand"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-003", "word": "Darth Vader", "tabooWords": ["Star Wars", "Sith", "Luke Skywalker", "dark side", "helmet"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-004", "word": "TikTok", "tabooWords": ["app", "video", "dance", "social media", "scroll"], "difficulty": "medium", "category": "popculture" },
+  { "id": "mpc-005", "word": "Iron Man", "tabooWords": ["Tony Stark", "Avengers", "Marvel", "suit", "billionaire"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-006", "word": "Beyoncé", "tabooWords": ["singer", "Queen B", "Single Ladies", "Jay-Z", "Destiny's Child"], "difficulty": "medium", "category": "popculture" },
+  { "id": "mpc-007", "word": "Titanic", "tabooWords": ["ship", "iceberg", "Leonardo DiCaprio", "Kate Winslet", "sink"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-008", "word": "Forrest Gump", "tabooWords": ["Tom Hanks", "box of chocolates", "run", "Jenny", "shrimp"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-009", "word": "Netflix", "tabooWords": ["streaming", "binge", "watch", "show", "movie"], "difficulty": "medium", "category": "popculture" },
+  { "id": "mpc-010", "word": "Shrek", "tabooWords": ["ogre", "donkey", "swamp", "Fiona", "DreamWorks"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-011", "word": "James Bond", "tabooWords": ["007", "spy", "MI6", "martini", "Aston Martin"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-012", "word": "The Office", "tabooWords": ["Dunder Mifflin", "Michael Scott", "Jim Halpert", "sitcom", "paper"], "difficulty": "medium", "category": "popculture" },
+  { "id": "mpc-013", "word": "Spider-Man", "tabooWords": ["Peter Parker", "web", "swing", "Marvel", "superhero"], "difficulty": "medium", "category": "movies" },
+  { "id": "mpc-014", "word": "Stranger Things", "tabooWords": ["Eleven", "Upside Down", "Hawkins", "Netflix", "Demogorgon"], "difficulty": "medium", "category": "popculture" },
+  { "id": "mpc-015", "word": "Godzilla", "tabooWords": ["monster", "kaiju", "Japan", "atomic", "lizard"], "difficulty": "medium", "category": "movies" }
+]

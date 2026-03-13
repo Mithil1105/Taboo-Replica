@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 99%;
+    --foreground: 240 6% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+
+    --primary: 255 90% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 90% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 94%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 140 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 90%;
+    --input: 240 5% 90%;
+    --ring: 255 90% 75%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --card-shadow: 0 0 0 1px hsl(240 5% 90%), 0 2px 4px -1px hsla(240, 6%, 10%, 0.04);
+    --card-shadow-hover: 0 0 0 1px hsl(255 90% 65%), 0 4px 12px -2px hsla(255, 90%, 65%, 0.2);
+    --card-shadow-elevated: 0 4px 24px -4px hsla(240, 6%, 10%, 0.08), 0 0 0 1px hsl(240 5% 90%);
+  }
+
+  .dark {
+    --background: 240 6% 10%;
+    --foreground: 240 5% 95%;
+
+    --card: 240 6% 12%;
+    --card-foreground: 240 5% 95%;
+
+    --popover: 240 6% 12%;
+    --popover-foreground: 240 5% 95%;
+
+    --primary: 255 90% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 90% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 18%;
+    --muted-foreground: 240 4% 65%;
+
+    --accent: 140 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 3% 20%;
+    --input: 240 3% 20%;
+    --ring: 255 90% 75%;
+
+    --card-shadow: 0 0 0 1px hsl(240 3% 20%), 0 2px 4px -1px hsla(0, 0%, 0%, 0.2);
+    --card-shadow-hover: 0 0 0 1px hsl(255 90% 65%), 0 4px 12px -2px hsla(255, 90%, 65%, 0.3);
+    --card-shadow-elevated: 0 4px 24px -4px hsla(0, 0%, 0%, 0.3), 0 0 0 1px hsl(240 3% 20%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-figtree;
+  }
+}
+
+@layer utilities {
+  .card-shadow {
+    box-shadow: var(--card-shadow);
+  }
+  .card-shadow-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+  .card-shadow-elevated {
+    box-shadow: var(--card-shadow-elevated);
+  }
+  /* Safe area for mobile (notch / home indicator) */
+  .pb-safe {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  }
+  .pt-safe {
+    padding-top: max(0.75rem, env(safe-area-inset-top, 0px));
+  }
+  /* Landing hero gradient (lilac / soft blue) */
+  .landing-hero-bg {
+    background: linear-gradient(135deg, hsl(255 90% 97%) 0%, hsl(240 60% 97%) 50%, hsl(210 80% 97%) 100%);
+  }
+  .dark .landing-hero-bg {
+    background: linear-gradient(135deg, hsl(255 30% 12%) 0%, hsl(240 20% 10%) 50%, hsl(210 25% 12%) 100%);
+  }
+}
