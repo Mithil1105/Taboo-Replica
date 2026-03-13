@@ -1,9 +1,10 @@
 /**
- * Game entry point. Renders the full game flow (deck selection, setup, playing, round end).
+ * Play entry point.
+ * Renders the mode selection screen where players choose between Pass & Play and Local Multiplayer.
  * Landing "Start Playing" CTAs link here.
  */
-import Index from "./Index";
+import PlayModeSelection from "@/features/game/shared/pages/PlayModeSelection";
 
 export default function Play() {
-  return <Index />;
+  return <PlayModeSelection />;
 }

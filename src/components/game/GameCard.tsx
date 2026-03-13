@@ -45,23 +45,27 @@ export function GameCard({ card }: GameCardProps) {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="flex w-full flex-col items-center rounded-3xl bg-card p-4 sm:p-6 md:p-8 card-shadow-elevated"
+          className="flex w-full max-w-md flex-col overflow-hidden rounded-2xl border border-border/80 bg-card shadow-sm"
           style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }}
         >
-          <h1 className="mb-4 text-balance text-center text-2xl font-bold tracking-tight text-card-foreground sm:mb-6 sm:text-4xl md:text-5xl">
-            {card.word}
-          </h1>
+          {/* Main word header */}
+          <div className="bg-primary/10 px-4 py-4 text-center">
+            <h1 className="text-xl font-bold tracking-tight text-card-foreground sm:text-2xl">
+              {card.word}
+            </h1>
+          </div>
 
-          <div className="w-full space-y-0">
-            <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-destructive/70">
-              <Ban className="h-3.5 w-3.5" />
-              <span>Don't say</span>
+          {/* Taboo words - one per line */}
+          <div className="px-4 py-4">
+            <div className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-widest text-destructive/80">
+              <Ban className="h-3 w-3" />
+              <span>Don&apos;t say</span>
             </div>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {card.tabooWords.map((word, i) => (
                 <li
                   key={i}
-                  className="rounded-xl bg-destructive/5 px-4 py-2.5 text-center text-base font-medium text-card-foreground"
+                  className="text-center text-base font-medium text-card-foreground"
                 >
                   {word}
                 </li>

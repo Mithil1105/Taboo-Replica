@@ -5,6 +5,7 @@ import { useTheme } from "@/hooks/useTheme";
 import { useGame } from "@/hooks/useGame";
 import type { DeckMeta, GamePhase } from "@/types";
 import decksRegistry from "@/data/decks.json";
+import { getValidatedDecks } from "@/lib/deckValidation";
 
 import { ThemeToggle } from "@/components/game/ThemeToggle";
 import { DeckCard } from "@/components/game/DeckCard";
@@ -28,7 +29,7 @@ import {
 import { ArrowLeft, Minus, Plus, Info, Home } from "lucide-react";
 import { playCorrectSound, playSkipSound, playTabooSound, playTimerBuzzerSound } from "@/hooks/useSound";
 
-const allDecks = decksRegistry as DeckMeta[];
+const allDecks = getValidatedDecks(decksRegistry) as DeckMeta[];
 
 const pageTransition = {
   initial: { opacity: 0, y: 8 },
@@ -202,7 +203,7 @@ export default function Index() {
 
         {/* ─── DECK SELECTION ─── */}
         {phase === "deckSelection" && (
-          <motion.div key="decks" {...pageTransition} className="flex min-h-svh flex-col px-4 pb-32 pt-4 pt-safe">
+          <motion.div key="decks" {...pageTransition} className="flex min-h-svh flex-col px-4 pb-24 pt-4 pt-safe">
             <div className="mx-auto w-full max-w-4xl">
               <div className="mb-6 flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
@@ -251,14 +252,14 @@ export default function Index() {
               )}
             </div>
 
-            {/* Fixed bottom CTA */}
-            <div className="fixed bottom-0 left-0 right-0 border-t border-border bg-background/80 p-4 pb-safe backdrop-blur-lg">
+            {/* Fixed bottom CTA - always visible, above content */}
+            <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-4 pb-safe backdrop-blur-md">
               <div className="mx-auto max-w-md">
                 <motion.button
                   whileTap={{ scale: 0.97 }}
                   onClick={goToSetup}
                   disabled={selectedDecks.size === 0}
-                  className="flex h-14 w-full items-center justify-center rounded-xl bg-primary font-semibold text-primary-foreground transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="flex min-h-[48px] w-full touch-manipulation items-center justify-center rounded-xl bg-primary font-semibold text-primary-foreground transition-all disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Continue{selectedDecks.size > 0 && ` · ${totalCards} Cards`}
                 </motion.button>
@@ -446,10 +447,10 @@ export default function Index() {
 
         {/* ─── PLAYING ─── */}
         {phase === "playing" && !game.roundResult && (
-          <motion.div key="playing" {...pageTransition} className="flex min-h-svh flex-col items-center px-4 py-4 pb-safe">
-            <div className="flex w-full max-w-md flex-1 flex-col gap-4">
+          <motion.div key="playing" {...pageTransition} className="flex min-h-svh flex-col items-center px-4 py-3 pb-safe">
+            <div className="flex w-full max-w-md flex-1 flex-col gap-3">
               {/* Header with Quit */}
-              <div className="flex items-center justify-between gap-2">
+              <div className="flex shrink-0 items-center justify-between gap-2">
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowQuitConfirm(true)}
@@ -468,15 +469,17 @@ export default function Index() {
                 </div>
               </div>
 
-              <ScoreBoard teams={game.settings.teams} currentTeamIndex={game.currentTeamIndex} />
+              <div className="shrink-0">
+                <ScoreBoard teams={game.settings.teams} currentTeamIndex={game.currentTeamIndex} />
+              </div>
 
               {/* Card area */}
-              <div className="flex flex-1 items-center justify-center py-2">
+              <div className="flex min-h-0 flex-1 items-center justify-center py-1">
                 {game.currentCard && <GameCard card={game.currentCard} />}
               </div>
 
               {/* Actions */}
-              <div className="pb-2">
+              <div className="shrink-0 pb-1">
                 <ActionButtonGroup
                   onCorrect={handleCorrectWithSound}
                   onSkip={handleSkipWithSound}

@@ -11,6 +11,11 @@ import FAQ from "./pages/landing/FAQ";
 import Contact from "./pages/landing/Contact";
 import Play from "./pages/Play";
 import NotFound from "./pages/NotFound";
+import PassAndPlay from "@/features/game/pass-and-play/pages/PassAndPlay";
+import LocalMultiplayerIntro from "@/features/game/local-multiplayer/pages/Intro";
+import LocalMultiplayerCreateRoom from "@/features/game/local-multiplayer/pages/CreateRoom";
+import LocalMultiplayerJoinRoom from "@/features/game/local-multiplayer/pages/JoinRoom";
+import LocalMultiplayerLobby from "@/features/game/local-multiplayer/pages/Lobby";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +33,11 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/play" element={<Play />} />
+          <Route path="/play/pass-and-play" element={<PassAndPlay />} />
+          <Route path="/play/local-multiplayer" element={<LocalMultiplayerIntro />} />
+          <Route path="/play/local-multiplayer/create" element={<LocalMultiplayerCreateRoom />} />
+          <Route path="/play/local-multiplayer/join" element={<LocalMultiplayerJoinRoom />} />
+          <Route path="/play/local-multiplayer/room/:roomCode" element={<LocalMultiplayerLobby />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

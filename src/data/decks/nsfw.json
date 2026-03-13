@@ -7,7 +7,7 @@
             "CUM",
             "MOAN",
             "PEAK",
-            "ECSTASY"
+            "SATISFIED"
         ],
         "difficulty": "easy",
         "category": "Pleasure"
@@ -32,7 +32,7 @@
             "SUCK",
             "ORAL",
             "HEAD",
-            "FELLATIO",
+            "FINGER LICKING GOOD",
             "MOUTH"
         ],
         "difficulty": "medium",
@@ -55,7 +55,7 @@
         "id": "midnight-005",
         "word": "DOGGYSTYLE",
         "tabooWords": [
-            "REAR",
+            "BEND OVER",
             "FROM BEHIND",
             "POUND",
             "ASS UP",
@@ -84,7 +84,7 @@
             "TOY",
             "BUZZ",
             "CLIT",
-            "DILDOSISTER",
+            "SELF PLEASURE",
             "BATTERY"
         ],
         "difficulty": "medium",
@@ -97,7 +97,7 @@
             "FAKE PENIS",
             "STRAP ON",
             "INSERT",
-            "PHALLIC",
+            "SILICON",
             "PLASTIC"
         ],
         "difficulty": "easy",
@@ -123,8 +123,9 @@
             "TIE UP",
             "ROPES",
             "HANDCUFFS",
-            "DOM",
-            "SUB"
+            "DOMINATE",
+            "SUBMIT",
+            "50 SHADES OF GREY"
         ],
         "difficulty": "hard",
         "category": "Kink"
@@ -159,7 +160,7 @@
         "id": "midnight-013",
         "word": "FINGERING",
         "tabooWords": [
-            "DIGIT",
+            "DEEP",
             "HAND",
             "G SPOT",
             "STROKE",
@@ -175,8 +176,8 @@
             "INTERNAL",
             "CUM INSIDE",
             "FILL",
-            "PIE",
-            "BAKE"
+            "WHITE",
+            "SWEET"
         ],
         "difficulty": "hard",
         "category": "Finishing"
@@ -188,7 +189,7 @@
             "TEASE",
             "DELAY",
             "STOP START",
-            "BUILD",
+            "PRESSURE PAIN",
             "DENY"
         ],
         "difficulty": "medium",
@@ -228,7 +229,8 @@
             "URINE",
             "WET",
             "PISS PLAY",
-            "BATH"
+            "BATH",
+            "ACID"
         ],
         "difficulty": "hard",
         "category": "Kink"
@@ -252,7 +254,7 @@
         "tabooWords": [
             "TITS",
             "BREASTS",
-            "RACK",
+            "HANDFULL",
             "CLEAVAGE",
             "JUGS"
         ],
@@ -267,7 +269,7 @@
             "GRIND",
             "RUB",
             "THRUST",
-            "FROT"
+            "CONTROL"
         ],
         "difficulty": "easy",
         "category": "Tease"
@@ -328,11 +330,11 @@
         "id": "midnight-026",
         "word": "SQUIRTING",
         "tabooWords": [
-            "GUSH",
+            "SPRAY",
             "WET",
             "FEMALE EJAC",
             "FLUID",
-            "SPRAY"
+            "DRIP"
         ],
         "difficulty": "hard",
         "category": "Pleasure"
@@ -396,7 +398,7 @@
             "DICK",
             "PENIS",
             "BONER",
-            "SHAFT",
+            "MORNING WOOD",
             "HARD"
         ],
         "difficulty": "easy",
@@ -499,7 +501,7 @@
         "tabooWords": [
             "MUTUAL ORAL",
             "TOP BOTTOM",
-            "69",
+            "VICE VERSA",
             "RECIPROCAL",
             "SIMULTANEOUS"
         ],
@@ -649,6 +651,7 @@
         "difficulty": "easy",
         "category": "Body"
     },
+    
     {
         "id": "midnight-051",
         "word": "MASTURBATE",
@@ -986,5 +989,18 @@
         ],
         "difficulty": "hard",
         "category": "Group Fun"
+    },
+    {
+        "id": "midnight-077",
+        "word": "ERECTILE DISFUNCTION",
+        "tabooWords": [
+            "NOT WORKING",
+            "SOFTY",
+            "UNDER MAINTENANCE",
+            "EMBERASSMENT",
+            "FRUSTRATION"
+        ],
+        "difficulty": "easy",
+        "category": "Body"
     }
 ]
