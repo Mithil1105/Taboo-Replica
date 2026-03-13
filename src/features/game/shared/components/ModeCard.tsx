@@ -11,6 +11,8 @@ interface ModeCardProps {
   to: string;
   accent?: "primary" | "secondary";
   icon?: ReactNode;
+  /** Optional compact badge, e.g. "Works offline" */
+  badge?: string;
 }
 
 export function ModeCard({
@@ -22,6 +24,7 @@ export function ModeCard({
   to,
   accent = "primary",
   icon,
+  badge,
 }: ModeCardProps) {
   const accentClasses =
     accent === "secondary"
@@ -34,10 +37,15 @@ export function ModeCard({
       transition={{ duration: 0.18 }}
       className="flex w-full max-w-md flex-col rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm backdrop-blur-sm sm:p-5"
     >
-      <div className="flex items-center justify-between gap-3">
-        <div className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-widest ${accentClasses}`}>
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-current" />
-          <span>{label}</span>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <div className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-widest ${accentClasses}`}>
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-current" />
+            <span>{label}</span>
+          </div>
+          {badge && (
+            <span className="text-[10px] text-muted-foreground">{badge}</span>
+          )}
         </div>
         {icon && <div className="text-muted-foreground">{icon}</div>}
       </div>

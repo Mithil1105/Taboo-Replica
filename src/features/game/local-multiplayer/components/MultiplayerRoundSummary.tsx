@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check, SkipForward, AlertTriangle, LogOut } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { playRoundEndSound } from "@/hooks/useSound";
 import type { GameSessionRow } from "@/lib/supabase/types";
 import { nextRound, endGameEarly } from "@/lib/supabase/sessionService";
 import { canNextRound } from "@/lib/supabase/multiplayerActions";
@@ -27,6 +28,10 @@ export function MultiplayerRoundSummary({
   const [nextLoading, setNextLoading] = useState(false);
   const [endLoading, setEndLoading] = useState(false);
   const teamName = session.current_turn_team === "A" ? teamAName : teamBName;
+
+  useEffect(() => {
+    playRoundEndSound();
+  }, []);
   const roundScore = session.round_correct - session.round_taboo;
   const canProceed = canNextRound(session, isHost);
 

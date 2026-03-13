@@ -1,15 +1,30 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import type { Card, GameSettings, Team, RoundResult } from "@/types";
+import { validateDeck } from "@/lib/deckValidation";
 
 // Deck card imports - dynamic
 import classicEveryday from "@/data/decks/classic-everyday.json";
 import moviesPopculture from "@/data/decks/movies-popculture.json";
 import nsfw from "@/data/decks/nsfw.json";
+import classic from "@/data/decks/classic.json";
+import classic2 from "@/data/decks/classic2.json";
+import bollywood1 from "@/data/decks/bollywood-1.json";
+import bollywood2 from "@/data/decks/bollywood2.json";
+import hollywood1 from "@/data/decks/hollywood1.json";
+import hollywood2 from "@/data/decks/hollywood2.json";
+import nsfw2 from "@/data/decks/nsfw2.json";
 
-const deckFileMap: Record<string, Card[]> = {
-  "classic-everyday": classicEveryday as Card[],
-  "movies-popculture": moviesPopculture as Card[],
-  nsfw: nsfw as Card[],
+const deckRawMap: Record<string, unknown> = {
+  "classic-everyday": classicEveryday,
+  "movies-popculture": moviesPopculture,
+  nsfw: nsfw,
+  classic: classic,
+  classic2: classic2,
+  "bollywood-1": bollywood1,
+  bollywood2: bollywood2,
+  hollywood1: hollywood1,
+  hollywood2: hollywood2,
+  nsfw2: nsfw2,
 };
 
 function shuffle<T>(array: T[]): T[] {
@@ -78,8 +93,9 @@ export function useGame() {
   const loadCards = useCallback((deckIds: string[]) => {
     const allCards: Card[] = [];
     deckIds.forEach((id) => {
-      const deckCards = deckFileMap[id];
-      if (deckCards) allCards.push(...deckCards);
+      const raw = deckRawMap[id];
+      const deckCards = raw ? validateDeck(raw, id) : [];
+      allCards.push(...deckCards);
     });
     const shuffled = shuffle(allCards);
     setCards(shuffled);

@@ -1,0 +1,1506 @@
+[
+  {
+    "id": "classic-251",
+    "word": "Binge Drinking",
+    "taboo_words": ["Alcohol", "Party", "Excessive", "Drunk", "Shots"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-252",
+    "word": "Cringe",
+    "taboo_words": ["Embarrassing", "Awkward", "Social", "Face", "Watch"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-253",
+    "word": "Room Service",
+    "taboo_words": ["Hotel", "Food", "Order", "Bed", "Stay"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-254",
+    "word": "Inheritance",
+    "taboo_words": ["Money", "Will", "Death", "Family", "Property"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-255",
+    "word": "Blackout",
+    "taboo_words": ["Electricity", "Dark", "Power", "Light", "Drunk"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-256",
+    "word": "Friendzone",
+    "taboo_words": ["Crush", "Love", "Relationship", "Just Friends", "Rejected"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-257",
+    "word": "Side Eye",
+    "taboo_words": ["Look", "Judgment", "Glance", "Disrespect", "Face"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-258",
+    "word": "Quiet Quitting",
+    "taboo_words": ["Job", "Work", "Effort", "Minimum", "Resign"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-259",
+    "word": "Main Character",
+    "taboo_words": ["Energy", "Attention", "Focus", "Self", "Center"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-260",
+    "word": "Guilty Pleasure",
+    "taboo_words": ["Secret", "Love", "Like", "Enjoy", "Embarrassing"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-261",
+    "word": "Zodiac Sign",
+    "taboo_words": ["Astrology", "Stars", "Horoscope", "Birthday", "Leo"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-262",
+    "word": "Gold Digger",
+    "taboo_words": ["Money", "Rich", "Marriage", "Wealth", "Dating"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-263",
+    "word": "Tinder Bio",
+    "taboo_words": ["Profile", "Dating", "App", "Match", "Description"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-264",
+    "word": "Sugar Daddy",
+    "taboo_words": ["Older", "Money", "Support", "Allowance", "Rich"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-265",
+    "word": "Gym Rat",
+    "taboo_words": ["Workout", "Exercise", "Lift", "Bodybuilder", "Daily"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-266",
+    "word": "Ghosting",
+    "taboo_words": ["Reply", "Text", "Ignore", "Dating", "Silence"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-267",
+    "word": "Mansplaining",
+    "taboo_words": ["Explain", "Talk", "Women", "Condescending", "Patronizing"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-268",
+    "word": "Rizz",
+    "taboo_words": ["Charisma", "Game", "Flirt", "Smooth", "Attractive"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-269",
+    "word": "Ick",
+    "taboo_words": ["Turn off", "Gross", "Dating", "Feeling", "Small"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-270",
+    "word": "Netflix and Chill",
+    "taboo_words": ["Sex", "Watch", "Streaming", "Home", "Invite"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-271",
+    "word": "Soft Launch",
+    "taboo_words": ["Instagram", "Relationship", "Reveal", "Hand", "Photo"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-272",
+    "word": "Aura Points",
+    "taboo_words": ["Vibe", "Energy", "Cool", "Slang", "TikTok"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-273",
+    "word": "Situationship",
+    "taboo_words": ["Dating", "Complicated", "No Label", "Between", "Vague"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-274",
+    "word": "Third Wheel",
+    "taboo_words": ["Couple", "Extra", "Friend", "Date", "Awkward"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-275",
+    "word": "Cancel Culture",
+    "taboo_words": ["Twitter", "Boycott", "Online", "Social Media", "Offensive"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-276",
+    "word": "Quarter-Life Crisis",
+    "taboo_words": ["Age", "Job", "Regret", "Young", "Future"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-277",
+    "word": "Drunk Text",
+    "taboo_words": ["Ex", "Regret", "Message", "Alcohol", "Phone"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-278",
+    "word": "Side Hustle",
+    "taboo_words": ["Job", "Extra", "Money", "Work", "Gig"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-279",
+    "word": "Gaslighting",
+    "taboo_words": ["Manipulate", "Truth", "Crazy", "Mind", "Lie"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-280",
+    "word": "Dry Spell",
+    "taboo_words": ["Sex", "Long Time", "Single", "Lack", "Activity"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-281",
+    "word": "Vape",
+    "taboo_words": ["Smoke", "Electronic", "Juice", "Nicotine", "Clouds"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-282",
+    "word": "Prenup",
+    "taboo_words": ["Marriage", "Money", "Legal", "Contract", "Divorce"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-283",
+    "word": "Happy Hour",
+    "taboo_words": ["Drinks", "Alcohol", "Bar", "Cheap", "After Work"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-284",
+    "word": "Incognito Mode",
+    "taboo_words": ["Browser", "Private", "History", "Search", "Secret"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-285",
+    "word": "Botox",
+    "taboo_words": ["Needle", "Face", "Wrinkles", "Plastic", "Aging"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-286",
+    "word": "Open Relationship",
+    "taboo_words": ["Dating", "Polyamory", "Partners", "Sex", "Marriage"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-287",
+    "word": "Walk of Shame",
+    "taboo_words": ["Morning", "Home", "Clothes", "Last Night", "Party"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-288",
+    "word": "Thirst Trap",
+    "taboo_words": ["Photo", "Instagram", "Sexy", "Bait", "Attention"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-289",
+    "word": "Group Chat",
+    "taboo_words": ["WhatsApp", "Message", "Friends", "Notification", "Mute"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-290",
+    "word": "Burnout",
+    "taboo_words": ["Work", "Stress", "Tired", "Mental", "Exhausted"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-291",
+    "word": "OnlyFans",
+    "taboo_words": ["Subscription", "Content", "Creator", "Paid", "Photos"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-292",
+    "word": "Pillow Talk",
+    "taboo_words": ["Bed", "Sleep", "Intimate", "Night", "Conversation"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-293",
+    "word": "Aura",
+    "taboo_words": ["Vibe", "Energy", "Cool", "Spirit", "Feeling"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-294",
+    "word": "Red Flag",
+    "taboo_words": ["Warning", "Bad", "Relationship", "Dating", "Sign"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-295",
+    "word": "Therapy",
+    "taboo_words": ["Counseling", "Mental", "Doctor", "Session", "Feelings"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-296",
+    "word": "Catfish",
+    "taboo_words": ["Fake", "Profile", "Internet", "Photos", "Identify"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-297",
+    "word": "Student Debt",
+    "taboo_words": ["Loan", "University", "College", "Money", "Interest"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "classic-298",
+    "word": "Iced Coffee",
+    "taboo_words": ["Cold", "Starbucks", "Caffeine", "Summer", "Straw"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "classic-299",
+    "word": "Friends with Benefits",
+    "taboo_words": ["Sex", "Casual", "Relationship", "Agreement", "No Strings"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "classic-300",
+    "word": "Taxes",
+    "taboo_words": ["Government", "Income", "Money", "April", "IRS"],
+    "difficulty": "easy"
+  }
+,
+    {
+      "id": "classic-301",
+      "word": "Home Warranty",
+      "taboo_words": ["Insurance", "House", "Repair", "Coverage", "Contract"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-302",
+      "word": "Air Fryer",
+      "taboo_words": ["Cook", "Kitchen", "Healthy", "Oil", "Crispy"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-303",
+      "word": "Side Eye",
+      "taboo_words": ["Glance", "Look", "Judgment", "Disrespect", "Face"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-304",
+      "word": "Influencer",
+      "taboo_words": ["Instagram", "Followers", "TikTok", "Sponsor", "Brand"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-305",
+      "word": "Two-Factor Authentication",
+      "taboo_words": ["Code", "Security", "Login", "Password", "Phone"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-306",
+      "word": "Ghosting",
+      "taboo_words": ["Dating", "Text", "Ignore", "Reply", "Disappear"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-307",
+      "word": "Water Bill",
+      "taboo_words": ["Monthly", "Payment", "Utility", "Shower", "Money"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-308",
+      "word": "Selfie Stick",
+      "taboo_words": ["Photo", "Phone", "Travel", "Extend", "Camera"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-309",
+      "word": "Quiet Quitting",
+      "taboo_words": ["Work", "Job", "Minimum", "Effort", "Resign"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-310",
+      "word": "Fast Fashion",
+      "taboo_words": ["Cheap", "Clothes", "Zara", "Trend", "H&M"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-311",
+      "word": "Pest Control",
+      "taboo_words": ["Bugs", "Exterminator", "Ants", "House", "Spray"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-312",
+      "word": "Bumble",
+      "taboo_words": ["Dating", "App", "Women", "Match", "Message"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-313",
+      "word": "Soft Launch",
+      "taboo_words": ["Instagram", "Relationship", "Reveal", "Photo", "Hand"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-314",
+      "word": "Doorbell Camera",
+      "taboo_words": ["Ring", "Security", "Package", "Video", "Porch"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-315",
+      "word": "Credit Score",
+      "taboo_words": ["Loan", "Bank", "Money", "Finance", "Rating"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-316",
+      "word": "Charcuterie Board",
+      "taboo_words": ["Cheese", "Meat", "Platter", "Grapes", "Wine"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-317",
+      "word": "Podcast",
+      "taboo_words": ["Audio", "Listen", "Spotify", "Host", "Talk"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-318",
+      "word": "Vaping",
+      "taboo_words": ["Smoke", "Electronic", "Juice", "Nicotine", "Clouds"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-319",
+      "word": "Open Relationship",
+      "taboo_words": ["Partners", "Dating", "Sex", "Marriage", "Polyamory"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-320",
+      "word": "Hand Sanitizer",
+      "taboo_words": ["Germs", "Clean", "Alcohol", "Wash", "Gel"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-321",
+      "word": "Crypto Wallet",
+      "taboo_words": ["Bitcoin", "Digital", "Money", "Security", "Key"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-322",
+      "word": "Yoga Mat",
+      "taboo_words": ["Exercise", "Stretch", "Floor", "Gym", "Rubber"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-323",
+      "word": "Situationship",
+      "taboo_words": ["Dating", "No Label", "Complicated", "Vague", "Partner"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-324",
+      "word": "Grocery Bag",
+      "taboo_words": ["Plastic", "Reusable", "Store", "Shopping", "Food"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-325",
+      "word": "Zodiac Sign",
+      "taboo_words": ["Astrology", "Horoscope", "Stars", "Birthday", "Leo"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-326",
+      "word": "Energy Drink",
+      "taboo_words": ["Caffeine", "Sugar", "Red Bull", "Monster", "Wake up"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-327",
+      "word": "Friendzone",
+      "taboo_words": ["Crush", "Love", "Relationship", "Just Friends", "Rejected"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-328",
+      "word": "Retirement Fund",
+      "taboo_words": ["Savings", "Old", "Money", "401k", "Future"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-329",
+      "word": "Smart Home",
+      "taboo_words": ["Alexa", "Google", "Lights", "Voice", "Internet"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-330",
+      "word": "Bachelorette Party",
+      "taboo_words": ["Bride", "Wedding", "Girls", "Night out", "Drinks"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-331",
+      "word": "Algorithm",
+      "taboo_words": ["Feed", "Computer", "Social Media", "Math", "Code"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-332",
+      "word": "Blackout",
+      "taboo_words": ["Power", "Electricity", "Dark", "Drunk", "Light"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-333",
+      "word": "Airbnb",
+      "taboo_words": ["Stay", "Hotel", "Rent", "App", "Host"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-334",
+      "word": "Gaslighting",
+      "taboo_words": ["Crazy", "Manipulate", "Truth", "Lie", "Mind"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-335",
+      "word": "Uber Eats",
+      "taboo_words": ["Food", "Delivery", "App", "Order", "Door"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-336",
+      "word": "Pillow Talk",
+      "taboo_words": ["Bed", "Sleep", "Intimate", "Night", "Conversation"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-337",
+      "word": "Iced Coffee",
+      "taboo_words": ["Cold", "Starbucks", "Caffeine", "Summer", "Straw"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-338",
+      "word": "Prenup",
+      "taboo_words": ["Marriage", "Money", "Legal", "Contract", "Divorce"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-339",
+      "word": "Burnout",
+      "taboo_words": ["Work", "Stress", "Tired", "Exhausted", "Break"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-340",
+      "word": "Cancel Culture",
+      "taboo_words": ["Internet", "Online", "Boycott", "Twitter", "Offensive"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-341",
+      "word": "Happy Hour",
+      "taboo_words": ["Drinks", "Alcohol", "Bar", "Cheap", "After work"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-342",
+      "word": "Main Character Energy",
+      "taboo_words": ["Attention", "Confidence", "Self", "Center", "Focus"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-343",
+      "word": "Adulting",
+      "taboo_words": ["Bills", "Work", "Responsibilities", "Grown-up", "Hard"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-344",
+      "word": "Skin Care",
+      "taboo_words": ["Face", "Lotion", "Routine", "Cream", "Serum"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-345",
+      "word": "Ghostwriter",
+      "taboo_words": ["Author", "Book", "Write", "Credit", "Secret"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-346",
+      "word": "Taxes",
+      "taboo_words": ["Government", "Income", "Money", "April", "IRS"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-347",
+      "word": "Walk of Shame",
+      "taboo_words": ["Morning", "Home", "Clothes", "Last night", "Party"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-348",
+      "word": "Side Hustle",
+      "taboo_words": ["Gig", "Money", "Extra", "Work", "Income"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-349",
+      "word": "Main Character",
+      "taboo_words": ["Energy", "Attention", "Focus", "Self", "Center"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-350",
+      "word": "Rent",
+      "taboo_words": ["Apartment", "Monthly", "Money", "Landlord", "Lease"],
+      "difficulty": "easy"
+    }
+  , 
+    {
+      "id": "classic-351",
+      "word": "Dishwasher Tablet",
+      "taboo_words": ["Clean", "Soap", "Kitchen", "Pods", "Wash"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-352",
+      "word": "Maternity Leave",
+      "taboo_words": ["Baby", "Pregnant", "Work", "Off", "Parent"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-353",
+      "word": "Small Talk",
+      "taboo_words": ["Weather", "Awkward", "Conversation", "Chat", "Polite"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-354",
+      "word": "Imposter Syndrome",
+      "taboo_words": ["Fake", "Fraud", "Success", "Work", "Skill"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-355",
+      "word": "Pantry",
+      "taboo_words": ["Food", "Kitchen", "Storage", "Shelf", "Snacks"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-356",
+      "word": "Micro-Management",
+      "taboo_words": ["Boss", "Manager", "Control", "Detail", "Work"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-357",
+      "word": "Tupperware",
+      "taboo_words": ["Leftovers", "Container", "Plastic", "Lid", "Kitchen"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-358",
+      "word": "Quiet Quitting",
+      "taboo_words": ["Effort", "Minimum", "Resign", "Work", "Job"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-359",
+      "word": "Dry January",
+      "taboo_words": ["Sober", "Alcohol", "Resolution", "Drink", "Month"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-360",
+      "word": "Elevator Pitch",
+      "taboo_words": ["Idea", "Speech", "Short", "Business", "Sell"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-361",
+      "word": "To-Do List",
+      "taboo_words": ["Task", "Check", "Paper", "Organize", "Work"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-362",
+      "word": "Group Chat",
+      "taboo_words": ["WhatsApp", "Message", "Friends", "Mute", "Notification"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-363",
+      "word": "Office Politics",
+      "taboo_words": ["Drama", "Promotion", "Coworkers", "Rumors", "Corporate"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-364",
+      "word": "Home Gym",
+      "taboo_words": ["Workout", "Weights", "Garage", "Exercise", "Equipment"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-365",
+      "word": "Sourdough",
+      "taboo_words": ["Bread", "Bake", "Starter", "Dough", "Yeast"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-366",
+      "word": "Uber",
+      "taboo_words": ["Cab", "Ride", "Driver", "App", "Car"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-367",
+      "word": "AirPods",
+      "taboo_words": ["Ear", "Wireless", "Bluetooth", "Music", "Apple"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-368",
+      "word": "Couch Potato",
+      "taboo_words": ["Lazy", "TV", "Sofa", "Watch", "Inactive"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-369",
+      "word": "Red Flag",
+      "taboo_words": ["Dating", "Bad", "Warning", "Relationship", "Sign"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-370",
+      "word": "Passive Aggressive",
+      "taboo_words": ["Note", "Angry", "Indirect", "Tone", "Behavior"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-371",
+      "word": "LinkedIn",
+      "taboo_words": ["Job", "Professional", "Network", "Resume", "Career"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-372",
+      "word": "Gaslighting",
+      "taboo_words": ["Crazy", "Manipulate", "Truth", "Lie", "Mind"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-373",
+      "word": "Hangover",
+      "taboo_words": ["Drunk", "Headache", "Alcohol", "Morning", "Drinking"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-374",
+      "word": "Smart Bulb",
+      "taboo_words": ["Light", "Alexa", "Home", "App", "Color"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-375",
+      "word": "Passport",
+      "taboo_words": ["Travel", "Airport", "Country", "Visa", "ID"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-376",
+      "word": "Credit Card",
+      "taboo_words": ["Debt", "Bank", "Swipe", "Money", "Plastic"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-377",
+      "word": "Binge Watch",
+      "taboo_words": ["Netflix", "Episodes", "Series", "Streaming", "TV"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-378",
+      "word": "Alarm Clock",
+      "taboo_words": ["Wake up", "Morning", "Snooze", "Late", "Alert"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-379",
+      "word": "Self-Checkout",
+      "taboo_words": ["Scan", "Grocery", "Store", "Machine", "Register"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-380",
+      "word": "Yoga Mat",
+      "taboo_words": ["Stretch", "Floor", "Exercise", "Rubber", "Gym"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-381",
+      "word": "Podcast",
+      "taboo_words": ["Listen", "Audio", "Spotify", "Host", "Talk"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-382",
+      "word": "Digital Nomad",
+      "taboo_words": ["Travel", "Work", "Remote", "Laptop", "Laptop"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-383",
+      "word": "Gentrification",
+      "taboo_words": ["Neighborhood", "Expensive", "Housing", "Local", "Change"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-384",
+      "word": "Fast Food",
+      "taboo_words": ["Burger", "Greasy", "McDonalds", "Quick", "Drive-thru"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-385",
+      "word": "Taxes",
+      "taboo_words": ["Government", "Income", "Money", "April", "IRS"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-386",
+      "word": "Side Hustle",
+      "taboo_words": ["Gig", "Money", "Extra", "Work", "Income"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-387",
+      "word": "Rent",
+      "taboo_words": ["Apartment", "Monthly", "Money", "Landlord", "Lease"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-388",
+      "word": "Roommate",
+      "taboo_words": ["Live", "House", "Share", "Person", "Rent"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-389",
+      "word": "Vending Machine",
+      "taboo_words": ["Snacks", "Coins", "Slot", "Soda", "Chips"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-390",
+      "word": "Hand Sanitizer",
+      "taboo_words": ["Clean", "Germs", "Alcohol", "Gel", "Wash"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-391",
+      "word": "Influencer",
+      "taboo_words": ["Instagram", "Followers", "TikTok", "Sponsor", "Brand"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-392",
+      "word": "Quiet Quitting",
+      "taboo_words": ["Work", "Job", "Minimum", "Effort", "Resign"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-393",
+      "word": "Black Friday",
+      "taboo_words": ["Sale", "Shopping", "Discount", "November", "Store"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-394",
+      "word": "Airbnb",
+      "taboo_words": ["Stay", "Hotel", "Rent", "App", "Host"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-395",
+      "word": "Iced Coffee",
+      "taboo_words": ["Cold", "Starbucks", "Caffeine", "Summer", "Straw"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-396",
+      "word": "Adulting",
+      "taboo_words": ["Bills", "Work", "Responsibilities", "Grown-up", "Hard"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-397",
+      "word": "Walking Pad",
+      "taboo_words": ["Treadmill", "Desk", "Steps", "Home", "Work"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-398",
+      "word": "Air Fryer",
+      "taboo_words": ["Cook", "Kitchen", "Healthy", "Oil", "Crispy"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-399",
+      "word": "Ghostwriter",
+      "taboo_words": ["Author", "Book", "Write", "Credit", "Secret"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-400",
+      "word": "Tinder",
+      "taboo_words": ["Swipe", "Match", "Date", "App", "Hookup"],
+      "difficulty": "easy"
+    }
+  ,
+    {
+      "id": "classic-401",
+      "word": "Binge Watch",
+      "taboo_words": ["Episodes", "Series", "Netflix", "All night", "Streaming"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-402",
+      "word": "Imposter Syndrome",
+      "taboo_words": ["Fraud", "Fake", "Success", "Work", "Feel"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-403",
+      "word": "Happy Hour",
+      "taboo_words": ["Drinks", "Alcohol", "Bar", "Cheap", "After work"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-404",
+      "word": "Battery Low",
+      "taboo_words": ["Phone", "Charge", "Percentage", "Dead", "Plug"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-405",
+      "word": "Awkward Silence",
+      "taboo_words": ["Quiet", "Conversation", "Talk", "Social", "Pause"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-406",
+      "word": "Credit Score",
+      "taboo_words": ["Loan", "Bank", "Money", "Finance", "Rating"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-407",
+      "word": "Yoga",
+      "taboo_words": ["Stretch", "Mat", "Exercise", "Pants", "Meditation"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-408",
+      "word": "Catfish",
+      "taboo_words": ["Fake", "Profile", "Online", "Dating", "Picture"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-409",
+      "word": "Micro-Management",
+      "taboo_words": ["Boss", "Work", "Control", "Manager", "Detail"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-410",
+      "word": "Elevator",
+      "taboo_words": ["Lift", "Floor", "Building", "Button", "Stairs"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-411",
+      "word": "Spam",
+      "taboo_words": ["Email", "Junk", "Folder", "Call", "Telemarketer"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-412",
+      "word": "Hangry",
+      "taboo_words": ["Hungry", "Angry", "Food", "Mood", "Eat"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-413",
+      "word": "Red Flag",
+      "taboo_words": ["Warning", "Dating", "Relationship", "Bad", "Signal"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-414",
+      "word": "Crypto",
+      "taboo_words": ["Bitcoin", "Wallet", "Coin", "Investment", "Digital"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-415",
+      "word": "Ibuprofen",
+      "taboo_words": ["Pain", "Pill", "Headache", "Medicine", "Advil"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-416",
+      "word": "Public Transport",
+      "taboo_words": ["Bus", "Train", "Metro", "Commute", "Ticket"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-417",
+      "word": "Autocorrect",
+      "taboo_words": ["Typo", "Text", "Keyboard", "Wrong", "Fix"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-418",
+      "word": "Side Hustle",
+      "taboo_words": ["Job", "Extra", "Money", "Work", "Gig"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-419",
+      "word": "Cancel Culture",
+      "taboo_words": ["Twitter", "Problematic", "Online", "Social Media", "Boycott"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-420",
+      "word": "Sneakers",
+      "taboo_words": ["Shoes", "Feet", "Run", "Nike", "Adidas"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-421",
+      "word": "AirPods",
+      "taboo_words": ["Music", "Ear", "Wireless", "Bluetooth", "Apple"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-422",
+      "word": "Burnout",
+      "taboo_words": ["Tired", "Work", "Stress", "Exhausted", "Break"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-423",
+      "word": "Sourdough",
+      "taboo_words": ["Bread", "Bake", "Starter", "Dough", "Yeast"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-424",
+      "word": "Incognito Mode",
+      "taboo_words": ["Private", "Browser", "History", "Secret", "Search"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-425",
+      "word": "Vaping",
+      "taboo_words": ["Smoke", "Electronic", "Juice", "Clouds", "Nicotine"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-426",
+      "word": "Car Insurance",
+      "taboo_words": ["Accident", "Money", "Drive", "Policy", "Coverage"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-427",
+      "word": "Pantry",
+      "taboo_words": ["Food", "Kitchen", "Snacks", "Shelf", "Storage"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-428",
+      "word": "Friendzone",
+      "taboo_words": ["Rejected", "Love", "Relationship", "Just friends", "Crush"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-429",
+      "word": "Earbuds",
+      "taboo_words": ["Listen", "Headphones", "Music", "Audio", "Wire"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-430",
+      "word": "Artificial Intelligence",
+      "taboo_words": ["Robot", "ChatGPT", "Computer", "Bot", "Future"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-431",
+      "word": "Grocery Bag",
+      "taboo_words": ["Plastic", "Store", "Carry", "Food", "Reusable"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-432",
+      "word": "Two-Factor Authentication",
+      "taboo_words": ["Code", "Security", "Login", "Password", "Phone"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-433",
+      "word": "Avocado Toast",
+      "taboo_words": ["Brunch", "Millennial", "Bread", "Green", "Expensive"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-434",
+      "word": "Dry Cleaning",
+      "taboo_words": ["Suit", "Wash", "Clothes", "Chemicals", "Laundry"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-435",
+      "word": "Morning Person",
+      "taboo_words": ["Early", "Wake up", "Sunrise", "Active", "Sleep"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-436",
+      "word": "Tax Haven",
+      "taboo_words": ["Money", "Offshore", "Island", "Legal", "Rich"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-437",
+      "word": "Backpack",
+      "taboo_words": ["Bag", "School", "Travel", "Shoulder", "Carry"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-438",
+      "word": "Unsubscribe",
+      "taboo_words": ["Email", "List", "Stop", "Newsletter", "Click"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-439",
+      "word": "Roommate",
+      "taboo_words": ["Live", "House", "Rent", "Person", "Share"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-440",
+      "word": "Prenuptial Agreement",
+      "taboo_words": ["Marriage", "Divorce", "Money", "Contract", "Legal"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-441",
+      "word": "Water Bottle",
+      "taboo_words": ["Drink", "Hydrate", "Plastic", "Flask", "Thirsty"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-442",
+      "word": "Algorithm",
+      "taboo_words": ["Computer", "Social Media", "Feed", "Code", "Math"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-443",
+      "word": "Cereal",
+      "taboo_words": ["Milk", "Breakfast", "Bowl", "Morning", "Flakes"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-444",
+      "word": "Office Politics",
+      "taboo_words": ["Drama", "Promotion", "Coworkers", "Rumors", "Corporate"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-445",
+      "word": "E-scooter",
+      "taboo_words": ["Electric", "Ride", "City", "Wheels", "Rental"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-446",
+      "word": "To-Do List",
+      "taboo_words": ["Tasks", "Work", "Paper", "Write", "Check"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-447",
+      "word": "Skin Care",
+      "taboo_words": ["Face", "Lotion", "Routine", "Cream", "Serum"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-448",
+      "word": "Home Office",
+      "taboo_words": ["Desk", "WFH", "Remote", "Work", "Chair"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-449",
+      "word": "Gentrification",
+      "taboo_words": ["Neighborhood", "Expensive", "Change", "Local", "Housing"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-450",
+      "word": "Nightcap",
+      "taboo_words": ["Drink", "Sleep", "Alcohol", "Evening", "Bed"],
+      "difficulty": "medium"
+    }
+  ,
+    {
+      "id": "classic-451",
+      "word": "Binge Watch",
+      "taboo_words": ["Netflix", "Episodes", "Series", "Streaming", "TV"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-452",
+      "word": "Imposter Syndrome",
+      "taboo_words": ["Fake", "Fraud", "Success", "Work", "Feelings"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-453",
+      "word": "Happy Hour",
+      "taboo_words": ["Drinks", "Alcohol", "Bar", "Cheap", "After work"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-454",
+      "word": "Battery Low",
+      "taboo_words": ["Phone", "Charge", "Percentage", "Dead", "Plug"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-455",
+      "word": "Awkward Silence",
+      "taboo_words": ["Quiet", "Conversation", "Talk", "Social", "Pause"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-456",
+      "word": "Credit Score",
+      "taboo_words": ["Loan", "Bank", "Money", "Finance", "Rating"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-457",
+      "word": "Yoga Mat",
+      "taboo_words": ["Stretch", "Floor", "Exercise", "Rubber", "Gym"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-458",
+      "word": "Catfish",
+      "taboo_words": ["Fake", "Profile", "Online", "Dating", "Picture"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-459",
+      "word": "Micro-Management",
+      "taboo_words": ["Boss", "Work", "Control", "Manager", "Detail"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-460",
+      "word": "Elevator",
+      "taboo_words": ["Lift", "Floor", "Building", "Button", "Stairs"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-461",
+      "word": "Spam",
+      "taboo_words": ["Email", "Junk", "Folder", "Call", "Telemarketer"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-462",
+      "word": "Hangry",
+      "taboo_words": ["Hungry", "Angry", "Food", "Mood", "Eat"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-463",
+      "word": "Red Flag",
+      "taboo_words": ["Warning", "Dating", "Relationship", "Bad", "Signal"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-464",
+      "word": "Crypto",
+      "taboo_words": ["Bitcoin", "Wallet", "Coin", "Investment", "Digital"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-465",
+      "word": "Ibuprofen",
+      "taboo_words": ["Pain", "Pill", "Headache", "Medicine", "Advil"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-466",
+      "word": "Public Transport",
+      "taboo_words": ["Bus", "Train", "Metro", "Commute", "Ticket"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-467",
+      "word": "Autocorrect",
+      "taboo_words": ["Typo", "Text", "Keyboard", "Wrong", "Fix"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-468",
+      "word": "Side Hustle",
+      "taboo_words": ["Job", "Extra", "Money", "Work", "Gig"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-469",
+      "word": "Cancel Culture",
+      "taboo_words": ["Twitter", "Problematic", "Online", "Social Media", "Boycott"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-470",
+      "word": "Sneakers",
+      "taboo_words": ["Shoes", "Feet", "Run", "Nike", "Adidas"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-471",
+      "word": "AirPods",
+      "taboo_words": ["Music", "Ear", "Wireless", "Bluetooth", "Apple"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-472",
+      "word": "Burnout",
+      "taboo_words": ["Tired", "Work", "Stress", "Exhausted", "Break"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-473",
+      "word": "Sourdough",
+      "taboo_words": ["Bread", "Bake", "Starter", "Dough", "Yeast"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-474",
+      "word": "Incognito Mode",
+      "taboo_words": ["Private", "Browser", "History", "Secret", "Search"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-475",
+      "word": "Vaping",
+      "taboo_words": ["Smoke", "Electronic", "Juice", "Clouds", "Nicotine"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-476",
+      "word": "Car Insurance",
+      "taboo_words": ["Accident", "Money", "Drive", "Policy", "Coverage"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-477",
+      "word": "Pantry",
+      "taboo_words": ["Food", "Kitchen", "Snacks", "Shelf", "Storage"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-478",
+      "word": "Friendzone",
+      "taboo_words": ["Rejected", "Love", "Relationship", "Just friends", "Crush"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-479",
+      "word": "Earbuds",
+      "taboo_words": ["Listen", "Headphones", "Music", "Audio", "Wire"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-480",
+      "word": "Artificial Intelligence",
+      "taboo_words": ["Robot", "ChatGPT", "Computer", "Bot", "Future"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-481",
+      "word": "Grocery Bag",
+      "taboo_words": ["Plastic", "Store", "Carry", "Food", "Reusable"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-482",
+      "word": "Two-Factor Authentication",
+      "taboo_words": ["Code", "Security", "Login", "Password", "Phone"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-483",
+      "word": "Avocado Toast",
+      "taboo_words": ["Brunch", "Millennial", "Bread", "Green", "Expensive"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-484",
+      "word": "Dry Cleaning",
+      "taboo_words": ["Suit", "Wash", "Clothes", "Chemicals", "Laundry"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-485",
+      "word": "Morning Person",
+      "taboo_words": ["Early", "Wake up", "Sunrise", "Active", "Sleep"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-486",
+      "word": "Tax Haven",
+      "taboo_words": ["Money", "Offshore", "Island", "Legal", "Rich"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-487",
+      "word": "Backpack",
+      "taboo_words": ["Bag", "School", "Travel", "Shoulder", "Carry"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-488",
+      "word": "Unsubscribe",
+      "taboo_words": ["Email", "List", "Stop", "Newsletter", "Click"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-489",
+      "word": "Roommate",
+      "taboo_words": ["Live", "House", "Rent", "Person", "Share"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-490",
+      "word": "Prenuptial Agreement",
+      "taboo_words": ["Marriage", "Divorce", "Money", "Contract", "Legal"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-491",
+      "word": "Water Bottle",
+      "taboo_words": ["Drink", "Hydrate", "Plastic", "Flask", "Thirsty"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-492",
+      "word": "Algorithm",
+      "taboo_words": ["Computer", "Social Media", "Feed", "Code", "Math"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-493",
+      "word": "Cereal",
+      "taboo_words": ["Milk", "Breakfast", "Bowl", "Morning", "Flakes"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-494",
+      "word": "Office Politics",
+      "taboo_words": ["Drama", "Promotion", "Coworkers", "Rumors", "Corporate"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-495",
+      "word": "E-scooter",
+      "taboo_words": ["Electric", "Ride", "City", "Wheels", "Rental"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-496",
+      "word": "To-Do List",
+      "taboo_words": ["Tasks", "Work", "Paper", "Write", "Check"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-497",
+      "word": "Skin Care",
+      "taboo_words": ["Face", "Lotion", "Routine", "Cream", "Serum"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "classic-498",
+      "word": "Home Office",
+      "taboo_words": ["Desk", "WFH", "Remote", "Work", "Chair"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "classic-499",
+      "word": "Gentrification",
+      "taboo_words": ["Neighborhood", "Expensive", "Change", "Local", "Housing"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "classic-500",
+      "word": "Nightcap",
+      "taboo_words": ["Drink", "Sleep", "Alcohol", "Evening", "Bed"],
+      "difficulty": "medium"
+    }
+  ]

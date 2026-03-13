@@ -46,48 +46,112 @@ function devWarn(msg: string) {
   if (isDev) console.warn(`[deck] ${msg}`);
 }
 
-/** Minimal card shape - id, word, tabooWords array */
-function isValidCardShape(obj: unknown): obj is { id: string; word: string; tabooWords: unknown[] } {
+/** Get taboo words array from card - supports tabooWords, taboo_words, or taboo */
+function getTabooWordsArray(o: Record<string, unknown>): unknown[] | null {
+  const arr = o.tabooWords ?? o.taboo_words ?? o.taboo;
+  return Array.isArray(arr) ? arr : null;
+}
+
+/** Minimal card shape - id, word, taboo words array (tabooWords, taboo_words, or taboo) */
+function isValidCardShape(obj: unknown): obj is { id: string; word: string; tabooWords?: unknown[]; taboo_words?: unknown[]; taboo?: unknown[] } {
   if (!obj || typeof obj !== "object") return false;
   const o = obj as Record<string, unknown>;
+  const tabooArr = getTabooWordsArray(o);
   return (
     typeof o.id === "string" &&
     o.id.length > 0 &&
     typeof o.word === "string" &&
     o.word.length > 0 &&
-    Array.isArray(o.tabooWords)
+    tabooArr !== null &&
+    tabooArr.length > 0
   );
 }
+
+const MAX_TABOO_LENGTH = 50;
+const MIN_TABOO_COUNT = 3;
+const MAX_TABOO_COUNT = 6;
 
 /** Validate and sanitize a single taboo word */
 function sanitizeTabooWord(w: unknown): string | null {
   if (typeof w !== "string") return null;
   const trimmed = w.trim();
-  if (trimmed.length === 0 || trimmed.length > 100) return null;
+  if (trimmed.length === 0 || trimmed.length > MAX_TABOO_LENGTH) return null;
   return trimmed;
 }
 
+/** Normalize for comparison (lowercase, trimmed) */
+function normalizeForCompare(s: string): string {
+  return s.toLowerCase().trim();
+}
+
 /** Validate and sanitize a card. Returns null if invalid. */
-export function validateCard(raw: unknown): Card | null {
+export function validateCard(raw: unknown, seenWords?: Set<string>): Card | null {
   if (!isValidCardShape(raw)) {
     devWarn(`Invalid card shape: ${JSON.stringify(raw)?.slice(0, 80)}`);
     return null;
   }
 
-  const tabooWords = raw.tabooWords
+  const o = raw as Record<string, unknown>;
+  const mainWord = (raw as { word: string }).word.trim();
+  const mainWordNorm = normalizeForCompare(mainWord);
+
+  const tabooArr = getTabooWordsArray(o) ?? [];
+  let tabooWords = tabooArr
     .map(sanitizeTabooWord)
     .filter((w): w is string => w !== null);
 
   if (tabooWords.length === 0) {
-    devWarn(`Card "${raw.word}" has no valid taboo words`);
+    devWarn(`Card "${mainWord}" has no valid taboo words`);
     return null;
   }
 
+  const tabooSet = new Set<string>();
+  const filtered: string[] = [];
+  for (const w of tabooWords) {
+    const norm = normalizeForCompare(w);
+    if (norm === mainWordNorm || (mainWordNorm.length > 0 && norm.includes(mainWordNorm))) {
+      devWarn(`Card "${mainWord}": taboo word contains main word, skipping "${w}"`);
+      continue;
+    }
+    if (tabooSet.has(norm)) {
+      devWarn(`Card "${mainWord}": duplicate taboo word "${w}"`);
+      continue;
+    }
+    tabooSet.add(norm);
+    filtered.push(w);
+  }
+
+  tabooWords = filtered;
+  if (tabooWords.length === 0) {
+    devWarn(`Card "${mainWord}" has no valid taboo words after filtering`);
+    return null;
+  }
+
+  if (tabooWords.length < MIN_TABOO_COUNT && isDev) {
+    devWarn(`Card "${mainWord}": only ${tabooWords.length} taboo words (recommend ${MIN_TABOO_COUNT}-${MAX_TABOO_COUNT})`);
+  }
+  if (tabooWords.length > MAX_TABOO_COUNT) {
+    tabooWords = tabooWords.slice(0, MAX_TABOO_COUNT);
+    devWarn(`Card "${mainWord}": trimmed taboo list to ${MAX_TABOO_COUNT}`);
+  }
+
+  if (seenWords?.has(mainWordNorm)) {
+    devWarn(`Deck: duplicate card word "${mainWord}"`);
+    return null;
+  }
+  seenWords?.add(mainWordNorm);
+
+  const difficultyRaw = (raw as Card).difficulty;
+  const difficulty =
+    typeof difficultyRaw === "string" && ["easy", "medium", "hard"].includes(difficultyRaw.toLowerCase())
+      ? (difficultyRaw.toLowerCase() as "easy" | "medium" | "hard")
+      : "medium";
+
   return {
-    id: raw.id,
-    word: raw.word.trim(),
+    id: (raw as Record<string, unknown>).id as string,
+    word: mainWord,
     tabooWords,
-    difficulty: typeof (raw as Card).difficulty === "string" ? (raw as Card).difficulty : undefined,
+    difficulty,
     category: typeof (raw as Card).category === "string" ? (raw as Card).category : undefined,
   };
 }
@@ -101,9 +165,10 @@ export function validateDeck(raw: unknown, deckId: string): Card[] {
 
   const valid: Card[] = [];
   const seenIds = new Set<string>();
+  const seenWords = new Set<string>();
 
   for (let i = 0; i < raw.length; i++) {
-    const card = validateCard(raw[i]);
+    const card = validateCard(raw[i], seenWords);
     if (!card) continue;
     if (seenIds.has(card.id)) {
       devWarn(`Deck ${deckId}: duplicate card id "${card.id}" at index ${i}`);

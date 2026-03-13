@@ -22,11 +22,15 @@ The UI is optimized for phones, with big touch targets, safe-area padding for no
   - Configurable round duration (30 / 60 / 90 seconds)
   - Adjustable number of rounds per team
   - Optional score limit (first team to X points wins)
-  - **Skip is a free pass** (no score penalty), Taboo is −1, Correct is +1
+  - **Correct** → +1 for the clue team
+  - **Skip** → no score change (free pass)
+  - **Taboo** → −1 for the clue team, +1 for the opponents
 - **Multiple themed decks**
   - Classic everyday words
   - Movies & pop culture
   - NSFW / midnight deck (optional)
+- **Sound feedback** (optional, toggle in settings)
+- **Multiplayer onboarding** (first-time setup guide, skippable after first view)
 - **Round summaries and scoreboard**
   - Live team scores
   - Per-round breakdown (correct, skipped, taboo, round score)
@@ -92,7 +96,7 @@ By default the app runs on something like `http://localhost:5173` (or the port V
    - Buttons:
      - **Correct** → +1 point, card is removed from the deck
      - **Skip** → no score change (free pass), card may re-appear later
-     - **Taboo** → −1 point, card is removed from the deck
+     - **Taboo** → −1 for clue team, +1 for opponents; card is removed
 
 5. **When the timer hits 0**
    - The round ends automatically with a buzzer sound.
@@ -117,7 +121,7 @@ By default the app runs on something like `http://localhost:5173` (or the port V
 
 ### Debug Mode
 
-Add `?debug=1` to the URL in development, or set `VITE_DEBUG=true` in `.env`, to show a collapsible debug panel with:
+Add `?debug=1` to the URL in development, or set `VITE_DEBUG=true` in `.env`, to show a collapsible debug panel with room/session state:
 
 - Room code, room status, device ID
 - Team, host status, host connectivity
@@ -159,7 +163,13 @@ VITE_SUPABASE_URL=your-supabase-project-url
 VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
-On **Vercel**, add these as Environment Variables for the project (same names). No `VITE_` prefix changes needed.
+On **Vercel**, add these as Environment Variables for the project (same names). No `VITE_` prefix changes needed. The `vercel.json` rewrites ensure SPA routing works on refresh.
+
+#### Vercel deployment
+
+1. Connect your repo to Vercel.
+2. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as env vars.
+3. Deploy. The `vercel.json` rewrites all routes to `index.html` for SPA behavior.
 
 #### 2. Create the database tables
 
@@ -169,6 +179,7 @@ On **Vercel**, add these as Environment Variables for the project (same names). 
 
 **Original migrations (if needed):**
 2. `supabase/migrations/130325_reconnect_participant.sql` – optional index
+8. `supabase/migrations/130330_stale_room_cleanup.sql` – optional; creates `cleanup_stale_rooms()` for cron
 3. `supabase/migrations/130325_room_cleanup.sql` – optional closed_at column
 4. `supabase/migrations/130325_deployment_readiness.sql` – realtime notes
 5. `supabase/migrations/130326_rls_anon_policies.sql` – **required if room create/join returns 403** – enables anon access for Local Multiplayer
@@ -203,7 +214,7 @@ Without this, setup changes and gameplay will not sync live between devices.
 #### 6. Dev notes
 
 - If Supabase env vars are missing, Local Multiplayer shows an inline error; create/join actions are disabled.
-- Pass & Play does **not** depend on Supabase and works fully offline.
+- Pass & Play does **not** depend on Supabase and works fully offline (see [PWA & Offline Support](#pwa--offline-support)).
 - No hardcoded localhost; the app works with Vercel + Supabase out of the box.
 - Deck registry and card JSON are validated at runtime; invalid entries are filtered with dev warnings.
 - In dev mode, Supabase errors are logged to console with `[createRoom]`, `[joinRoom]`, `[createSession]` prefixes for easier debugging.
@@ -217,9 +228,63 @@ Without this, setup changes and gameplay will not sync live between devices.
 - **Validation**: `src/lib/deckValidation.ts` validates registry shape and card shape; filters invalid cards, logs warnings in dev
 - **Adding a deck**: Add entry to `decks.json`, add import + entry in `sessionService.ts` deckRawMap, create JSON file
 
+### PWA & Offline Support
+
+The app is a **Progressive Web App (PWA)** and supports offline play for Pass & Play.
+
+#### What works offline (after first load while online)
+
+- App shell (HTML, JS, CSS)
+- Pass & Play: deck selection, rounds, scoring, sounds
+- Mode selection and navigation
+- Deck/card data (bundled with the app)
+
+#### What requires internet
+
+- Local Multiplayer (create room, join room, realtime sync)
+- Supabase API calls
+
+#### Installability
+
+- On supported browsers (Chrome, Edge, Safari), you can **Add to Home Screen** or **Install** the app.
+- Works in Flutter WebView; offline caching remains effective even when the install prompt is unavailable.
+
+#### Cache strategy
+
+- **Precached**: App shell, JS/CSS bundles, icons, manifest
+- **Not cached**: Supabase API (network-only)
+- Decks are bundled into the app; no separate deck fetch when offline
+
+#### Testing offline
+
+1. Load the app once while online (visit the site).
+2. Open DevTools → Application → Service Workers → check "Offline".
+3. Refresh. The app should load from cache.
+4. Go to Pass & Play and play a round; it should work without network.
+
+#### PWA update strategy
+
+- New deployments auto-update the service worker in the background.
+- Users get the latest version on the next page load or app restart.
+
+---
+
+### Room / Session Cleanup
+
+To keep Supabase storage small, finished multiplayer sessions are cleaned up automatically:
+
+- **Host ends game** → Room data (game_sessions, taboo_events, room_participants, room) is deleted.
+- **Everyone leaves** → Same cleanup when the last participant disconnects.
+- **Stale rooms** → Run `supabase/migrations/130330_stale_room_cleanup.sql` to create `cleanup_stale_rooms()`. Schedule it via Supabase pg_cron (e.g. daily) to delete closed rooms older than 24 hours.
+
+No permanent match history is stored.
+
+---
+
 ### Known Limitations
 
 - Local Multiplayer requires two physical devices (or two browser profiles); no bots
+- **Local Multiplayer requires internet**; Pass & Play works offline after cache is primed
 - Room codes are 6 characters; no persistence of room history
 - No authentication; device ID is the identity
 - Realtime depends on Supabase; offline multiplayer is not supported

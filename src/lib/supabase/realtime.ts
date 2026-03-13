@@ -5,9 +5,11 @@ import type { RoomRow, RoomParticipantRow, GameSessionRow } from "./types";
 export type RoomCallback = (room: RoomRow) => void;
 export type ParticipantsCallback = (participants: RoomParticipantRow[]) => void;
 
+export type RoomOrNullCallback = (room: RoomRow | null) => void;
+
 export function subscribeToRoom(
   roomId: string,
-  onChange: RoomCallback,
+  onChange: RoomCallback | RoomOrNullCallback,
 ): RealtimeChannel {
   const supabase = getSupabaseClient();
   const channel = supabase
@@ -16,8 +18,10 @@ export function subscribeToRoom(
       "postgres_changes",
       { event: "*", schema: "public", table: "rooms", filter: `id=eq.${roomId}` },
       (payload) => {
-        if (payload.new) {
-          onChange(payload.new as RoomRow);
+        if (payload.eventType === "DELETE") {
+          (onChange as RoomOrNullCallback)(null);
+        } else if (payload.new) {
+          (onChange as RoomCallback)(payload.new as RoomRow);
         }
       },
     )
@@ -48,8 +52,7 @@ export function subscribeToParticipants(
           .eq("room_id", roomId);
 
         if (error) {
-          // eslint-disable-next-line no-console
-          console.error("Failed to refresh participants", error);
+          if (import.meta.env.DEV) console.warn("[realtime] Failed to refresh participants:", error);
           return;
         }
 

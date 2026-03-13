@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useTheme } from "@/hooks/useTheme";
+import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 import { ThemeToggle } from "@/components/game/ThemeToggle";
 import { ModeCard } from "../components/ModeCard";
 import { Home, Users, Smartphone } from "lucide-react";
@@ -13,6 +14,7 @@ const pageTransition = {
 
 export default function PlayModeSelection() {
   const { theme, toggleTheme } = useTheme();
+  const online = useOnlineStatus();
 
   return (
     <div className="relative flex min-h-svh flex-col bg-background font-figtree">
@@ -62,6 +64,7 @@ export default function PlayModeSelection() {
             to="/play/pass-and-play"
             accent="primary"
             icon={<Smartphone className="h-5 w-5" />}
+            badge={!online ? "Works offline" : undefined}
           />
 
           <ModeCard
@@ -80,7 +83,9 @@ export default function PlayModeSelection() {
           />
 
           <p className="mt-1 text-center text-[11px] leading-relaxed text-muted-foreground">
-            You can switch modes any time. Local Multiplayer syncs both devices in realtime.
+            {online
+              ? "You can switch modes any time. Local Multiplayer syncs both devices in realtime."
+              : "Pass & Play works offline. Local Multiplayer needs internet."}
           </p>
         </section>
       </motion.main>

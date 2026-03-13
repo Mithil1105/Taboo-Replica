@@ -1,0 +1,352 @@
+[
+  {
+    "id": "hollywood-01",
+    "word": "BASIC INSTINCT",
+    "tabooWords": ["SHARON STONE", "ICE PICK", "LEG CROSS", "POLICE", "NO PANTIES"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-02",
+    "word": "FIFTY SHADES",
+    "tabooWords": ["GREY", "BDSM", "RED ROOM", "CONTRACT", "ANASTASIA"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-03",
+    "word": "HARVEY WEINSTEIN",
+    "tabooWords": ["PRODUCER", "ME TOO", "CASTING COUCH", "SCANDAL", "PRISON"],
+    "difficulty": "medium",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-04",
+    "word": "EYES WIDE SHUT",
+    "tabooWords": ["TOM CRUISE", "ORGY", "MASKS", "SECRET SOCIETY", "KUBRICK"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-05",
+    "word": "KIM KARDASHIAN",
+    "tabooWords": ["SEX TAPE", "RAY J", "LEAKED", "FAMOUS", "REALITY TV"],
+    "difficulty": "easy",
+    "category": "Celebs"
+  },
+  {
+    "id": "hollywood-06",
+    "word": "METHOD ACTING",
+    "tabooWords": ["REAL SEX", "NUDITY", "CHARACTER", "PREPARATION", "INTENSE"],
+    "difficulty": "hard",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-07",
+    "word": "BLUE VALENTINE",
+    "tabooWords": ["RYAN GOSLING", "SHOWER", "ORAL", "NC-17", "RELATIONSHIP"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-08",
+    "word": "WARDROBE MALFUNCTION",
+    "tabooWords": ["JANET JACKSON", "SUPER BOWL", "NIP SLIP", "EXPOSED", "LIVE"],
+    "difficulty": "medium",
+    "category": "Scandals"
+  },
+  {
+    "id": "hollywood-09",
+    "word": "MAGIC MIKE",
+    "tabooWords": ["STRIPPER", "CHANNING TATUM", "DANCE", "MALE", "ABS"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-10",
+    "word": "ONLYFANS",
+    "tabooWords": ["SUBSCRIPTION", "BELLA THORNE", "CONTENT", "EXPLICIT", "PAY"],
+    "difficulty": "medium",
+    "category": "Media"
+  },
+  {
+    "id": "hollywood-11",
+    "word": "SEX SCENE",
+    "tabooWords": ["ACTORS", "SIMULATED", "BED", "CHEMISTRY", "BODY DOUBLE"],
+    "difficulty": "easy",
+    "category": "Cinema"
+  },
+  {
+    "id": "hollywood-12",
+    "word": "INTIMACY COORDINATOR",
+    "tabooWords": ["SET", "SAFETY", "CHOREOGRAPHY", "CONSENT", "SCENE"],
+    "difficulty": "hard",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-13",
+    "word": "BROKEBACK MOUNTAIN",
+    "tabooWords": ["COWBOYS", "GAY", "TENT", "HEATH LEDGER", "SECRET"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-14",
+    "word": "NC-17",
+    "tabooWords": ["RATING", "ADULTS ONLY", "CENSOR", "EXPLICIT", "THEATER"],
+    "difficulty": "medium",
+    "category": "Cinema"
+  },
+  {
+    "id": "hollywood-15",
+    "word": "MALENA",
+    "tabooWords": ["MONICA BELLUCCI", "ITALIAN", "BEAUTY", "DESIRE", "STARE"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-16",
+    "word": "PLAYBOY MANSION",
+    "tabooWords": ["HUGH HEFNER", "BUNNIES", "GROTTO", "PARTY", "PAJAMAS"],
+    "difficulty": "medium",
+    "category": "Lifestyle"
+  },
+  {
+    "id": "hollywood-17",
+    "word": "NINE 1/2 WEEKS",
+    "tabooWords": ["FRIDGE", "FOOD", "MICKEY ROURKE", "EROTIC", "BLINDFOLD"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-18",
+    "word": "WOLF OF WALL STREET",
+    "tabooWords": ["CANDLE", "MARGOT ROBBIE", "JORDAN BELFORT", "DRUGS", "MONEY"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-19",
+    "word": "CASTING COUCH",
+    "tabooWords": ["OFFICE", "AUDITION", "FAVOR", "ROLE", "EXPLOITATION"],
+    "difficulty": "easy",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-20",
+    "word": "BOOGIE NIGHTS",
+    "tabooWords": ["PORN STAR", "DIRK DIGGLER", "70S", "LARGE", "MARK WAHLBERG"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-21",
+    "word": "BODY DOUBLE",
+    "tabooWords": ["NUDITY", "STAND IN", "REPLACE", "ACTOR", "SKIN"],
+    "difficulty": "medium",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-22",
+    "word": "CALIGULA",
+    "tabooWords": ["ROMAN", "EMPEROR", "HARDCORE", "CONTROVERSIAL", "ANCIENT"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-23",
+    "word": "WILD THINGS",
+    "tabooWords": ["POOL", "THREEWAY", "DENISE RICHARDS", "KISS", "THRILLER"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-24",
+    "word": "SHAME",
+    "tabooWords": ["MICHAEL FASSBENDER", "ADDICTION", "FRONTAL", "NEW YORK", "COMPULSIVE"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-25",
+    "word": "GOLDEN GLOBES AFTERPARTY",
+    "tabooWords": ["DRUNK", "HOTEL", "HOOKUP", "A-LIST", "DRESS"],
+    "difficulty": "medium",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-26",
+    "word": "AMERICAN PIE",
+    "tabooWords": ["MILF", "STIFLER", "PASTRY", "VIRGINITY", "BEDROOM"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-27",
+    "word": "LIAISON",
+    "tabooWords": ["AFFAIR", "SECRET", "LOVER", "CHEAT", "HOTEL"],
+    "difficulty": "hard",
+    "category": "Tropes"
+  },
+  {
+    "id": "hollywood-28",
+    "word": "FULL FRONTAL",
+    "tabooWords": ["NUDE", "GENITALS", "EXPOSED", "RATING", "UNCENSORED"],
+    "difficulty": "medium",
+    "category": "Cinema"
+  },
+  {
+    "id": "hollywood-29",
+    "word": "STRIPTEASE",
+    "tabooWords": ["DEMI MOORE", "CLOTHES", "POLE", "MONEY", "LAPDANCE"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-30",
+    "word": "Y TU MAMA TAMBIEN",
+    "tabooWords": ["MEXICAN", "ROAD TRIP", "THREEWAY", "GAEL GARCIA", "BEACH"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-31",
+    "word": "PAMELA ANDERSON",
+    "tabooWords": ["BAYWATCH", "TOMMY LEE", "TAPE", "BLONDE", "PLAYBOY"],
+    "difficulty": "easy",
+    "category": "Celebs"
+  },
+  {
+    "id": "hollywood-32",
+    "word": "MILE HIGH CLUB",
+    "tabooWords": ["AIRPLANE", "FLIGHT", "BATHROOM", "JOIN", "ALTITUDE"],
+    "difficulty": "medium",
+    "category": "Tropes"
+  },
+  {
+    "id": "hollywood-33",
+    "word": "GAME OF THRONES",
+    "tabooWords": ["HBO", "NUDITY", "INCEST", "COITUS", "DRAGONS"],
+    "difficulty": "easy",
+    "category": "TV"
+  },
+  {
+    "id": "hollywood-34",
+    "word": "WALK OF SHAME",
+    "tabooWords": ["MORNING", "HEELS", "DRESS", "NIGHT BEFORE", "HOME"],
+    "difficulty": "medium",
+    "category": "Tropes"
+  },
+  {
+    "id": "hollywood-35",
+    "word": "CRUEL INTENTIONS",
+    "tabooWords": ["REESE WITHERSPOON", "STEPSIBLINGS", "BET", "KISS", "VALMONT"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-36",
+    "word": "INTIMATE TAPE",
+    "tabooWords": ["LEAKED", "CELEBRITY", "PRIVATE", "BEDROOM", "SCANDAL"],
+    "difficulty": "easy",
+    "category": "Scandals"
+  },
+  {
+    "id": "hollywood-37",
+    "word": "SHOWGIRLS",
+    "tabooWords": ["LAS VEGAS", "POOL", "STRIPPER", "LAPDANCE", "NC-17"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-38",
+    "word": "MILF",
+    "tabooWords": ["MOTHER", "STIFLER", "OLDER", "ATTRACTIVE", "COUGAR"],
+    "difficulty": "easy",
+    "category": "Slang"
+  },
+  {
+    "id": "hollywood-39",
+    "word": "BOUND",
+    "tabooWords": ["WACHOWSKIS", "LESBIAN", "MAFIA", "TIE UP", "THRILLER"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-40",
+    "word": "FATAL ATTRACTION",
+    "tabooWords": ["BUNNY", "BOILING", "AFFAIR", "GLENN CLOSE", "STALKER"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-41",
+    "word": "PENTHOUSE",
+    "tabooWords": ["MAGAZINE", "ADULT", "PET", "NUDITY", "READ"],
+    "difficulty": "medium",
+    "category": "Media"
+  },
+  {
+    "id": "hollywood-42",
+    "word": "SEX SYMBOL",
+    "tabooWords": ["MARILYN MONROE", "ICON", "DESIRE", "FAMOUS", "ATTRACTIVE"],
+    "difficulty": "medium",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-43",
+    "word": "UNFAITHFUL",
+    "tabooWords": ["DIANE LANE", "CHEAT", "TRAIN", "HUSBAND", "LOVER"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-44",
+    "word": "SADOMASOCHISM",
+    "tabooWords": ["PAIN", "PLEASURE", "WHIP", "BDSM", "DOMINANT"],
+    "difficulty": "hard",
+    "category": "Kink"
+  },
+  {
+    "id": "hollywood-45",
+    "word": "THE GRADUATE",
+    "tabooWords": ["MRS ROBINSON", "OLDER WOMAN", "SEDUCE", "AFFAIR", "LEG"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "hollywood-46",
+    "word": "PAPARAZZI",
+    "tabooWords": ["CAMERA", "PHOTOS", "CANDID", "PRIVACY", "STALKING"],
+    "difficulty": "easy",
+    "category": "Industry"
+  },
+  {
+    "id": "hollywood-47",
+    "word": "SUGAR DADDY",
+    "tabooWords": ["MONEY", "OLDER MAN", "PAY", "RELATIONSHIP", "GIFTS"],
+    "difficulty": "medium",
+    "category": "Slang"
+  },
+  {
+    "id": "hollywood-48",
+    "word": "HOTEL RENDEZVOUS",
+    "tabooWords": ["SECRET", "MEETING", "ROOM", "AFFAIR", "CHECK IN"],
+    "difficulty": "medium",
+    "category": "Tropes"
+  },
+  {
+    "id": "hollywood-49",
+    "word": "SKINEMAX",
+    "tabooWords": ["CINEMAX", "LATE NIGHT", "SOFTCORE", "CABLE TV", "EROTIC"],
+    "difficulty": "hard",
+    "category": "Media"
+  },
+  {
+    "id": "hollywood-50",
+    "word": "LUST",
+    "tabooWords": ["DESIRE", "WANT", "SIN", "PASSION", "EYES"],
+    "difficulty": "easy",
+    "category": "Feelings"
+  }
+]

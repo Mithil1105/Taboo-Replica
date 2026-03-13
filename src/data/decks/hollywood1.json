@@ -1,0 +1,603 @@
+[
+  {
+    "id": "hollywood-01",
+    "word": "Leonardo DiCaprio",
+    "taboo_words": ["Titanic", "Oscar", "Model", "Inception", "Under 25"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-02",
+    "word": "Nepo Baby",
+    "taboo_words": ["Parents", "Famous", "Industry", "Privilege", "Lily-Rose Depp"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-03",
+    "word": "Method Acting",
+    "taboo_words": ["Jared Leto", "Character", "Stay", "Intense", "Preparation"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-04",
+    "word": "The Oscars",
+    "taboo_words": ["Academy", "Statue", "Speech", "Red Carpet", "Awards"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-05",
+    "word": "Botox",
+    "taboo_words": ["Face", "Wrinkles", "Plastic", "Needle", "Frozen"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-06",
+    "word": "Intimacy Coordinator",
+    "taboo_words": ["Sex Scene", "Naked", "Safe", "Set", "Actor"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-07",
+    "word": "Marvel",
+    "taboo_words": ["MCU", "Superheroes", "Disney", "Comics", "Iron Man"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-08",
+    "word": "Stunt Double",
+    "taboo_words": ["Action", "Body", "Danger", "Lookalike", "Replacement"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-09",
+    "word": "Tom Cruise",
+    "taboo_words": ["Mission Impossible", "Scientology", "Top Gun", "Stunts", "Running"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-10",
+    "word": "Casting Couch",
+    "taboo_words": ["Scandal", "Harvey Weinstein", "Audition", "Director", "Me Too"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-11",
+    "word": "Meryl Streep",
+    "taboo_words": ["Nominations", "Acting", "Devil Wears Prada", "Legend", "Accent"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-12",
+    "word": "Director's Cut",
+    "taboo_words": ["Version", "Length", "Editing", "Final", "Vision"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-13",
+    "word": "Kim Kardashian",
+    "taboo_words": ["Reality TV", "Tape", "Skims", "Famous", "Kanye"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-14",
+    "word": "Ghostwriter",
+    "taboo_words": ["Script", "Author", "Credit", "Secret", "Book"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-15",
+    "word": "Brad Pitt",
+    "taboo_words": ["Angelina", "Fight Club", "Actor", "Jennifer Aniston", "Handsome"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-16",
+    "word": "Paparazzi",
+    "taboo_words": ["Photos", "Camera", "Stalk", "Tabloid", "TMZ"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-17",
+    "word": "The Walk of Fame",
+    "taboo_words": ["Star", "Sidewalk", "Hollywood Blvd", "Name", "Cement"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-18",
+    "word": "Rehab",
+    "taboo_words": ["Drugs", "Alcohol", "Center", "Celebrity", "Clean"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-19",
+    "word": "Zendaya",
+    "taboo_words": ["Euphoria", "Spider-Man", "Tom Holland", "Fashion", "Dune"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-20",
+    "word": "Box Office Bomb",
+    "taboo_words": ["Flop", "Money", "Loss", "Failure", "Movie"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-21",
+    "word": "Snyder Cut",
+    "taboo_words": ["Justice League", "DC", "Fans", "Director", "Campaign"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-22",
+    "word": "Jennifer Lawrence",
+    "taboo_words": ["Hunger Games", "Katniss", "Relatable", "Oscar", "J-Law"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-23",
+    "word": "A-List",
+    "taboo_words": ["Famous", "Star", "Top", "Elite", "Celebrity"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-24",
+    "word": "Green Screen",
+    "taboo_words": ["CGI", "Effects", "Background", "Special", "Acting"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-25",
+    "word": "Quentin Tarantino",
+    "taboo_words": ["Feet", "Director", "Pulp Fiction", "Blood", "Violence"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-26",
+    "word": "PR Marriage",
+    "taboo_words": ["Contract", "Fake", "Relationship", "Stunt", "Publicity"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-27",
+    "word": "Christopher Nolan",
+    "taboo_words": ["Inception", "Batman", "Time", "Oppenheimer", "Director"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-28",
+    "word": "One-Hit Wonder",
+    "taboo_words": ["Fame", "Success", "Once", "Disappear", "Career"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-29",
+    "word": "Margot Robbie",
+    "taboo_words": ["Barbie", "Harley Quinn", "Wolf of Wall Street", "Australian", "Blonde"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-30",
+    "word": "Nondisclosure Agreement (NDA)",
+    "taboo_words": ["Secret", "Legal", "Contract", "Silence", "Lawsuit"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-31",
+    "word": "Streaming Service",
+    "taboo_words": ["Netflix", "Hulu", "Disney Plus", "Watch", "TV"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-32",
+    "word": "CGI",
+    "taboo_words": ["Computer", "Graphics", "Fake", "Effects", "Animation"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-33",
+    "word": "Lady Gaga",
+    "taboo_words": ["Singer", "A Star Is Born", "Monster", "Pop", "Meat Dress"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-34",
+    "word": "Indie Film",
+    "taboo_words": ["Budget", "Independent", "Sundance", "Studio", "Art"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-35",
+    "word": "Blacklist",
+    "taboo_words": ["Banned", "Industry", "Career", "Hollywood", "Political"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-36",
+    "word": "Ryan Gosling",
+    "taboo_words": ["Ken", "The Notebook", "Barbie", "La La Land", "Handsome"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-37",
+    "word": "Franchise",
+    "taboo_words": ["Series", "Sequel", "Movie", "Brand", "Trilogy"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-38",
+    "word": "Red Carpet",
+    "taboo_words": ["Dress", "Premiere", "Photos", "Walk", "Fashion"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-39",
+    "word": "The Golden Globes",
+    "taboo_words": ["Awards", "HFPA", "Drinking", "Dinner", "Ceremony"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-40",
+    "word": "Typecasting",
+    "taboo_words": ["Role", "Same", "Character", "Actor", "Stereotype"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-41",
+    "word": "Johnny Depp",
+    "taboo_words": ["Pirates", "Amber Heard", "Jack Sparrow", "Trial", "Tim Burton"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-42",
+    "word": "Golden Razzie",
+    "taboo_words": ["Worst", "Award", "Film", "Bad", "Parody"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-43",
+    "word": "Scarlett Johansson",
+    "taboo_words": ["Black Widow", "Avengers", "Marvel", "Voice", "Actress"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-44",
+    "word": "Jump Scare",
+    "taboo_words": ["Horror", "Loud", "Startle", "Ghost", "Movie"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-45",
+    "word": "The Rock",
+    "taboo_words": ["Dwayne Johnson", "Wrestling", "Action", "Muscle", "Jumanji"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-46",
+    "word": "Ensemble Cast",
+    "taboo_words": ["Group", "Actors", "Many", "Stars", "Movie"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-47",
+    "word": "Method Actor",
+    "taboo_words": ["Daniel Day-Lewis", "Crazy", "Stay", "Acting", "Process"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "hollywood-48",
+    "word": "Cannes Film Festival",
+    "taboo_words": ["France", "Awards", "Palme d'Or", "Movies", "Prestigious"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "hollywood-49",
+    "word": "Angelina Jolie",
+    "taboo_words": ["Brad Pitt", "Lara Croft", "Director", "Tattoo", "Children"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "hollywood-50",
+    "word": "Post-Credits Scene",
+    "taboo_words": ["Marvel", "End", "After", "Tease", "Wait"],
+    "difficulty": "medium"
+  }
+  ,
+    {
+      "id": "hollywood-51",
+      "word": "Will Smith",
+      "taboo_words": ["Slap", "Chris Rock", "Oscars", "Fresh Prince", "Jada"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-52",
+      "word": "Post-Production",
+      "taboo_words": ["Editing", "CGI", "Sound", "After", "Fix"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-53",
+      "word": "Cult Classic",
+      "taboo_words": ["Fans", "Flop", "Follower", "Rocky Horror", "Niche"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-54",
+      "word": "Keanu Reeves",
+      "taboo_words": ["John Wick", "Matrix", "Neo", "Speed", "Breathtaking"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-55",
+      "word": "Ghostface",
+      "taboo_words": ["Scream", "Mask", "Knife", "Phone Call", "Horror"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-56",
+      "word": "Screenplay",
+      "taboo_words": ["Script", "Dialogue", "Writer", "Pages", "Draft"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-57",
+      "word": "Steven Spielberg",
+      "taboo_words": ["Jaws", "ET", "Director", "Jurassic Park", "Legend"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-58",
+      "word": "Mary-Kate & Ashley",
+      "taboo_words": ["Twins", "Olsen", "Full House", "Fashion", "Child Stars"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-59",
+      "word": "Creative Differences",
+      "taboo_words": ["Fired", "Director", "Argument", "Studio", "Quit"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-60",
+      "word": "The Joker",
+      "taboo_words": ["Batman", "Heath Ledger", "Clown", "Harley Quinn", "Gotham"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-61",
+      "word": "Box Office Poison",
+      "taboo_words": ["Unpopular", "Career", "Flop", "Avoid", "Actor"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-62",
+      "word": "Viola Davis",
+      "taboo_words": ["EGOT", "Acting", "Fences", "Help", "Powerful"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-63",
+      "word": "Rom-Com",
+      "taboo_words": ["Love", "Comedy", "Girlfriend", "Date", "Genre"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-64",
+      "word": "Final Girl",
+      "taboo_words": ["Horror", "Survivor", "Last", "Slasher", "Movie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-65",
+      "word": "Cillian Murphy",
+      "taboo_words": ["Oppenheimer", "Peaky Blinders", "Eyes", "Irish", "Nolan"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-66",
+      "word": "Executive Producer",
+      "taboo_words": ["Money", "Funding", "Credit", "Business", "Boss"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-67",
+      "word": "The Godfather",
+      "taboo_words": ["Mafia", "Marlon Brando", "Corleone", "Offer", "Crime"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-68",
+      "word": "Nepotism Baby",
+      "taboo_words": ["Parents", "Hollywood", "Connections", "Star", "Unfair"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-69",
+      "word": "Body Horror",
+      "taboo_words": ["Gross", "Physical", "Cronenberg", "Mutation", "Graphic"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-70",
+      "word": "Marilyn Monroe",
+      "taboo_words": ["Blonde", "Icon", "Dress", "Norma Jeane", "Hollywood"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-71",
+      "word": "Spaghetti Western",
+      "taboo_words": ["Cowboy", "Italy", "Clint Eastwood", "Gun", "Director"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-72",
+      "word": "Showrunner",
+      "taboo_words": ["TV", "Boss", "Series", "Creator", "Writer"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-73",
+      "word": "The Avengers",
+      "taboo_words": ["Iron Man", "Marvel", "Assembled", "Thanos", "Group"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-74",
+      "word": "Cameo",
+      "taboo_words": ["Short", "Appearance", "Surprise", "Famous", "Role"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-75",
+      "word": "Alfred Hitchcock",
+      "taboo_words": ["Suspense", "Psycho", "Birds", "Director", "Thriller"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-76",
+      "word": "Development Hell",
+      "taboo_words": ["Stuck", "Waiting", "Years", "Production", "Script"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-77",
+      "word": "Samuel L. Jackson",
+      "taboo_words": ["Motherf***", "Pulp Fiction", "Marvel", "Fury", "Actor"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-78",
+      "word": "Cinematographer",
+      "taboo_words": ["Lighting", "Camera", "Look", "Visuals", "Director of Photography"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-79",
+      "word": "Voice Acting",
+      "taboo_words": ["Cartoon", "Microphone", "Animation", "Studio", "Dubbing"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-80",
+      "word": "James Bond",
+      "taboo_words": ["007", "Spy", "Martini", "Agent", "British"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-81",
+      "word": "MacGuffin",
+      "taboo_words": ["Object", "Plot", "Goal", "Search", "Device"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-82",
+      "word": "Julia Roberts",
+      "taboo_words": ["Pretty Woman", "Smile", "Actress", "Erin Brockovich", "Icon"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-83",
+      "word": "Screen Actors Guild (SAG)",
+      "taboo_words": ["Union", "Strike", "Protection", "Actors", "Fees"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-84",
+      "word": "Star Wars",
+      "taboo_words": ["Jedi", "Vader", "Force", "Lightsaber", "Lucas"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-85",
+      "word": "Film Noir",
+      "taboo_words": ["Dark", "Detective", "Black and White", "Shadows", "Crime"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-86",
+      "word": "Natalie Portman",
+      "taboo_words": ["Black Swan", "Star Wars", "Oscar", "Smart", "Actress"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-87",
+      "word": "Greenlight",
+      "taboo_words": ["Approval", "Start", "Studio", "Money", "Project"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-88",
+      "word": "M. Night Shyamalan",
+      "taboo_words": ["Twist", "Ending", "Director", "Sixth Sense", "Signs"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-89",
+      "word": "Dwayne Johnson",
+      "taboo_words": ["Rock", "WWE", "Muscle", "Jumanji", "Action"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-90",
+      "word": "Ego Trip",
+      "taboo_words": ["Director", "Arrogant", "Project", "Selfish", "Power"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-91",
+      "word": "Harry Potter",
+      "taboo_words": ["Wizard", "Magic", "Wand", "Hogwarts", "Books"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-92",
+      "word": "Jump Cut",
+      "taboo_words": ["Editing", "Sudden", "Fast", "Scene", "Abrupt"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "hollywood-93",
+      "word": "Robert Downey Jr.",
+      "taboo_words": ["Iron Man", "Tony Stark", "Marvel", "Oppenheimer", "Sherlock"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-94",
+      "word": "Breaking the Fourth Wall",
+      "taboo_words": ["Camera", "Audience", "Speak", "Deadpool", "Direct"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-95",
+      "word": "Method Actress",
+      "taboo_words": ["Role", "Stay", "Intense", "Lady Gaga", "Character"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-96",
+      "word": "Hollywood Walk of Fame",
+      "taboo_words": ["Star", "Sidewalk", "Street", "Name", "Tourist"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "hollywood-97",
+      "word": "Black Comedy",
+      "taboo_words": ["Dark", "Death", "Funny", "Sick", "Humor"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-98",
+      "word": "Stan Lee",
+      "taboo_words": ["Marvel", "Comics", "Cameo", "Creator", "Spider-Man"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-99",
+      "word": "The Academy",
+      "taboo_words": ["Oscars", "Voting", "Awards", "Statue", "Ceremony"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "hollywood-100",
+      "word": "Final Cut",
+      "taboo_words": ["Director", "Editing", "Version", "End", "Control"],
+      "difficulty": "hard"
+    }
+  ]

@@ -42,7 +42,7 @@ export function TabooWordPicker({ open, onOpenChange, tabooWords, onConfirm }: T
             Which taboo word was spoken?
           </AlertDialogTitle>
           <AlertDialogDescription className="text-muted-foreground">
-            Select the word the clue giver said. This will subtract 1 point from their team.
+            Select the word the clue giver said. Clue team loses 1 point, your team gains 1.
           </AlertDialogDescription>
         </AlertDialogHeader>
 

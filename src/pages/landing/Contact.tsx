@@ -46,7 +46,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-border/80 bg-card/80 p-6 md:p-8">
                 <p className="text-sm text-muted-foreground">
-                  This form is a placeholder. Connect it to your backend or email service when ready.
+                  Share feedback, report bugs, or suggest new decks. We read every message.
                 </p>
                 <div className="space-y-2">
                   <Label htmlFor="contact-email">Email</Label>

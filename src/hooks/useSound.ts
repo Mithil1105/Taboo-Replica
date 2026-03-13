@@ -1,8 +1,25 @@
 // Synthesized sound effects using Web Audio API - no backend needed
+const SOUND_KEY = "taboo-sound-enabled";
+
+export function isSoundEnabled(): boolean {
+  if (typeof window === "undefined") return true;
+  const v = localStorage.getItem(SOUND_KEY);
+  return v === null || v === "1";
+}
+
+export function setSoundEnabled(enabled: boolean): void {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(SOUND_KEY, enabled ? "1" : "0");
+}
+
 const audioCtx = () => {
   const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
   return ctx;
 };
+
+function shouldPlay(): boolean {
+  return isSoundEnabled();
+}
 
 function playTone(
   frequency: number,
@@ -52,13 +69,13 @@ function playNoise(duration: number, volume = 0.15) {
 }
 
 export function playCorrectSound() {
-  // Two ascending tones - cheerful ding
+  if (!shouldPlay()) return;
   playTone(523, 0.12, "sine", 0.25); // C5
   setTimeout(() => playTone(659, 0.2, "sine", 0.25), 80); // E5
 }
 
 export function playSkipSound() {
-  // Quick low whoosh
+  if (!shouldPlay()) return;
   const ctx = audioCtx();
   const osc = ctx.createOscillator();
   const gain = ctx.createGain();
@@ -75,14 +92,14 @@ export function playSkipSound() {
 }
 
 export function playTabooSound() {
-  // Harsh buzzer - two dissonant tones + noise
+  if (!shouldPlay()) return;
   playTone(180, 0.35, "square", 0.15);
   playTone(160, 0.35, "sawtooth", 0.1);
   playNoise(0.25, 0.08);
 }
 
 export function playTimerBuzzerSound() {
-  // Long buzzer - descending
+  if (!shouldPlay()) return;
   playTone(600, 0.15, "square", 0.2);
   setTimeout(() => playTone(500, 0.15, "square", 0.2), 120);
   setTimeout(() => playTone(350, 0.4, "square", 0.25), 240);
@@ -90,5 +107,14 @@ export function playTimerBuzzerSound() {
 }
 
 export function playTickSound() {
+  if (!shouldPlay()) return;
   playTone(1000, 0.05, "sine", 0.08);
+}
+
+export function playRoundEndSound() {
+  if (!shouldPlay()) return;
+  playTone(523, 0.1, "sine", 0.2); // C5
+  setTimeout(() => playTone(659, 0.1, "sine", 0.2), 80); // E5
+  setTimeout(() => playTone(784, 0.15, "sine", 0.25), 160); // G5
+  setTimeout(() => playTone(1047, 0.2, "sine", 0.2), 240); // C6
 }

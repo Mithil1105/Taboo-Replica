@@ -1,16 +1,10 @@
 /**
  * Development-only debug panel for room/session state visibility.
- * Only visible when VITE_DEBUG=true or import.meta.env.DEV with ?debug=1 in URL.
+ * Only visible when VITE_DEBUG=true or ?debug=1 in dev.
  */
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-
-const isDebugEnabled = () => {
-  if (typeof window === "undefined") return false;
-  if (import.meta.env.VITE_DEBUG === "true") return true;
-  if (import.meta.env.DEV && new URLSearchParams(window.location.search).get("debug") === "1") return true;
-  return false;
-};
+import { isDebugEnabled } from "@/lib/debug";
 
 interface DebugPanelProps {
   roomCode?: string | null;

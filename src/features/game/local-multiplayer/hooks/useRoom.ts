@@ -65,6 +65,7 @@ export function useRoom(
 
         roomChannel = subscribeToRoom(result.room.id, (updated) => {
           setRoom(updated);
+          if (!updated) setError("Room no longer exists.");
         });
 
         participantsChannel = subscribeToParticipants(result.room.id, (list) => {

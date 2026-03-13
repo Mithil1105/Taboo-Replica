@@ -1,0 +1,352 @@
+[
+  {
+    "id": "bollywood-01",
+    "word": "ITEM NUMBER",
+    "tabooWords": ["DANCE", "BELLY", "SONG", "SPECIAL APPEARANCE", "REVEALING"],
+    "difficulty": "easy",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-02",
+    "word": "EMRAAN HASHMI",
+    "tabooWords": ["SERIAL KISSER", "MURDER", "LIPS", "ASHIQ BANAYA", "HERO"],
+    "difficulty": "easy",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-03",
+    "word": "SUNNY LEONE",
+    "tabooWords": ["ADULT STAR", "JISM 2", "BABY DOLL", "PORN", "CANADA"],
+    "difficulty": "easy",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-04",
+    "word": "KAMA SUTRA",
+    "tabooWords": ["POSITIONS", "ANCIENT", "INDIA", "BOOK", "PLEASURE"],
+    "difficulty": "easy",
+    "category": "History"
+  },
+  {
+    "id": "bollywood-05",
+    "word": "DIRTY PICTURE",
+    "tabooWords": ["VIDYA BALAN", "SILK SMITHA", "OOH LA LA", "SOUTH", "CLEAVAGE"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-06",
+    "word": "LUST STORIES",
+    "tabooWords": ["NETFLIX", "KIARA ADVANI", "VIBRATOR", "ANTHOLOGY", "KARAN JOHAR"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-07",
+    "word": "CASTING COUCH",
+    "tabooWords": ["DIRECTOR", "FAVOR", "AUDITION", "STRUGGLE", "COMPROMISE"],
+    "difficulty": "hard",
+    "category": "Industry"
+  },
+  {
+    "id": "bollywood-08",
+    "word": "MALLIKA SHERAWAT",
+    "tabooWords": ["MURDER", "KISS", "BOLD", "BEEBEE", "SEX SYMBOL"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-09",
+    "word": "CHOLI KE PEECHE",
+    "tabooWords": ["BLOUSE", "UNDERNEATH", "SONG", "MADHURI", "HEART"],
+    "difficulty": "hard",
+    "category": "Songs"
+  },
+  {
+    "id": "bollywood-10",
+    "word": "GRAND MASTI",
+    "tabooWords": ["ADULT COMEDY", "JOKES", "SEXUAL", "MOVIE", "VULGAR"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-11",
+    "word": "VICKY DONOR",
+    "tabooWords": ["SPERM", "INFERTILITY", "AYUSHMANN", "PREGNANCY", "DOCTOR"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-12",
+    "word": "HATE STORY",
+    "tabooWords": ["REVENGE", "THRILLER", "SKIN SHOW", "EROTIC", "SERIES"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-13",
+    "word": "POONAM PANDEY",
+    "tabooWords": ["STRIP", "CRICKET", "WORLD CUP", "APP", "INSTAGRAM"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-14",
+    "word": "SHERLYN CHOPRA",
+    "tabooWords": ["PLAYBOY", "MAGAZINE", "NUDE", "BOLD", "KAMA SUTRA 3D"],
+    "difficulty": "hard",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-15",
+    "word": "BIPASHA BASU",
+    "tabooWords": ["JISM", "ALONE", "HORROR", "HOT", "DUSKY"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-16",
+    "word": "MIRZAPUR SCENES",
+    "tabooWords": ["GUDDU", "BEENA TRIPATHI", "BED", "RAW", "VIOLENCE"],
+    "difficulty": "hard",
+    "category": "Web Series"
+  },
+  {
+    "id": "bollywood-17",
+    "word": "LOVEMAKING",
+    "tabooWords": ["BED", "INTIMATE", "CHEMISTRY", "ACTORS", "SHOWER"],
+    "difficulty": "medium",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-18",
+    "word": "SARKAI LO KHATIYA",
+    "tabooWords": ["BED", "GOVINDA", "SONG", "MOVE", "WINTER"],
+    "difficulty": "hard",
+    "category": "Songs"
+  },
+  {
+    "id": "bollywood-19",
+    "word": "VANITY VAN",
+    "tabooWords": ["ACTOR", "MAKEUP", "PRIVATE", "AFFAIR", "TRAILER"],
+    "difficulty": "medium",
+    "category": "Industry"
+  },
+  {
+    "id": "bollywood-20",
+    "word": "RADHIKA APTE",
+    "tabooWords": ["PARCHED", "NUDE", "LEAK", "ACTRESS", "BOLD"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-21",
+    "word": "JISM",
+    "tabooWords": ["BODY", "JOHN ABRAHAM", "EROTIC", "THRILLER", "BIPASHA"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-22",
+    "word": "B-GRADE MOVIE",
+    "tabooWords": ["LOW BUDGET", "SHAKILA", "SOUTH", "VULGAR", "EXPLOITATION"],
+    "difficulty": "medium",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-23",
+    "word": "SACRED GAMES",
+    "tabooWords": ["NAWAZUDDIN", "KUKOO", "FRONTAL", "NETFLIX", "GAITONDE"],
+    "difficulty": "medium",
+    "category": "Web Series"
+  },
+  {
+    "id": "bollywood-24",
+    "word": "GANDII BAAT",
+    "tabooWords": ["ALT BALAZI", "RURAL", "DIRTY TALK", "EROTICA", "EPISODES"],
+    "difficulty": "medium",
+    "category": "Web Series"
+  },
+  {
+    "id": "bollywood-25",
+    "word": "SILK SMITHA",
+    "tabooWords": ["SOUTH", "ACTRESS", "DIRTY PICTURE", "DANCE", "SUICIDE"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-26",
+    "word": "FASHION SCANDAL",
+    "tabooWords": ["WARDROBE MALFUNCTION", "RAMP", "DRESS", "OOPS", "MODELS"],
+    "difficulty": "medium",
+    "category": "Industry"
+  },
+  {
+    "id": "bollywood-27",
+    "word": "HUNTERRR",
+    "tabooWords": ["GULSHAN DEVAIAH", "ADDICTION", "WOMANIZER", "SEX", "COMEDY"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-28",
+    "word": "ONE NIGHT STAND",
+    "tabooWords": ["SUNNY LEONE", "MORNING", "FLING", "HOOKUP", "HOTEL"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-29",
+    "word": "KISSING CONTEST",
+    "tabooWords": ["LIPS", "RECORDS", "EMRAAN", "MALLIKA", "DURATION"],
+    "difficulty": "hard",
+    "category": "Industry"
+  },
+  {
+    "id": "bollywood-30",
+    "word": "MMS LEAK",
+    "tabooWords": ["VIDEO", "KAREENA", "SCANDAL", "SHAHID", "PHONE"],
+    "difficulty": "hard",
+    "category": "Industry"
+  },
+  {
+    "id": "bollywood-31",
+    "word": "SHAKILA",
+    "tabooWords": ["B-GRADE", "SOUTH", "SILK", "BOLD", "MALAYALAM"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-32",
+    "word": "DARD-E-DISCO",
+    "tabooWords": ["SRK", "ABS", "SHIRTLESS", "SONG", "DANCE"],
+    "difficulty": "easy",
+    "category": "Songs"
+  },
+  {
+    "id": "bollywood-33",
+    "word": "ZEENAT AMAN",
+    "tabooWords": ["SATYAM SHIVAM", "BOLD", "TRANSPARENT", "SAREE", "VINTAGE"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-34",
+    "word": "MAHESH BHATT",
+    "tabooWords": ["DIRECTOR", "BOLD", "POOJA", "KISS", "CONTROVERSY"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-35",
+    "word": "CLEAVAGE SHOT",
+    "tabooWords": ["CAMERA", "ANGLE", "BREASTS", "LOW CUT", "ZOOM"],
+    "difficulty": "easy",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-36",
+    "word": "RAAJKUMAR RAO",
+    "tabooWords": ["LSD", "SEX", "CAMERA", "REALISTIC", "BOLD"],
+    "difficulty": "hard",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-37",
+    "word": "MASTIZAADE",
+    "tabooWords": ["SUNNY LEONE", "TUSSHAR KAPOOR", "ADULT", "JOKES", "DOUBLE ENTENDRE"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-38",
+    "word": "SAREE TEASE",
+    "tabooWords": ["TIP TIP", "RAIN", "WET", "DANCE", "DRAPE"],
+    "difficulty": "easy",
+    "category": "Tropes"
+  },
+  {
+    "id": "bollywood-39",
+    "word": "KYA KOOL HAIN HUM",
+    "tabooWords": ["RITESH", "TUSSHAR", "ADULT", "FRANCHISE", "COMEDY"],
+    "difficulty": "easy",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-40",
+    "word": "NASHA",
+    "tabooWords": ["POONAM PANDEY", "TEACHER", "STUDENT", "BOLD", "EROTIC"],
+    "difficulty": "medium",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-41",
+    "word": "REKHA",
+    "tabooWords": ["UTSAV", "BOLD", "KAMA SUTRA", "VINTAGE", "BEAUTY"],
+    "difficulty": "hard",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-42",
+    "word": "EKTA KAPOOR",
+    "tabooWords": ["ALT BALAJI", "EROTICA", "WEB SERIES", "PRODUCER", "BOLD CONTENT"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-43",
+    "word": "BHAAG D K BOSE",
+    "tabooWords": ["DELHI BELLY", "SWEAR", "ABUSE", "SONG", "FAST"],
+    "difficulty": "hard",
+    "category": "Songs"
+  },
+  {
+    "id": "bollywood-44",
+    "word": "AAMIR KHAN",
+    "tabooWords": ["PK", "NUDE", "POSTER", "TRANSISTOR", "RADIO"],
+    "difficulty": "medium",
+    "category": "Celebs"
+  },
+  {
+    "id": "bollywood-45",
+    "word": "BOOM",
+    "tabooWords": ["KATRINA KAIF", "GULSHAN GROVER", "BOLD", "DEBUT", "SCANDAL"],
+    "difficulty": "hard",
+    "category": "Movies"
+  },
+  {
+    "id": "bollywood-46",
+    "word": "B-GRADE POSTER",
+    "tabooWords": ["STREET", "WALL", "VULGAR", "SKIN", "ADULT"],
+    "difficulty": "easy",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-47",
+    "word": "INTIMATE SCENE",
+    "tabooWords": ["BED", "CLOSE", "KISS", "CHEMISTRY", "SHOWER"],
+    "difficulty": "easy",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-48",
+    "word": "DOUBLE ENTENDRE",
+    "tabooWords": ["MEANING", "DIRTY", "JOKE", "LYRICS", "COMEDY"],
+    "difficulty": "medium",
+    "category": "Tropes"
+  },
+  {
+    "id": "bollywood-49",
+    "word": "CABARET",
+    "tabooWords": ["HELEN", "DANCE", "CLUB", "REVEALING", "VINTAGE"],
+    "difficulty": "medium",
+    "category": "Cinema"
+  },
+  {
+    "id": "bollywood-50",
+    "word": "AFFAIR",
+    "tabooWords": ["SECRET", "SCANDAL", "EXTRA MARITAL", "ACTORS", "GOSSIP"],
+    "difficulty": "easy",
+    "category": "Industry"
+  }
+]

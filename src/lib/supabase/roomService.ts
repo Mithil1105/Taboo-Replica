@@ -246,17 +246,14 @@ export async function leaveRoom(input: LeaveRoomInput): Promise<void> {
     .eq("room_id", room.id)
     .eq("device_id", input.deviceId);
 
-  // If no one left connected, mark room as closed
+  // If no one left connected, clean up room data to avoid storage growth
   const { data: remaining } = await supabase
     .from("room_participants")
     .select("id")
     .eq("room_id", room.id)
     .eq("connected", true);
   if (!remaining?.length) {
-    await supabase
-      .from("rooms")
-      .update({ status: "closed" as RoomStatus, updated_at: new Date().toISOString() })
-      .eq("id", room.id);
+    await cleanupRoomData(room.id);
   }
 }
 
@@ -320,14 +317,23 @@ export async function updateRoomSetup(roomId: string, setup: RoomSetupInput): Pr
   if (error) throw error;
 }
 
-/** Close a room (sets status to closed). Host can use this to end the game for everyone. */
-export async function closeRoom(roomId: string): Promise<void> {
+/**
+ * Permanently delete room data to avoid storage growth.
+ * Deletes: game_sessions (taboo_events cascade), room_participants, room.
+ * Use when host ends game or when everyone has left.
+ */
+export async function cleanupRoomData(roomId: string): Promise<void> {
   const supabase = getSupabaseClient();
-  const { error } = await supabase
-    .from("rooms")
-    .update({ status: "closed" as RoomStatus, updated_at: new Date().toISOString() })
-    .eq("id", roomId);
+  // 1. Delete game_sessions (taboo_events cascade automatically)
+  await supabase.from("game_sessions").delete().eq("room_id", roomId);
+  // 2. Delete room (room_participants cascade automatically)
+  const { error } = await supabase.from("rooms").delete().eq("id", roomId);
   if (error) throw error;
+}
+
+/** Close a room and clean up all data. Host can use this to end the game for everyone. */
+export async function closeRoom(roomId: string): Promise<void> {
+  await cleanupRoomData(roomId);
 }
 
 export async function getRoomWithParticipants(roomCode: string): Promise<RoomWithParticipants | null> {

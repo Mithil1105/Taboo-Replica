@@ -8,11 +8,25 @@ import type { Card } from "@/types";
 import classicEveryday from "@/data/decks/classic-everyday.json";
 import moviesPopculture from "@/data/decks/movies-popculture.json";
 import nsfw from "@/data/decks/nsfw.json";
+import classic from "@/data/decks/classic.json";
+import classic2 from "@/data/decks/classic2.json";
+import bollywood1 from "@/data/decks/bollywood-1.json";
+import bollywood2 from "@/data/decks/bollywood2.json";
+import hollywood1 from "@/data/decks/hollywood1.json";
+import hollywood2 from "@/data/decks/hollywood2.json";
+import nsfw2 from "@/data/decks/nsfw2.json";
 
 const deckRawMap: Record<string, unknown> = {
   "classic-everyday": classicEveryday,
   "movies-popculture": moviesPopculture,
   nsfw: nsfw,
+  classic: classic,
+  classic2: classic2,
+  "bollywood-1": bollywood1,
+  bollywood2: bollywood2,
+  hollywood1: hollywood1,
+  hollywood2: hollywood2,
+  nsfw2: nsfw2,
 };
 
 function shuffle<T>(array: T[]): T[] {
@@ -29,8 +43,7 @@ function loadCardsFromDecks(deckIds: string[]): Card[] {
   deckIds.forEach((id) => {
     const raw = deckRawMap[id];
     const cards = raw ? validateDeck(raw, id) : [];
-    if (cards.length === 0 && deckRawMap[id]) {
-      // deck exists but validation filtered all
+    if (cards.length === 0 && deckRawMap[id] && import.meta.env.DEV) {
       console.warn(`[session] Deck ${id} has no valid cards after validation`);
     }
     all.push(...cards);
@@ -167,8 +180,8 @@ export async function advanceCard(
   } else if (action === "skip") {
     roundSkipped += 1;
   } else if (action === "taboo") {
-    scoreA = team === "A" ? scoreA - 1 : scoreA;
-    scoreB = team === "B" ? scoreB - 1 : scoreB;
+    scoreA = team === "A" ? scoreA - 1 : scoreA + (team === "B" ? 1 : 0);
+    scoreB = team === "B" ? scoreB - 1 : scoreB + (team === "A" ? 1 : 0);
     roundTaboo += 1;
     usedIds.push(cardId);
     if (tabooWord) {

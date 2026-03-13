@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useState, useCallback, useEffect } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   AlertDialog,
@@ -42,6 +42,7 @@ const allDecks = getValidatedDecks(decksRegistry) as DeckMeta[];
 
 export default function LocalMultiplayerRoomPage() {
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
   const { roomCode } = useParams<{ roomCode: string }>();
   const deviceId = useDeviceId();
   const { room, participants, isLoading: roomLoading, error: roomError, isReconnecting } = useRoom(roomCode, deviceId);
@@ -150,6 +151,30 @@ export default function LocalMultiplayerRoomPage() {
 
   const error = roomError || sessionError;
 
+  // When host ends game (room closed), auto-redirect observers
+  useEffect(() => {
+    if (room?.status === "closed" && !isHost) {
+      navigate("/play/local-multiplayer?closed=1", { replace: true });
+    }
+  }, [room?.status, isHost, navigate]);
+
+  // Room not found or no longer exists
+  if (!room && roomCode && !roomLoading) {
+    return (
+      <div className="flex min-h-svh flex-col items-center justify-center gap-4 bg-background px-4">
+        <p className="text-center text-sm font-medium text-muted-foreground">
+          {roomError || "This room no longer exists or the code is invalid."}
+        </p>
+        <Link
+          to="/play/local-multiplayer"
+          className="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"
+        >
+          Create or join a room
+        </Link>
+      </div>
+    );
+  }
+
   if (roomLoading && !room) {
     return (
       <div className="flex min-h-svh flex-col items-center justify-center gap-3 bg-background px-4">
@@ -172,7 +197,9 @@ export default function LocalMultiplayerRoomPage() {
   if (room?.status === "closed") {
     return (
       <div className="flex min-h-svh flex-col items-center justify-center gap-4 bg-background px-4">
-        <p className="text-center text-sm font-medium text-muted-foreground">This room has been closed.</p>
+        <p className="text-center text-sm font-medium text-muted-foreground">
+          {isHost ? "You closed this room." : "The host ended the game. This room is closed."}
+        </p>
         <Link
           to="/play/local-multiplayer"
           className="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"

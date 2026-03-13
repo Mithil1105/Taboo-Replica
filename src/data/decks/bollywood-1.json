@@ -1,0 +1,302 @@
+[
+  {
+    "id": "bollywood-01",
+    "word": "Shah Rukh Khan",
+    "taboo_words": ["King", "Badshah", "SRK", "Mannat", "Rahul"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-02",
+    "word": "Item Number",
+    "taboo_words": ["Dance", "Song", "Sizzling", "Special Appearance", "Munni"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-03",
+    "word": "Dilwale Dulhania Le Jayenge",
+    "taboo_words": ["DDLJ", "Mustard Fields", "Train", "Simran", "Raj"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-04",
+    "word": "Casting Couch",
+    "taboo_words": ["Director", "Audition", "Favor", "Industry", "Scandal"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-05",
+    "word": "Salman Khan",
+    "taboo_words": ["Bhai", "Shirtless", "Being Human", "Tiger", "Bodyguard"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-06",
+    "word": "Rain Dance",
+    "taboo_words": ["Sari", "Wet", "Water", "Monsoon", "Sensual"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-07",
+    "word": "Karan Johar",
+    "taboo_words": ["Dharma", "Nepotism", "Coffee", "Director", "Alia"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-08",
+    "word": "Plastic Surgery",
+    "taboo_words": ["Botox", "Lips", "Nose Job", "Correction", "Artificial"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-09",
+    "word": "Amitabh Bachchan",
+    "taboo_words": ["Big B", "Angry Young Man", "Sholay", "Don", "Rekha"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-10",
+    "word": "Paparazzi",
+    "taboo_words": ["Viral Bhayani", "Photos", "Airport Look", "Camera", "Privacy"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-11",
+    "word": "Extra-Marital Affair",
+    "taboo_words": ["Cheating", "Secret", "Scandal", "Mistress", "Husband"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-12",
+    "word": "Deepika Padukone",
+    "taboo_words": ["Ranveer", "Om Shanti Om", "Padmaavat", "Mastani", "Height"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-13",
+    "word": "Lip Lock",
+    "taboo_words": ["Kiss", "Mouth", "Embrace", "Emraan Hashmi", "Scene"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-14",
+    "word": "Nepotism",
+    "taboo_words": ["Star Kid", "Kangana", "Privilege", "Industry", "Insider"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-15",
+    "word": "Aamir Khan",
+    "taboo_words": ["Perfectionist", "Lagaan", "Dangal", "PK", "3 Idiots"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-16",
+    "word": "Airport Look",
+    "taboo_words": ["Fashion", "Travel", "Outfit", "Sunglasses", "Designer"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-17",
+    "word": "Priyanka Chopra",
+    "taboo_words": ["Nick Jonas", "Quantico", "Desi Girl", "Global", "Miss World"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-18",
+    "word": "Box Office",
+    "taboo_words": ["Collection", "Crore", "Hit", "Flop", "Earnings"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-19",
+    "word": "Dharma Productions",
+    "taboo_words": ["KJO", "Snake", "Banner", "Rich", "Glamour"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-20",
+    "word": "Katrina Kaif",
+    "taboo_words": ["Sheila", "Vicky Kaushal", "Foreign", "Dance", "Chikni Chameli"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-21",
+    "word": "Love Triangle",
+    "taboo_words": ["Three", "Relationship", "Choice", "Kuch Kuch Hota Hai", "Drama"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-22",
+    "word": "Ranbir Kapoor",
+    "taboo_words": ["Alia", "Barfi", "Rockstar", "Sanju", "Casanova"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-23",
+    "word": "Stardust",
+    "taboo_words": ["Magazine", "Award", "Gossip", "Party", "Glitter"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-24",
+    "word": "Hrithik Roshan",
+    "taboo_words": ["Greek God", "Dance", "Krrish", "Dhoom", "Sussanne"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-25",
+    "word": "Double Role",
+    "taboo_words": ["Twice", "Twins", "Identical", "Lookalike", "Judwaa"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-26",
+    "word": "Sanjay Dutt",
+    "taboo_words": ["Munna Bhai", "Sanju", "Jail", "Khalnayak", "Baba"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-27",
+    "word": "Award Show",
+    "taboo_words": ["Filmfare", "Performance", "Trophy", "Host", "Rigged"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-28",
+    "word": "Backless Choli",
+    "taboo_words": ["Blouse", "Traditional", "Sexy", "String", "Lehenga"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-29",
+    "word": "Kangana Ranaut",
+    "taboo_words": ["Queen", "Controversy", "Twitter", "Himachal", "Panga"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-30",
+    "word": "Playback Singer",
+    "taboo_words": ["Voice", "Arijit", "Audio", "Microphone", "Studio"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-31",
+    "word": "Akshay Kumar",
+    "taboo_words": ["Khiladi", "Canada", "Early Morning", "Martial Arts", "Stunts"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-32",
+    "word": "Background Dancer",
+    "taboo_words": ["Group", "Chorus", "Stage", "Prop", "Step"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-33",
+    "word": "Rekha",
+    "taboo_words": ["Saree", "Amitabh", "Evergreen", "Umrao Jaan", "Sindoor"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-34",
+    "word": "Boycott Bollywood",
+    "taboo_words": ["Trend", "Twitter", "Sushant", "Cancel", "Protest"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-35",
+    "word": "Alia Bhatt",
+    "taboo_words": ["Ranbir", "Gangubai", "Student of the Year", "Raazi", "Genius"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-36",
+    "word": "Monsoon Shootout",
+    "taboo_words": ["Police", "Gun", "Rain", "Crime", "Thriller"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-37",
+    "word": "Ranveer Singh",
+    "taboo_words": ["Deepika", "Energy", "Outfits", "Bajirao", "Gulley Boy"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-38",
+    "word": "Screen Test",
+    "taboo_words": ["Audition", "Camera", "Role", "Acting", "Tryout"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-39",
+    "word": "Kareena Kapoor",
+    "taboo_words": ["Bebo", "Saif", "Geet", "Size Zero", "Poo"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-40",
+    "word": "Choreographer",
+    "taboo_words": ["Saroj Khan", "Farah Khan", "Steps", "Dance", "Directing"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-41",
+    "word": "Sholay",
+    "taboo_words": ["Gabbar", "Jai", "Veeru", "Basanti", "Curry Western"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-42",
+    "word": "PR Agency",
+    "taboo_words": ["Image", "Manager", "Reputation", "Publicity", "Spin"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-43",
+    "word": "Vicky Kaushal",
+    "taboo_words": ["Katrina", "Uri", "Masaan", "Army", "Sardar Udham"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-44",
+    "word": "Vanity Van",
+    "taboo_words": ["Makeup", "Trailer", "Shoot", "Set", "Break"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-45",
+    "word": "Sridevi",
+    "taboo_words": ["Hawa Hawai", "Chandni", "Mridula", "Mom", "Boney Kapoor"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-46",
+    "word": "Drug Bust",
+    "taboo_words": ["NCB", "Aryan Khan", "Party", "Substance", "Raid"],
+    "difficulty": "hard"
+  },
+  {
+    "id": "bollywood-47",
+    "word": "Varun Dhawan",
+    "taboo_words": ["David Dhawan", "Natasha", "Coolie", "Judwaa 2", "Bhediya"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-48",
+    "word": "Interval",
+    "taboo_words": ["Samosa", "Break", "Intermission", "Halfway", "Popcorn"],
+    "difficulty": "easy"
+  },
+  {
+    "id": "bollywood-49",
+    "word": "Censor Board",
+    "taboo_words": ["Cut", "Certificate", "Adult", "Pahlaj Nihalani", "Banned"],
+    "difficulty": "medium"
+  },
+  {
+    "id": "bollywood-50",
+    "word": "Yash Chopra",
+    "taboo_words": ["Switzerland", "Romance", "YRF", "Director", "Chiffon"],
+    "difficulty": "medium"
+  }
+]
