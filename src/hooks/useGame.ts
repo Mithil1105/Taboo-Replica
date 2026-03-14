@@ -64,9 +64,9 @@ export function useGame() {
   const [usedCardIds, setUsedCardIds] = useState<Set<string>>(new Set());
   const [gameOverByScore, setGameOverByScore] = useState(false);
 
-  // Round-local trackers
+  // Round-local trackers (roundSkipped is state so UI can show skips remaining)
   const roundCorrect = useRef(0);
-  const roundSkipped = useRef(0);
+  const [roundSkipped, setRoundSkipped] = useState(0);
   const roundTaboo = useRef(0);
   const roundScore = useRef(0);
 
@@ -119,7 +119,7 @@ export function useGame() {
 
   const startRound = useCallback(() => {
     roundCorrect.current = 0;
-    roundSkipped.current = 0;
+    setRoundSkipped(0);
     roundTaboo.current = 0;
     roundScore.current = 0;
     setTimeLeft(settings.roundDuration);
@@ -178,10 +178,10 @@ export function useGame() {
     if (!currentCard) return;
     if (
       settings.maxSkipsPerRound > 0 &&
-      roundSkipped.current >= settings.maxSkipsPerRound
+      roundSkipped >= settings.maxSkipsPerRound
     )
       return;
-    roundSkipped.current += 1;
+    setRoundSkipped((n) => n + 1);
     // Skip is a free pass: no score change (roundScore and team score stay the same)
     advanceCard(usedCardIds);
     setSettings((s) => {
@@ -193,7 +193,7 @@ export function useGame() {
       };
       return { ...s, teams };
     });
-  }, [currentCard, advanceCard, currentTeamIndex, settings.maxSkipsPerRound, usedCardIds]);
+  }, [currentCard, advanceCard, currentTeamIndex, settings.maxSkipsPerRound, roundSkipped, usedCardIds]);
 
   const handleTaboo = useCallback(() => {
     if (!currentCard) return;
@@ -204,11 +204,16 @@ export function useGame() {
     advanceCard(newUsed);
     setSettings((s) => {
       const teams = [...s.teams] as [Team, Team];
-      const idx = currentTeamIndex;
-      teams[idx] = {
-        ...teams[idx],
-        score: teams[idx].score - 1,
-        taboo: teams[idx].taboo + 1,
+      const clueIdx = currentTeamIndex;
+      const observerIdx = clueIdx === 0 ? 1 : 0;
+      teams[clueIdx] = {
+        ...teams[clueIdx],
+        score: teams[clueIdx].score - 1,
+        taboo: teams[clueIdx].taboo + 1,
+      };
+      teams[observerIdx] = {
+        ...teams[observerIdx],
+        score: teams[observerIdx].score + 1,
       };
       return { ...s, teams };
     });
@@ -221,14 +226,14 @@ export function useGame() {
     const result: RoundResult = {
       teamIndex: currentTeamIndex,
       correct: roundCorrect.current,
-      skipped: roundSkipped.current,
+      skipped: roundSkipped,
       taboo: roundTaboo.current,
       score: roundScore.current,
     };
     setRoundResult(result);
     // Team score and correct/skipped/taboo counts were already updated live in
     // handleCorrect, handleSkip, handleTaboo — nothing more to add here.
-  }, [currentTeamIndex]);
+  }, [currentTeamIndex, roundSkipped]);
 
   // End game when a team reaches the score limit
   useEffect(() => {
@@ -253,6 +258,11 @@ export function useGame() {
     gameOverByScore ||
     (currentRound > settings.totalRounds && currentTeamIndex === 0 && roundResult !== null);
 
+  const skipsRemaining =
+    settings.maxSkipsPerRound === 0
+      ? null
+      : Math.max(0, settings.maxSkipsPerRound - roundSkipped);
+
   return {
     settings,
     setSettings,
@@ -263,6 +273,7 @@ export function useGame() {
     isPlaying,
     roundResult,
     isGameOver,
+    skipsRemaining,
     startGame,
     startRound,
     handleCorrect,

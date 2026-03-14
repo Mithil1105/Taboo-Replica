@@ -26,7 +26,8 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 
-import { ArrowLeft, Minus, Plus, Info, Home } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft, Minus, Plus, Home } from "lucide-react";
 import { playCorrectSound, playSkipSound, playTabooSound, playTimerBuzzerSound } from "@/hooks/useSound";
 
 const allDecks = getValidatedDecks(decksRegistry) as DeckMeta[];
@@ -41,12 +42,12 @@ const pageTransition = {
 const FILTERS = ["All", "Easy", "Medium", "Classic", "Entertainment", "Midnight"];
 
 export default function Index() {
+  const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
   const game = useGame();
-  const [phase, setPhase] = useState<GamePhase>("home");
+  const [phase, setPhase] = useState<GamePhase>("deckSelection");
   const [selectedDecks, setSelectedDecks] = useState<Set<string>>(new Set());
   const [filter, setFilter] = useState("All");
-  const [showHowToPlay, setShowHowToPlay] = useState(false);
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const prevTimeLeft = useRef<number | null>(null);
 
@@ -106,9 +107,10 @@ export default function Index() {
     setPhase("playing");
   };
   const goHome = () => {
-    setPhase("home");
+    setPhase("deckSelection");
     setSelectedDecks(new Set());
     setFilter("All");
+    navigate("/play");
   };
   const handleNextRound = () => {
     game.nextRound();
@@ -119,88 +121,6 @@ export default function Index() {
   return (
     <div className="flex min-h-svh flex-col bg-background font-figtree">
       <AnimatePresence mode="wait">
-        {/* ─── HOME ─── */}
-        {phase === "home" && (
-          <motion.div key="home" {...pageTransition} className="flex min-h-svh flex-col items-center justify-center px-4 pb-safe">
-            <div className="absolute right-4 top-4 flex items-center gap-2">
-              <Link
-                to="/"
-                className="flex h-10 min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-xl bg-muted px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted/80"
-              >
-                <Home className="h-4 w-4" />
-                <span className="hidden sm:inline">Back to site</span>
-              </Link>
-              <ThemeToggle theme={theme} onToggle={toggleTheme} />
-            </div>
-
-            <div className="flex max-w-md flex-col items-center gap-8 text-center">
-              <div className="space-y-3">
-                <h1 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">
-                  Taboo
-                </h1>
-                <p className="text-pretty text-base leading-relaxed text-muted-foreground">
-                  The word is on the tip of your tongue.
-                </p>
-              </div>
-
-              <div className="flex w-full flex-col gap-3">
-                <motion.button
-                  whileTap={{ scale: 0.97 }}
-                  onClick={goToDeckSelection}
-                  className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-primary text-base font-semibold text-primary-foreground transition-colors touch-manipulation sm:h-14"
-                >
-                  Start Game
-                </motion.button>
-                <motion.button
-                  whileTap={{ scale: 0.97 }}
-                  onClick={() => setShowHowToPlay(true)}
-                  className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-muted text-base font-semibold text-muted-foreground transition-colors touch-manipulation sm:h-14"
-                >
-                  <Info className="h-4 w-4" />
-                  How to Play
-                </motion.button>
-              </div>
-            </div>
-
-            {/* How to Play Modal */}
-            <AnimatePresence>
-              {showHowToPlay && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/30 p-4 backdrop-blur-sm"
-                  onClick={() => setShowHowToPlay(false)}
-                >
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    onClick={(e) => e.stopPropagation()}
-                    className="w-full max-w-sm space-y-4 rounded-3xl bg-card p-6 card-shadow-elevated"
-                  >
-                    <h2 className="text-xl font-bold text-card-foreground">How to Play</h2>
-                    <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
-                      <li><strong className="text-card-foreground">1.</strong> Split into two teams.</li>
-                      <li><strong className="text-card-foreground">2.</strong> One player describes the word on the card to their team.</li>
-                      <li><strong className="text-card-foreground">3.</strong> You can't say any of the taboo words listed below it!</li>
-                      <li><strong className="text-card-foreground">4.</strong> <strong className="text-accent">Correct</strong> = +1 point. <strong className="text-muted-foreground">Skip</strong> = free pass (no penalty). <strong className="text-destructive">Taboo</strong> = −1 point.</li>
-                      <li><strong className="text-card-foreground">5.</strong> When the timer runs out, the round ends. Highest score wins!</li>
-                    </ul>
-                    <motion.button
-                      whileTap={{ scale: 0.97 }}
-                      onClick={() => setShowHowToPlay(false)}
-                      className="flex h-12 w-full items-center justify-center rounded-xl bg-muted font-semibold text-muted-foreground"
-                    >
-                      Got it!
-                    </motion.button>
-                  </motion.div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        )}
-
         {/* ─── DECK SELECTION ─── */}
         {phase === "deckSelection" && (
           <motion.div key="decks" {...pageTransition} className="flex min-h-svh flex-col px-4 pb-24 pt-4 pt-safe">
@@ -235,20 +155,46 @@ export default function Index() {
               </div>
 
               {filteredDecks.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-16 text-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-col items-center justify-center py-16 text-center"
+                >
                   <p className="text-sm text-muted-foreground">No decks match this filter.</p>
-                </div>
+                </motion.div>
               ) : (
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                  {filteredDecks.map((deck) => (
-                    <DeckCard
-                      key={deck.id}
-                      deck={deck}
-                      isSelected={selectedDecks.has(deck.id)}
-                      onToggle={() => toggleDeck(deck.id)}
-                    />
-                  ))}
-                </div>
+                <motion.div
+                  layout
+                  className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
+                  initial={false}
+                  transition={{ layout: { duration: 0.25 } }}
+                >
+                  <AnimatePresence mode="sync">
+                    {filteredDecks.map((deck, i) => (
+                      <motion.div
+                        key={deck.id}
+                        layout
+                        initial={{ opacity: 0, scale: 0.9, y: 12 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.9, y: -8 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 28,
+                          delay: i * 0.03,
+                        }}
+                      >
+                        <DeckCard
+                          deck={deck}
+                          isSelected={selectedDecks.has(deck.id)}
+                          onToggle={() => toggleDeck(deck.id)}
+                        />
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </motion.div>
               )}
             </div>
 
@@ -449,8 +395,8 @@ export default function Index() {
         {phase === "playing" && !game.roundResult && (
           <motion.div key="playing" {...pageTransition} className="flex min-h-svh flex-col items-center px-4 py-3 pb-safe">
             <div className="flex w-full max-w-md flex-1 flex-col gap-3">
-              {/* Header with Quit */}
-              <div className="flex shrink-0 items-center justify-between gap-2">
+              {/* Header with Quit + Theme - mobile-first compact layout */}
+              <div className="flex shrink-0 flex-wrap items-center justify-between gap-2">
                 <motion.button
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowQuitConfirm(true)}
@@ -464,8 +410,11 @@ export default function Index() {
                   Round {game.currentRound}
                 </div>
                 <TimerDisplay timeLeft={game.timeLeft} totalTime={game.settings.roundDuration} />
-                <div className="min-w-[60px] text-right text-xs font-semibold uppercase tracking-widest text-primary sm:min-w-[80px]">
-                  {game.settings.teams[game.currentTeamIndex].name}
+                <div className="flex min-w-[44px] items-center justify-end gap-1.5 sm:min-w-[80px]">
+                  <span className="hidden text-right text-xs font-semibold uppercase tracking-widest text-primary sm:inline">
+                    {game.settings.teams[game.currentTeamIndex].name}
+                  </span>
+                  <ThemeToggle theme={theme} onToggle={toggleTheme} />
                 </div>
               </div>
 
@@ -484,6 +433,7 @@ export default function Index() {
                   onCorrect={handleCorrectWithSound}
                   onSkip={handleSkipWithSound}
                   onTaboo={handleTabooWithSound}
+                  skipsRemaining={game.skipsRemaining}
                 />
               </div>
             </div>
@@ -521,6 +471,9 @@ export default function Index() {
         {/* ─── ROUND END ─── */}
         {(phase === "playing" && game.roundResult) && (
           <motion.div key="roundEnd" {...pageTransition} className="flex min-h-svh flex-col items-center justify-center px-4 py-8 pb-safe">
+            <div className="absolute right-4 top-4">
+              <ThemeToggle theme={theme} onToggle={toggleTheme} />
+            </div>
             <div className="w-full max-w-md space-y-6">
               <ScoreBoard teams={game.settings.teams} currentTeamIndex={game.currentTeamIndex} />
               <RoundSummaryCard

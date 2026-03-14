@@ -81,7 +81,7 @@
   {
     "id": "bollywood2",
     "name": "Bollywood 2",
-    "description": "More Bollywood and Indian entertainment.",
+    "description": "18+ only. Mature themes and adult content. Play at your own discretion.",
     "category": "Entertainment",
     "difficulty": "Medium",
     "colorTag": "blue",
@@ -89,7 +89,8 @@
     "cardCount": 50,
     "filePath": "/data/decks/bollywood2.json",
     "isPremium": false,
-    "isActive": true
+    "isActive": true,
+    "ageRating": "18+"
   },
   {
     "id": "hollywood1",
@@ -107,7 +108,7 @@
   {
     "id": "hollywood2",
     "name": "Hollywood 2",
-    "description": "More Hollywood and pop culture.",
+    "description": "18+ only. Mature themes and adult content. Play at your own discretion.",
     "category": "Entertainment",
     "difficulty": "Medium",
     "colorTag": "blue",
@@ -115,7 +116,8 @@
     "cardCount": 50,
     "filePath": "/data/decks/hollywood2.json",
     "isPremium": false,
-    "isActive": true
+    "isActive": true,
+    "ageRating": "18+"
   },
   {
     "id": "nsfw2",

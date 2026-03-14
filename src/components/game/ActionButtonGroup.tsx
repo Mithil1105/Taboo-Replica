@@ -5,9 +5,11 @@ interface ActionButtonGroupProps {
   onCorrect: () => void;
   onSkip: () => void;
   onTaboo: () => void;
+  /** Number of skips left this round, or null if unlimited */
+  skipsRemaining?: number | null;
 }
 
-export function ActionButtonGroup({ onCorrect, onSkip, onTaboo }: ActionButtonGroupProps) {
+export function ActionButtonGroup({ onCorrect, onSkip, onTaboo, skipsRemaining }: ActionButtonGroupProps) {
   return (
     <div className="flex w-full gap-2 sm:gap-3">
       <motion.button
@@ -22,10 +24,18 @@ export function ActionButtonGroup({ onCorrect, onSkip, onTaboo }: ActionButtonGr
       <motion.button
         whileTap={{ scale: 0.95 }}
         onClick={onSkip}
-        className="flex min-h-[48px] flex-1 items-center justify-center gap-1.5 rounded-xl bg-muted font-semibold text-muted-foreground transition-colors touch-manipulation sm:min-h-[4rem] sm:gap-2"
+        disabled={skipsRemaining !== null && skipsRemaining <= 0}
+        className="flex min-h-[48px] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl bg-muted font-semibold text-muted-foreground transition-colors touch-manipulation disabled:opacity-50 disabled:cursor-not-allowed sm:min-h-[4rem] sm:gap-2"
       >
-        <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" />
-        <span className="text-xs uppercase tracking-wide sm:text-sm">Skip</span>
+        <span className="flex items-center gap-1.5">
+          <SkipForward className="h-4 w-4 sm:h-5 sm:w-5" />
+          <span className="text-xs uppercase tracking-wide sm:text-sm">Skip</span>
+        </span>
+        {skipsRemaining !== null && skipsRemaining !== undefined && (
+          <span className="text-[10px] font-medium tabular-nums text-muted-foreground">
+            {skipsRemaining} left
+          </span>
+        )}
       </motion.button>
 
       <motion.button

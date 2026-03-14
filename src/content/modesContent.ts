@@ -17,14 +17,14 @@ export const gameModes: GameModeItem[] = [
     bullets: [
       "One phone or tablet for the whole group",
       "Pass the device when turns change",
+      "Works offline after first load",
       "Observer team can gather around to watch the same card",
-      "Ideal when you only have one device",
     ],
     bestFor: "Small gatherings, quick games, or when you only have one device.",
   },
   {
     id: "team-sync",
-    name: "Team Sync Mode",
+    name: "Local Multiplayer",
     shortDescription: "Two phones—one per team. Less chaos.",
     description:
       "Each team has its own phone. The phone stays with the team; only the role (clue giver vs. guessers) changes as turns rotate. No passing devices around the whole room—just within your team.",
@@ -48,8 +48,8 @@ export const teamSyncBenefits = [
 ];
 
 export const modeComparison = [
-  { aspect: "Devices needed", passPlay: "1", teamSync: "2 (one per team)" },
+  { aspect: "Devices needed", passPlay: "1 (works offline)", teamSync: "2 (one per team, needs internet)" },
   { aspect: "Passing devices", passPlay: "Pass to next team each round", teamSync: "Stay within team only" },
-  { aspect: "Best for", passPlay: "Quick games, small groups", teamSync: "Parties, events, larger groups" },
+  { aspect: "Best for", passPlay: "Quick games, small groups, offline play", teamSync: "Parties, events, larger groups" },
   { aspect: "Chaos level", passPlay: "Moderate", teamSync: "Low—more organized" },
 ];

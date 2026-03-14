@@ -27,7 +27,7 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed mt-2">
                 Taboo Party is a digital take on the classic taboo-style word game. Two teams take turns giving clues
                 to secret words while avoiding forbidden words; the other team observes and can call violations. We
-                added timers, scoring, multiple decks, and two ways to play—Pass & Play with one device, or Team Sync
+                added timers, scoring, multiple decks,                 and two ways to play—Pass & Play with one device (works offline after first load), or Local Multiplayer
                 with two phones—so it fits different group sizes and settings.
               </p>
             </section>

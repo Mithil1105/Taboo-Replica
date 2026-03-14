@@ -51,19 +51,31 @@ export const faqItems: FAQItem[] = [
     id: "taboo-word-said",
     question: "What happens if someone says a taboo word?",
     answer:
-      "The observing team can call it out. Typically you'll mark it as a taboo violation in the app (which usually costs a point or ends the clue for that word, depending on house rules). The card might be skipped, and play continues. The app helps keep scoring fair and visible.",
+      "The observing team can call it out. A taboo violation includes: saying the secret word, any taboo word, breaking words into parts, using synonyms, or using translations—even if a teammate has already guessed. The clue team loses 1 point; the observer team gains 1 point. The card is done and play continues.",
+  },
+  {
+    id: "gestures-sounds",
+    question: "Can I use gestures or sounds?",
+    answer:
+      "No. Only spoken words are allowed. No gestures, sounds, or acting out. The clue giver must describe the word using words only.",
   },
   {
     id: "scoring",
     question: "How are scores calculated?",
     answer:
-      "Correct guesses usually add a point; skipped cards or taboo violations often subtract a point (or don't add). The exact rules are shown in the app. At the end of all rounds, the team with the higher score wins.",
+      "Correct guess: +1 for the clue team. Skip: no score change. Taboo: −1 for the clue team, +1 for the observer team. At the end of all rounds, the team with the higher score wins.",
   },
   {
     id: "mobile-friendly",
     question: "Is this game mobile-friendly?",
     answer:
-      "Yes. It's built to work on phones and tablets. Use it in the same room—no need for everyone to have the app open on their own device unless you choose Team Sync mode with two phones.",
+      "Yes. It's built to work on phones and tablets. Use it in the same room—no need for everyone to have the app open on their own device unless you choose Local Multiplayer mode with two phones.",
+  },
+  {
+    id: "offline-play",
+    question: "Can Pass & Play work offline?",
+    answer:
+      "Yes. After loading the app once while online, Pass & Play works offline. You can install it as a PWA and play without internet. Local Multiplayer (two phones) needs internet to sync both devices.",
   },
   {
     id: "different-decks",

@@ -274,8 +274,11 @@ export default function LocalMultiplayerRoomPage() {
 
   if (session?.phase === "playing") {
     return (
-      <div className="flex min-h-svh flex-col bg-background font-figtree">
+      <div className="relative flex min-h-svh flex-col bg-background font-figtree">
         {leaveConfirmDialog}
+        <div className="absolute right-4 top-4 z-10">
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+        </div>
         <AnimatePresence mode="wait">
           {!hostConnected && !isHost && (
             <motion.div
@@ -329,8 +332,11 @@ export default function LocalMultiplayerRoomPage() {
 
   if (session?.phase === "round_summary") {
     return (
-      <div className="flex min-h-svh flex-col bg-background font-figtree">
+      <div className="relative flex min-h-svh flex-col bg-background font-figtree">
         {leaveConfirmDialog}
+        <div className="absolute right-4 top-4 z-10">
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+        </div>
         {!hostConnected && !isHost && (
           <div className="flex items-center justify-center gap-2 border-b border-border/60 bg-amber-500/10 px-4 py-2 text-center text-xs font-medium text-amber-700 dark:text-amber-400">
             Host disconnected. Waiting for host to return…
@@ -366,8 +372,11 @@ export default function LocalMultiplayerRoomPage() {
 
   if (session?.phase === "results") {
     return (
-      <div className="flex min-h-svh flex-col bg-background font-figtree">
+      <div className="relative flex min-h-svh flex-col bg-background font-figtree">
         {leaveConfirmDialog}
+        <div className="absolute right-4 top-4 z-10">
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+        </div>
         {!hostConnected && !isHost && (
           <div className="flex items-center justify-center gap-2 border-b border-border/60 bg-amber-500/10 px-4 py-2 text-center text-xs font-medium text-amber-700 dark:text-amber-400">
             Host disconnected. You can leave or wait for host to return.

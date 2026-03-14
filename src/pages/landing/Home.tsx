@@ -61,8 +61,8 @@ export default function Home() {
               <p className="text-sm font-medium text-primary">Quick summary</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 <li>• Two teams take turns giving clues</li>
-                <li>• Clue giver can't say the word or the taboo words</li>
-                <li>• Correct guess = point; skip or taboo = usually −1</li>
+                <li>• Clue giver can&apos;t say the word or taboo words (no synonyms or translations)</li>
+                <li>• Correct = +1; Skip = no change; Taboo = −1 clue team, +1 observers</li>
                 <li>• Highest score when rounds end wins</li>
               </ul>
             </div>

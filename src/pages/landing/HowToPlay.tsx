@@ -46,7 +46,7 @@ export default function HowToPlay() {
                   }
                 >
                   <p>Sees the secret word and the taboo words on the card (or screen). Describes the word to their team
-                  without saying it or any taboo word. Only one clue giver per team per round.</p>
+                  using only spoken words—no gestures or sounds allowed. Must not say the word or any taboo word. Only one clue giver per team per round.</p>
                 </RuleCard>
                 <RuleCard
                   title={
@@ -78,8 +78,7 @@ export default function HowToPlay() {
                     </span>
                   }
                 >
-                  <p>If the clue giver says the secret word or any word on the taboo list, it's a violation. The
-                  observer team can call it; typically the card is skipped or a point is lost, and play continues.</p>
+                  <p>If the clue giver says the secret word or any word on the taboo list, it&apos;s a violation. The observer team can call it. Also forbidden: breaking words into parts, using synonyms, or using translations of the taboo words or the main word—even if a teammate has already guessed correctly. The clue team loses 1 point; the observer team gains 1 point. The card is done and play continues.</p>
                 </RuleCard>
               </div>
             </section>
@@ -88,12 +87,12 @@ export default function HowToPlay() {
               <h2 id="scoring-heading" className="text-2xl font-bold text-foreground mb-4">Scoring rules</h2>
               <div className="rounded-2xl border border-border/80 bg-card/80 p-6 max-w-2xl">
                 <ul className="space-y-2 text-muted-foreground">
-                  <li><strong className="text-foreground">Correct guess:</strong> +1 point (or as set in the app).</li>
-                  <li><strong className="text-foreground">Skip:</strong> Pass the card; usually −1 point or no change.</li>
-                  <li><strong className="text-foreground">Taboo:</strong> Said a forbidden word; typically −1 point and the card is done.</li>
+                  <li><strong className="text-foreground">Correct guess:</strong> +1 point for the clue team.</li>
+                  <li><strong className="text-foreground">Skip:</strong> Pass the card; no score change.</li>
+                  <li><strong className="text-foreground">Taboo:</strong> Said a forbidden word; −1 for the clue team, +1 for the observer team. The card is done.</li>
                 </ul>
                 <p className="mt-4 text-sm text-muted-foreground">
-                  The exact values are shown in the app. At the end of all rounds, the team with the higher score wins.
+                  At the end of all rounds, the team with the higher score wins. You can set round length, total rounds, and skip limits in the app.
                 </p>
               </div>
             </section>
@@ -112,9 +111,9 @@ export default function HowToPlay() {
             <section aria-labelledby="tips-heading">
               <h2 id="tips-heading" className="text-2xl font-bold text-foreground mb-4">Tips for more fun</h2>
               <ul className="space-y-2 text-muted-foreground max-w-2xl">
-                <li>• Use gestures and sounds (if your house rules allow) to make clues more creative.</li>
+                <li>• The opposing team can speak and disturb the clue giver—interference and banter add to the chaos and fun.</li>
                 <li>• Pick a round length that fits your group—shorter for fast games, longer for relaxed play.</li>
-                <li>• In Team Sync mode, keep one phone per team so you're not passing devices around the whole room.</li>
+                <li>• In Local Multiplayer mode, keep one phone per team so you&apos;re not passing devices around the whole room.</li>
                 <li>• Choose a deck that matches the group (e.g. family-friendly vs. pop culture).</li>
               </ul>
             </section>

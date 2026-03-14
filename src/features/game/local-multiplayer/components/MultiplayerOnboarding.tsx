@@ -28,7 +28,7 @@ const screens = [
   {
     icon: MessageCircle,
     title: "How taboo works",
-    body: "The clue giver must get their team to guess the main word without saying any of the taboo words listed. If they slip, the opposing team taps Taboo and selects which word was said.",
+    body: "The clue giver must get their team to guess the main word using only spoken words—no gestures or sounds allowed. No breaking words, synonyms, or translations—even if a teammate has guessed. If they slip, the opposing team taps Taboo and selects which word was said.",
     hint: "Observers must pick the exact taboo word that was spoken.",
   },
   {

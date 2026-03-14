@@ -35,7 +35,7 @@ export default function GameModes() {
             </section>
 
             <section aria-labelledby="team-sync-why" className="rounded-2xl border border-border/80 bg-primary/5 p-8 md:p-10">
-              <h2 id="team-sync-why" className="text-2xl font-bold text-foreground">Why Team Sync Mode is useful</h2>
+              <h2 id="team-sync-why" className="text-2xl font-bold text-foreground">Why Local Multiplayer is useful</h2>
               <p className="mt-3 text-muted-foreground max-w-2xl">
                 With two phones—one per team—the phone stays with the team. As turns change, the role on each phone
                 (clue giver view vs. observer view) updates automatically. You're not passing one device around the
@@ -60,7 +60,7 @@ export default function GameModes() {
                     <tr className="border-b border-border bg-muted/50">
                       <th className="p-4 font-semibold text-foreground">Aspect</th>
                       <th className="p-4 font-semibold text-foreground">Pass & Play</th>
-                      <th className="p-4 font-semibold text-foreground">Team Sync</th>
+                      <th className="p-4 font-semibold text-foreground">Local Multiplayer</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -80,9 +80,9 @@ export default function GameModes() {
               <h2 id="which-mode" className="text-2xl font-bold text-foreground mb-4">Which mode should you choose?</h2>
               <p className="text-muted-foreground max-w-2xl">
                 Use <strong className="text-foreground">Pass & Play</strong> when you only have one device or want a
-                quick, simple game. Use <strong className="text-foreground">Team Sync</strong> when you have two
+                quick, simple game—it works offline after the first load. Use <strong className="text-foreground">Local Multiplayer</strong> when you have two
                 phones and want a calmer, more organized round—especially for parties, college events, or larger
-                groups. Both are the same game; Team Sync just makes the 2-phone setup feel less chaotic.
+                groups. Both are the same game; Local Multiplayer just makes the 2-phone setup feel less chaotic.
               </p>
             </section>
 
