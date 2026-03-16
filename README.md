@@ -1,7 +1,7 @@
-## Taboo-Replica
+## Anathema
 
-A modern, mobile-first remake of the classic **Taboo** party game.  
-Players split into two teams, take turns describing a secret word, and try to avoid saying any of the taboo words on the card.
+**Anathema – the game of forbidden words.**  
+A modern, mobile-first party game. Players split into two teams, take turns describing a secret word, and try to avoid saying any of the forbidden words on the card.
 
 The UI is optimized for phones, with big touch targets, safe-area padding for notched devices, and fast in-game navigation between rounds.
 
@@ -10,13 +10,13 @@ The UI is optimized for phones, with big touch targets, safe-area padding for no
 ### Game Modes
 
 - **Pass & Play** – One device, shared turns. Pass a single phone between teams. No accounts or backend required.
-- **Local Multiplayer** – Two phones, one game. Each team uses their own device. Room-based setup with Supabase realtime sync. Clue mode (give hints) vs Observer mode (call taboo) by round.
+- **Local Multiplayer** – Two phones, one game. Each team uses their own device. Room-based setup with Supabase realtime sync. Clue mode (give hints) vs Observer mode (call anathema) by round.
 
 ### Features
 
 - **Mobile-optimized game experience**
   - Full-screen play view designed primarily for phones
-  - Large tap targets for Correct / Skip / Taboo
+  - Large tap targets for Correct / Skip / Anathema
   - Safe-area padding for devices with notches / home indicators
 - **Flexible game rules**
   - Configurable round duration (30 / 60 / 90 seconds)
@@ -24,7 +24,7 @@ The UI is optimized for phones, with big touch targets, safe-area padding for no
   - Optional score limit (first team to X points wins)
   - **Correct** → +1 for the clue team
   - **Skip** → no score change (free pass)
-  - **Taboo** → −1 for the clue team, +1 for the opponents
+  - **Anathema** → −1 for the clue team, +1 for the opponents
 - **Multiple themed decks**
   - Classic everyday words
   - Movies & pop culture
@@ -33,7 +33,7 @@ The UI is optimized for phones, with big touch targets, safe-area padding for no
 - **Multiplayer onboarding** (first-time setup guide, skippable after first view)
 - **Round summaries and scoreboard**
   - Live team scores
-  - Per-round breakdown (correct, skipped, taboo, round score)
+  - Per-round breakdown (correct, skipped, anathema, round score)
   - Clear “Next Round” / “Back to Home” flow
 - **Dark / light theme toggle**
   - Instant theme switcher available on all key screens
@@ -92,11 +92,11 @@ By default the app runs on something like `http://localhost:5173` (or the port V
 
 4. **During a round**
    - One player describes the main word on the card to their team.
-   - They **must not** say any of the taboo words shown below it.
+   - They **must not** say any of the forbidden words shown below it.
    - Buttons:
      - **Correct** → +1 point, card is removed from the deck
      - **Skip** → no score change (free pass), card may re-appear later
-     - **Taboo** → −1 for clue team, +1 for opponents; card is removed
+     - **Anathema** → −1 for clue team, +1 for opponents; card is removed
 
 5. **When the timer hits 0**
    - The round ends automatically with a buzzer sound.
@@ -197,7 +197,7 @@ Without this, setup changes and gameplay will not sync live between devices.
 - **Create** → host creates room, joins as Team A or B
 - **Join** → second device joins with room code, picks the other team
 - **Lobby** → both teams connected, host configures decks/rounds, starts game
-- **Playing** → realtime sync; clue team gives hints, observer team calls taboo
+- **Playing** → realtime sync; clue team gives hints, observer team calls anathema
 - **Round summary** → host advances to next round or ends game early
 - **Results** → host can Play again (return to lobby) or End game (close room)
 - **Leave** → participant disconnects; if both leave, room is closed
@@ -305,4 +305,3 @@ No permanent match history is stored.
 
 This project is currently private for client use.  
 If you plan to open-source it later, you can replace this section with a specific license (e.g. MIT).
-

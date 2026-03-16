@@ -25,6 +25,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Minus, Plus, Home } from "lucide-react";
@@ -216,7 +223,7 @@ export default function Index() {
 
         {/* ─── GAME SETUP ─── */}
         {phase === "gameSetup" && (
-          <motion.div key="setup" {...pageTransition} className="flex min-h-svh flex-col items-center px-4 pb-8 pt-4 pt-safe">
+          <motion.div key="setup" {...pageTransition} className="flex min-h-svh flex-col items-center px-4 pb-6 pt-4 pt-safe md:pb-8">
             <div className="w-full max-w-md">
               <div className="mb-6 flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
@@ -234,12 +241,12 @@ export default function Index() {
                 <ThemeToggle theme={theme} onToggle={toggleTheme} />
               </div>
 
-              <h2 className="mb-8 text-2xl font-bold text-foreground">Game Setup</h2>
+              <h2 className="mb-6 text-2xl font-bold text-foreground md:mb-8">Game Setup</h2>
 
-              <div className="space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {/* Team Names */}
                 {game.settings.teams.map((team, i) => (
-                  <div key={i} className="space-y-2">
+                  <div key={i} className="space-y-1.5 md:space-y-2">
                     <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                       Team {i + 1}
                     </label>
@@ -253,18 +260,37 @@ export default function Index() {
                           return { ...s, teams };
                         });
                       }}
-                      className="flex h-14 w-full rounded-xl border-0 bg-muted px-4 text-base font-medium text-foreground outline-none ring-1 ring-transparent transition-all focus:ring-2 focus:ring-ring placeholder:text-muted-foreground"
+                      className="flex h-11 w-full rounded-xl border-0 bg-muted px-4 text-base font-medium text-foreground outline-none ring-1 ring-transparent transition-all focus:ring-2 focus:ring-ring placeholder:text-muted-foreground md:h-14"
                       placeholder={`Team ${i + 1}`}
                     />
                   </div>
                 ))}
 
                 {/* Round Duration */}
-                <div className="space-y-3">
+                <div className="space-y-1.5 md:space-y-3">
                   <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Round Duration
                   </label>
-                  <div className="flex gap-3">
+                  {/* Mobile: dropdown */}
+                  <div className="md:hidden">
+                    <Select
+                      value={String(game.settings.roundDuration)}
+                      onValueChange={(v) => game.setSettings((s) => ({ ...s, roundDuration: Number(v) }))}
+                    >
+                      <SelectTrigger className="h-11 rounded-xl bg-muted font-semibold">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {[30, 60, 90].map((dur) => (
+                          <SelectItem key={dur} value={String(dur)}>
+                            {dur}s
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  {/* Desktop: buttons */}
+                  <div className="hidden gap-3 md:flex">
                     {[30, 60, 90].map((dur) => (
                       <motion.button
                         key={dur}
@@ -283,107 +309,192 @@ export default function Index() {
                 </div>
 
                 {/* Total Rounds */}
-                <div className="space-y-3">
+                <div className="space-y-1.5 md:space-y-3">
                   <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Total Rounds
                   </label>
-                  <div className="flex items-center justify-center gap-6">
-                    <motion.button
-                      whileTap={{ scale: 0.9 }}
-                      onClick={() => game.setSettings((s) => ({ ...s, totalRounds: Math.max(2, s.totalRounds - 2) }))}
-                      className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-muted-foreground"
+                  {/* Mobile: dropdown */}
+                  <div className="md:hidden">
+                    <Select
+                      value={String(game.settings.totalRounds)}
+                      onValueChange={(v) => game.setSettings((s) => ({ ...s, totalRounds: Number(v) }))}
                     >
-                      <Minus className="h-5 w-5" />
-                    </motion.button>
-                    <span className="tabular-nums text-3xl font-bold text-foreground">
-                      {game.settings.totalRounds}
-                    </span>
-                    <motion.button
-                      whileTap={{ scale: 0.9 }}
-                      onClick={() => game.setSettings((s) => ({ ...s, totalRounds: Math.min(20, s.totalRounds + 2) }))}
-                      className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-muted-foreground"
-                    >
-                      <Plus className="h-5 w-5" />
-                    </motion.button>
+                      <SelectTrigger className="h-11 rounded-xl bg-muted font-semibold">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {[2, 4, 6, 8, 10, 12, 14, 16, 18, 20].map((n) => (
+                          <SelectItem key={n} value={String(n)}>
+                            {n} ({n / 2} per team)
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
-                  <p className="text-center text-xs text-muted-foreground">
-                    {game.settings.totalRounds / 2} round{game.settings.totalRounds / 2 > 1 ? "s" : ""} per team
-                  </p>
+                  {/* Desktop: counter */}
+                  <div className="hidden md:block">
+                    <div className="flex items-center justify-center gap-6">
+                      <motion.button
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => game.setSettings((s) => ({ ...s, totalRounds: Math.max(2, s.totalRounds - 2) }))}
+                        className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-muted-foreground"
+                      >
+                        <Minus className="h-5 w-5" />
+                      </motion.button>
+                      <span className="tabular-nums text-3xl font-bold text-foreground">
+                        {game.settings.totalRounds}
+                      </span>
+                      <motion.button
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => game.setSettings((s) => ({ ...s, totalRounds: Math.min(20, s.totalRounds + 2) }))}
+                        className="flex h-12 w-12 items-center justify-center rounded-xl bg-muted text-muted-foreground"
+                      >
+                        <Plus className="h-5 w-5" />
+                      </motion.button>
+                    </div>
+                    <p className="mt-2 text-center text-xs text-muted-foreground">
+                      {game.settings.totalRounds / 2} round{game.settings.totalRounds / 2 > 1 ? "s" : ""} per team
+                    </p>
+                  </div>
                 </div>
 
                 {/* Max skips per round */}
-                <div className="space-y-3">
+                <div className="space-y-1.5 md:space-y-3">
                   <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Skips per round
                   </label>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      { value: 0, label: "Unlimited" },
-                      { value: 3, label: "3" },
-                      { value: 5, label: "5" },
-                      { value: 10, label: "10" },
-                    ].map((opt) => (
-                      <motion.button
-                        key={opt.value}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => game.setSettings((s) => ({ ...s, maxSkipsPerRound: opt.value }))}
-                        className={`flex h-12 min-w-[4rem] flex-1 items-center justify-center rounded-xl font-semibold transition-all sm:flex-none sm:px-4 ${
-                          game.settings.maxSkipsPerRound === opt.value
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-muted text-muted-foreground"
-                        }`}
-                      >
-                        {opt.label}
-                      </motion.button>
-                    ))}
+                  {/* Mobile: dropdown */}
+                  <div className="md:hidden">
+                    <Select
+                      value={String(game.settings.maxSkipsPerRound)}
+                      onValueChange={(v) => game.setSettings((s) => ({ ...s, maxSkipsPerRound: Number(v) }))}
+                    >
+                      <SelectTrigger className="h-11 rounded-xl bg-muted font-semibold">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {[
+                          { value: 0, label: "Unlimited" },
+                          { value: 3, label: "3" },
+                          { value: 5, label: "5" },
+                          { value: 10, label: "10" },
+                        ].map((opt) => (
+                          <SelectItem key={opt.value} value={String(opt.value)}>
+                            {opt.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {game.settings.maxSkipsPerRound === 0
+                        ? "Teams can skip as many cards as they want."
+                        : `Up to ${game.settings.maxSkipsPerRound} skips per round.`}
+                    </p>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    {game.settings.maxSkipsPerRound === 0
-                      ? "Teams can skip as many cards as they want each round."
-                      : `Each team can skip up to ${game.settings.maxSkipsPerRound} cards per round.`}
-                  </p>
+                  {/* Desktop: buttons */}
+                  <div className="hidden md:block">
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { value: 0, label: "Unlimited" },
+                        { value: 3, label: "3" },
+                        { value: 5, label: "5" },
+                        { value: 10, label: "10" },
+                      ].map((opt) => (
+                        <motion.button
+                          key={opt.value}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => game.setSettings((s) => ({ ...s, maxSkipsPerRound: opt.value }))}
+                          className={`flex h-12 min-w-[4rem] flex-1 items-center justify-center rounded-xl font-semibold transition-all sm:flex-none sm:px-4 ${
+                            game.settings.maxSkipsPerRound === opt.value
+                              ? "bg-primary text-primary-foreground"
+                              : "bg-muted text-muted-foreground"
+                          }`}
+                        >
+                          {opt.label}
+                        </motion.button>
+                      ))}
+                    </div>
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      {game.settings.maxSkipsPerRound === 0
+                        ? "Teams can skip as many cards as they want each round."
+                        : `Each team can skip up to ${game.settings.maxSkipsPerRound} cards per round.`}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Score limit (game ends when a team reaches this) */}
-                <div className="space-y-3">
+                <div className="space-y-1.5 md:space-y-3">
                   <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Score limit (first to reach wins)
                   </label>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      { value: 0, label: "Off" },
-                      { value: 10, label: "10" },
-                      { value: 15, label: "15" },
-                      { value: 20, label: "20" },
-                      { value: 25, label: "25" },
-                      { value: 30, label: "30" },
-                    ].map((opt) => (
-                      <motion.button
-                        key={opt.value}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => game.setSettings((s) => ({ ...s, scoreLimit: opt.value }))}
-                        className={`flex h-12 min-w-[3rem] flex-1 items-center justify-center rounded-xl font-semibold transition-all sm:flex-none sm:px-3 ${
-                          game.settings.scoreLimit === opt.value
-                            ? "bg-primary text-primary-foreground"
-                            : "bg-muted text-muted-foreground"
-                        }`}
-                      >
-                        {opt.label}
-                      </motion.button>
-                    ))}
+                  {/* Mobile: dropdown */}
+                  <div className="md:hidden">
+                    <Select
+                      value={String(game.settings.scoreLimit)}
+                      onValueChange={(v) => game.setSettings((s) => ({ ...s, scoreLimit: Number(v) }))}
+                    >
+                      <SelectTrigger className="h-11 rounded-xl bg-muted font-semibold">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {[
+                          { value: 0, label: "Off" },
+                          { value: 10, label: "10" },
+                          { value: 15, label: "15" },
+                          { value: 20, label: "20" },
+                          { value: 25, label: "25" },
+                          { value: 30, label: "30" },
+                        ].map((opt) => (
+                          <SelectItem key={opt.value} value={String(opt.value)}>
+                            {opt.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {game.settings.scoreLimit === 0
+                        ? "Game ends after set rounds."
+                        : `First to ${game.settings.scoreLimit} wins.`}
+                    </p>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    {game.settings.scoreLimit === 0
-                      ? "Game ends after the set number of rounds."
-                      : `Game ends as soon as a team reaches ${game.settings.scoreLimit} points.`}
-                  </p>
+                  {/* Desktop: buttons */}
+                  <div className="hidden md:block">
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { value: 0, label: "Off" },
+                        { value: 10, label: "10" },
+                        { value: 15, label: "15" },
+                        { value: 20, label: "20" },
+                        { value: 25, label: "25" },
+                        { value: 30, label: "30" },
+                      ].map((opt) => (
+                        <motion.button
+                          key={opt.value}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => game.setSettings((s) => ({ ...s, scoreLimit: opt.value }))}
+                          className={`flex h-12 min-w-[3rem] flex-1 items-center justify-center rounded-xl font-semibold transition-all sm:flex-none sm:px-3 ${
+                            game.settings.scoreLimit === opt.value
+                              ? "bg-primary text-primary-foreground"
+                              : "bg-muted text-muted-foreground"
+                          }`}
+                        >
+                          {opt.label}
+                        </motion.button>
+                      ))}
+                    </div>
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      {game.settings.scoreLimit === 0
+                        ? "Game ends after the set number of rounds."
+                        : `Game ends as soon as a team reaches ${game.settings.scoreLimit} points.`}
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <motion.button
                 whileTap={{ scale: 0.97 }}
                 onClick={goToGame}
-                className="mt-10 flex h-14 w-full items-center justify-center rounded-xl bg-primary text-base font-semibold text-primary-foreground"
+                className="mt-6 flex h-12 w-full items-center justify-center rounded-xl bg-primary text-base font-semibold text-primary-foreground md:mt-10 md:h-14"
               >
                 Start Round
               </motion.button>

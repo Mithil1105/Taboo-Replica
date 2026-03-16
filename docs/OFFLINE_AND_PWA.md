@@ -2,7 +2,7 @@
 
 ## Overview
 
-Taboo Party is a Progressive Web App (PWA) with offline support for Pass & Play.
+Anathema is a Progressive Web App (PWA) with offline support for Pass & Play.
 
 ## What Works Offline
 

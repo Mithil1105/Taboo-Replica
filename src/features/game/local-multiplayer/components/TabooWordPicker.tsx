@@ -39,7 +39,7 @@ export function TabooWordPicker({ open, onOpenChange, tabooWords, onConfirm }: T
       <AlertDialogContent className="max-w-[calc(100vw-2rem)] rounded-2xl border-border bg-card p-4 shadow-lg sm:max-w-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=open]:slide-in-from-bottom-4">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-base text-card-foreground">
-            Which taboo word was spoken?
+            Which forbidden word was spoken?
           </AlertDialogTitle>
           <AlertDialogDescription className="text-muted-foreground">
             Select the word the clue giver said. Clue team loses 1 point, your team gains 1.
@@ -53,11 +53,10 @@ export function TabooWordPicker({ open, onOpenChange, tabooWords, onConfirm }: T
               whileTap={{ scale: 0.97 }}
               type="button"
               onClick={() => setSelected(word)}
-              className={`inline-flex min-h-[44px] shrink-0 touch-manipulation rounded-xl px-4 text-sm font-semibold transition-colors ${
-                selected === word
+              className={`inline-flex min-h-[44px] shrink-0 touch-manipulation rounded-xl px-4 text-sm font-semibold transition-colors ${selected === word
                   ? "bg-destructive text-destructive-foreground"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
-              }`}
+                }`}
             >
               {word}
             </motion.button>
@@ -73,7 +72,7 @@ export function TabooWordPicker({ open, onOpenChange, tabooWords, onConfirm }: T
             disabled={!selected}
             className="min-h-[44px] touch-manipulation bg-destructive text-destructive-foreground hover:bg-destructive/90 disabled:opacity-50"
           >
-            Report taboo
+            Report anathema
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

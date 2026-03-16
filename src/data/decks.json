@@ -42,7 +42,7 @@
   {
     "id": "classic",
     "name": "Classic",
-    "description": "Classic taboo words for all occasions.",
+    "description": "Classic forbidden words for all occasions.",
     "category": "Classic",
     "difficulty": "Easy",
     "colorTag": "lilac",
@@ -55,7 +55,7 @@
   {
     "id": "classic2",
     "name": "Classic 2",
-    "description": "More classic taboo words.",
+    "description": "More classic forbidden words.",
     "category": "Classic",
     "difficulty": "Easy",
     "colorTag": "lilac",

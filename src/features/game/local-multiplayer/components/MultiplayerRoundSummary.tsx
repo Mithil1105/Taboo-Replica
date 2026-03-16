@@ -99,7 +99,7 @@ export function MultiplayerRoundSummary({
           <div className="flex flex-1 flex-col items-center gap-1 rounded-xl bg-muted/50 p-3">
             <AlertTriangle className="h-5 w-5 text-destructive" />
             <span className="tabular-nums text-xl font-bold">{session.round_taboo}</span>
-            <span className="text-[10px] font-medium uppercase text-muted-foreground">Taboo</span>
+            <span className="text-[10px] font-medium uppercase text-muted-foreground">Anathema</span>
           </div>
         </div>
 

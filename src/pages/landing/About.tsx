@@ -11,13 +11,13 @@ export default function About() {
     <>
       <SEOHead
         title="About"
-        description="Taboo Party is a modern digital party game: team word guessing, fair observer play, and flexible modes. Learn about the product vision and what's next."
+        description="Anathema is a modern digital party game: the game of forbidden words. Team word guessing, fair observer play, and flexible modes. Learn about the product vision and what's next."
         path="/about"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">
           <PageHeader
-            title="About Taboo Party"
+            title="About Anathema"
             description="A party word guessing game built for real groups and real rooms—with less chaos and more fun."
           />
 
@@ -25,7 +25,7 @@ export default function About() {
             <section>
               <h2 className="text-2xl font-bold text-foreground">What this game is</h2>
               <p className="text-muted-foreground leading-relaxed mt-2">
-                Taboo Party is a digital take on the classic taboo-style word game. Two teams take turns giving clues
+                Anathema is a digital take on the classic forbidden-words word game. Two teams take turns giving clues
                 to secret words while avoiding forbidden words; the other team observes and can call violations. We
                 added timers, scoring, multiple decks,                 and two ways to play—Pass & Play with one device (works offline after first load), or Local Multiplayer
                 with two phones—so it fits different group sizes and settings.
@@ -46,9 +46,9 @@ export default function About() {
               <h2 className="text-2xl font-bold text-foreground">What problem it solves</h2>
               <p className="text-muted-foreground leading-relaxed mt-2">
                 In group party games, passing one phone around can get messy—especially with more players. Not
-                everyone gets a clear view of the card, and scoring can feel arbitrary. Taboo Party gives you a
+                everyone gets a clear view of the card, and scoring can feel arbitrary.                 Anathema gives you a
                 shared timer and visible scoring, lets the observer team see the same card so they can fairly call
-                taboo, and with Team Sync mode keeps one phone per team so you're not passing a single device around
+                anathema, and with Team Sync mode keeps one phone per team so you're not passing a single device around
                 the whole group.
               </p>
             </section>

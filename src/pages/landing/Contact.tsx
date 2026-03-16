@@ -22,7 +22,7 @@ export default function Contact() {
     <>
       <SEOHead
         title="Contact & Feedback"
-        description="Send feedback or get in touch about the Taboo Party game. We'd love to hear how you're using it and what you'd like to see next."
+        description="Send feedback or get in touch about Anathema - the game of forbidden words. We'd love to hear how you're using it and what you'd like to see next."
         path="/contact"
       />
       <LandingLayout>

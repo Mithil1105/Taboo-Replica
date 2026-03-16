@@ -40,7 +40,7 @@ export default function GameModes() {
                 With two phones—one per team—the phone stays with the team. As turns change, the role on each phone
                 (clue giver view vs. observer view) updates automatically. You're not passing one device around the
                 whole group, so there's less chaos and fewer accidental drops. It's the smarter way to play a
-                multiplayer taboo-style game with a bigger crowd.
+                multiplayer forbidden-words game with a bigger crowd.
               </p>
               <ul className="mt-6 space-y-3">
                 {teamSyncBenefits.map((b, i) => (

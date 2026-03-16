@@ -218,9 +218,8 @@ export function MultiplayerPlayingView({
               {soundOn ? <Volume2 className="h-3.5 w-3.5" /> : <VolumeX className="h-3.5 w-3.5" />}
             </button>
             <div
-              className={`flex items-center gap-2 rounded-lg px-3 py-1.5 tabular-nums text-lg font-bold transition-colors ${
-                isLastFiveSeconds ? "animate-pulse bg-destructive/20 text-destructive" : "bg-muted/80 text-foreground"
-              }`}
+              className={`flex items-center gap-2 rounded-lg px-3 py-1.5 tabular-nums text-lg font-bold transition-colors ${isLastFiveSeconds ? "animate-pulse bg-destructive/20 text-destructive" : "bg-muted/80 text-foreground"
+                }`}
             >
               {String(Math.floor(timeLeft / 60)).padStart(2, "0")}:{String(timeLeft % 60).padStart(2, "0")}
             </div>
@@ -257,13 +256,12 @@ export function MultiplayerPlayingView({
               }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
               transition={{ duration: 0.2, ease: [0.32, 0.72, 0, 1] }}
-              className={`flex w-full max-w-md flex-col overflow-hidden rounded-2xl border-2 shadow-sm transition-colors duration-200 ${
-                cardFlash === "correct"
+              className={`flex w-full max-w-md flex-col overflow-hidden rounded-2xl border-2 shadow-sm transition-colors duration-200 ${cardFlash === "correct"
                   ? "border-accent bg-accent/10"
                   : cardFlash === "taboo"
                     ? "animate-shake border-destructive bg-destructive/10"
                     : "border-border/80 bg-card"
-              }`}
+                }`}
             >
               {/* Main word header */}
               <div className="bg-primary/10 px-4 py-3 text-center">
@@ -272,7 +270,7 @@ export function MultiplayerPlayingView({
                 </h1>
               </div>
 
-              {/* Taboo words - one per line */}
+              {/* Forbidden words - one per line */}
               <div className="px-4 py-3">
                 <p className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-destructive/80">
                   Don&apos;t say
@@ -323,7 +321,7 @@ export function MultiplayerPlayingView({
               className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl border-2 border-destructive/60 bg-destructive/10 font-semibold text-destructive disabled:opacity-60"
             >
               <AlertTriangle className="h-4 w-4" />
-              I said a taboo word
+              I said a forbidden word
             </motion.button>
           </div>
         )}
@@ -335,7 +333,7 @@ export function MultiplayerPlayingView({
             className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-destructive font-semibold text-destructive-foreground disabled:opacity-60"
           >
             <AlertTriangle className="h-4 w-4" />
-            Taboo
+            Anathema
           </motion.button>
         )}
       </div>

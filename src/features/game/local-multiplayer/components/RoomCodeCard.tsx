@@ -29,7 +29,7 @@ export function RoomCodeCard({ roomCode, helperText }: RoomCodeCardProps) {
     if (!hasCode || !canShare) return;
     try {
       await navigator.share({
-        title: "Join my Taboo game",
+        title: "Join my Anathema game",
         text: `Join my game! Room code: ${roomCode}`,
       });
       toast.success("Shared!");

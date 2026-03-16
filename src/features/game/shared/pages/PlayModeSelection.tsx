@@ -38,7 +38,7 @@ export default function PlayModeSelection() {
           </Link>
           <div className="flex flex-1 flex-col items-center gap-1 text-center">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Play Taboo
+              Play Anathema
             </p>
             <h1 className="text-base font-semibold text-foreground sm:text-lg">
               Choose your play mode
@@ -54,7 +54,7 @@ export default function PlayModeSelection() {
           <ModeCard
             label="Pass & Play"
             title="One device, shared turns"
-            description="Pass a single phone between teams for a quick, classic Taboo-style game."
+            description="Pass a single phone between teams for a quick, classic forbidden-words game."
             bullets={[
               "One device for both teams",
               "Fast setup, no accounts",
@@ -70,11 +70,11 @@ export default function PlayModeSelection() {
           <ModeCard
             label="Local Multiplayer"
             title="Two phones, one game"
-            description="Each team gets their own phone. Cleaner turns, easier taboo calls, and less chaos."
+            description="Each team gets their own phone. Cleaner turns, easier anathema calls, and less chaos."
             bullets={[
               "One phone per team",
               "Room-based setup",
-              "Observer can track taboo calls",
+              "Observer can track anathema calls",
             ]}
             ctaLabel="Set up Local Multiplayer"
             to="/play/local-multiplayer"

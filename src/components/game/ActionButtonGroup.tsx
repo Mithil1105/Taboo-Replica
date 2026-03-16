@@ -18,7 +18,7 @@ export function ActionButtonGroup({ onCorrect, onSkip, onTaboo, skipsRemaining }
         className="flex min-h-[48px] flex-1 items-center justify-center gap-1.5 rounded-xl bg-destructive font-semibold text-destructive-foreground transition-colors touch-manipulation sm:min-h-[4rem] sm:gap-2"
       >
         <AlertTriangle className="h-4 w-4 sm:h-5 sm:w-5" />
-        <span className="text-xs uppercase tracking-wide sm:text-sm">Taboo</span>
+        <span className="text-xs uppercase tracking-wide sm:text-sm">Anathema</span>
       </motion.button>
 
       <motion.button

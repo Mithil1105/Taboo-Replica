@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SITE_NAME, SITE_DESCRIPTION } from "@/content/siteConfig";
 
 export interface SEOHeadProps {
   title: string;
@@ -7,9 +8,7 @@ export interface SEOHeadProps {
   path?: string;
 }
 
-const SITE_NAME = "Taboo Party";
-const DEFAULT_DESCRIPTION =
-  "A modern Taboo-style party game for real groups. Team word guessing, Pass & Play or Team Sync mode. Play with friends, family, or at parties.";
+const DEFAULT_DESCRIPTION = SITE_DESCRIPTION;
 
 export function SEOHead({ title, description, path }: SEOHeadProps) {
   const fullTitle = title === SITE_NAME ? SITE_NAME : `${title} | ${SITE_NAME}`;

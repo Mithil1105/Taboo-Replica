@@ -76,76 +76,76 @@ export default function LocalMultiplayerIntro() {
         {showOnboarding ? (
           <MultiplayerOnboarding onComplete={handleOnboardingComplete} />
         ) : (
-        <>
-        {/* Content */}
-        <section className="flex flex-1 flex-col gap-4">
-          <div className="rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <Users className="h-5 w-5" />
+          <>
+            {/* Content */}
+            <section className="flex flex-1 flex-col gap-4">
+              <div className="rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-semibold text-foreground">
+                      One phone per team
+                    </h2>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                      Each team uses their own phone. Rounds feel smoother, turns are clearer, and anathema calls are easier to manage.
+                    </p>
+                  </div>
+                </div>
+
+                <ul className="mt-3 space-y-1.5 text-xs text-muted-foreground">
+                  <li>• Team A sees their cards on one device.</li>
+                  <li>• Team B sees theirs on another.</li>
+                  <li>• An observer can track anathema calls from either side.</li>
+                </ul>
               </div>
-              <div>
-                <h2 className="text-sm font-semibold text-foreground">
-                  One phone per team
-                </h2>
-                <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Each team uses their own phone. Rounds feel smoother, turns are clearer, and taboo calls are easier to manage.
+
+              <div className="rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/10 text-secondary">
+                    <Smartphone className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h2 className="text-sm font-semibold text-foreground">
+                      Built for in-person groups
+                    </h2>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                      Best when both teams are in the same room—game nights, college events, retreats, or workshops.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-1 rounded-2xl border border-dashed border-border/80 bg-muted/30 p-3">
+                <p className="text-[11px] text-muted-foreground leading-relaxed">
+                  {online
+                    ? "Create a room, share the code, and join from another device. Both teams play in sync with realtime updates."
+                    : "Needs internet. Try Pass & Play offline."}
                 </p>
               </div>
-            </div>
+            </section>
 
-            <ul className="mt-3 space-y-1.5 text-xs text-muted-foreground">
-              <li>• Team A sees their cards on one device.</li>
-              <li>• Team B sees theirs on another.</li>
-              <li>• An observer can track taboo calls from either side.</li>
-            </ul>
-          </div>
-
-          <div className="rounded-2xl border border-border/80 bg-card/90 p-4 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary/10 text-secondary">
-                <Smartphone className="h-5 w-5" />
-              </div>
-              <div>
-                <h2 className="text-sm font-semibold text-foreground">
-                  Built for in-person groups
-                </h2>
-                <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
-                  Best when both teams are in the same room—game nights, college events, retreats, or workshops.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-1 rounded-2xl border border-dashed border-border/80 bg-muted/30 p-3">
-            <p className="text-[11px] text-muted-foreground leading-relaxed">
-              {online
-                ? "Create a room, share the code, and join from another device. Both teams play in sync with realtime updates."
-                : "Needs internet. Try Pass & Play offline."}
-            </p>
-          </div>
-        </section>
-
-        {/* Actions */}
-        <footer className="mt-4 flex flex-col gap-2">
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            onClick={() => navigate("/play/local-multiplayer/create")}
-            disabled={!online}
-            className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-primary text-sm font-semibold text-primary-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Create a room
-          </motion.button>
-          <motion.button
-            whileTap={{ scale: 0.97 }}
-            onClick={() => navigate("/play/local-multiplayer/join")}
-            disabled={!online}
-            className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-muted text-sm font-semibold text-muted-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Join with a room code
-          </motion.button>
-        </footer>
-        </>
+            {/* Actions */}
+            <footer className="mt-4 flex flex-col gap-2">
+              <motion.button
+                whileTap={{ scale: 0.97 }}
+                onClick={() => navigate("/play/local-multiplayer/create")}
+                disabled={!online}
+                className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-primary text-sm font-semibold text-primary-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Create a room
+              </motion.button>
+              <motion.button
+                whileTap={{ scale: 0.97 }}
+                onClick={() => navigate("/play/local-multiplayer/join")}
+                disabled={!online}
+                className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-muted text-sm font-semibold text-muted-foreground transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Join with a room code
+              </motion.button>
+            </footer>
+          </>
         )}
       </motion.main>
     </div>

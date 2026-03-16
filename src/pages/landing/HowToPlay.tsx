@@ -13,7 +13,7 @@ export default function HowToPlay() {
     <>
       <SEOHead
         title="How to Play"
-        description="Learn how to play this Taboo-style party game: goal, roles (clue giver, guessers, observer team), taboo rules, scoring, and round flow. Quick guide for first-time players."
+        description="Learn how to play Anathema - the game of forbidden words: goal, roles (clue giver, guessers, observer team), rules, scoring, and round flow. Quick guide for first-time players."
         path="/how-to-play"
       />
       <LandingLayout>
@@ -28,8 +28,8 @@ export default function HowToPlay() {
               <h2 id="goal-heading" className="text-2xl font-bold text-foreground mb-4">Goal of the game</h2>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
                 Two teams compete to guess secret words. On each turn, one player (the clue giver) sees the word and a
-                list of taboo words they cannot say. They describe the word to their team; the team tries to guess
-                before time runs out. The other team observes and can call out if a taboo word is said. The team with
+                list of forbidden words they cannot say. They describe the word to their team; the team tries to guess
+                before time runs out. The other team observes and can call out if a forbidden word is said. The team with
                 the most points when all rounds are over wins.
               </p>
             </section>
@@ -45,8 +45,8 @@ export default function HowToPlay() {
                     </span>
                   }
                 >
-                  <p>Sees the secret word and the taboo words on the card (or screen). Describes the word to their team
-                  using only spoken words—no gestures or sounds allowed. Must not say the word or any taboo word. Only one clue giver per team per round.</p>
+                  <p>Sees the secret word and the forbidden words on the card (or screen). Describes the word to their team
+                    using only spoken words—no gestures or sounds allowed. Must not say the word or any forbidden word. Only one clue giver per team per round.</p>
                 </RuleCard>
                 <RuleCard
                   title={
@@ -57,7 +57,7 @@ export default function HowToPlay() {
                   }
                 >
                   <p>Teammates of the clue giver. Listen to the clues and try to guess the word before the timer runs out.
-                  They don't see the card.</p>
+                    They don't see the card.</p>
                 </RuleCard>
                 <RuleCard
                   title={
@@ -68,17 +68,17 @@ export default function HowToPlay() {
                   }
                 >
                   <p>The other team. They can watch the same card (on a shared screen or their device in Team Sync
-                  mode) and call out if the clue giver says a taboo word. This keeps play fair and fun.</p>
+                    mode) and call out if the clue giver says a forbidden word. This keeps play fair and fun.</p>
                 </RuleCard>
                 <RuleCard
                   title={
                     <span className="flex items-center gap-2">
                       <AlertCircle className="h-5 w-5 text-primary" aria-hidden />
-                      Taboo violation
+                      Anathema violation
                     </span>
                   }
                 >
-                  <p>If the clue giver says the secret word or any word on the taboo list, it&apos;s a violation. The observer team can call it. Also forbidden: breaking words into parts, using synonyms, or using translations of the taboo words or the main word—even if a teammate has already guessed correctly. The clue team loses 1 point; the observer team gains 1 point. The card is done and play continues.</p>
+                  <p>If the clue giver says the secret word or any word on the forbidden list, it&apos;s a violation. The observer team can call it. Also forbidden: breaking words into parts, using synonyms, or using translations of the forbidden words or the main word—even if a teammate has already guessed correctly. The clue team loses 1 point; the observer team gains 1 point. The card is done and play continues.</p>
                 </RuleCard>
               </div>
             </section>
@@ -89,7 +89,7 @@ export default function HowToPlay() {
                 <ul className="space-y-2 text-muted-foreground">
                   <li><strong className="text-foreground">Correct guess:</strong> +1 point for the clue team.</li>
                   <li><strong className="text-foreground">Skip:</strong> Pass the card; no score change.</li>
-                  <li><strong className="text-foreground">Taboo:</strong> Said a forbidden word; −1 for the clue team, +1 for the observer team. The card is done.</li>
+                  <li><strong className="text-foreground">Anathema:</strong> Said a forbidden word; −1 for the clue team, +1 for the observer team. The card is done.</li>
                 </ul>
                 <p className="mt-4 text-sm text-muted-foreground">
                   At the end of all rounds, the team with the higher score wins. You can set round length, total rounds, and skip limits in the app.
@@ -102,7 +102,7 @@ export default function HowToPlay() {
               <ol className="list-decimal list-inside space-y-3 text-muted-foreground max-w-2xl">
                 <li>Split into two teams and decide who goes first.</li>
                 <li>Team A's clue giver gets the card; their team guesses until time runs out (or all cards are used in the round).</li>
-                <li>Team B observes and can call taboo violations.</li>
+                <li>Team B observes and can call anathema violations.</li>
                 <li>When the round ends, switch: Team B's clue giver goes, Team A observes.</li>
                 <li>Repeat until you've played the agreed number of rounds. Highest total score wins.</li>
               </ol>

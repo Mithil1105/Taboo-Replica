@@ -20,9 +20,9 @@ export default defineConfig(({ mode }) => ({
       registerType: "prompt",
       includeAssets: ["placeholder.svg", "robots.txt"],
       manifest: {
-        name: "Taboo Party",
-        short_name: "Taboo Party",
-        description: "Taboo-style party word guessing game for teams. Pass & Play or Local Multiplayer.",
+        name: "Anathema",
+        short_name: "Anathema",
+        description: "Anathema – the game of forbidden words. Party word guessing game for teams. Pass & Play or Local Multiplayer.",
         theme_color: "#0f172a",
         background_color: "#0f172a",
         display: "standalone",

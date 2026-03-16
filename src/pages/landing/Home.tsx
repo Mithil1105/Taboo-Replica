@@ -26,7 +26,7 @@ export default function Home() {
     <>
       <SEOHead
         title={SITE_NAME}
-        description="A modern Taboo-style party game built for real groups. Team word guessing with Pass & Play or 2-phone Team Sync. Play with friends, family, or at parties—mobile-friendly and easy to learn."
+        description="Anathema: the game of forbidden words. Team word guessing with Pass & Play or 2-phone Team Sync. Play with friends, family, or at parties—mobile-friendly and easy to learn."
         path="/"
       />
       <LandingLayout>
@@ -51,9 +51,9 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-bold text-foreground sm:text-3xl">What is this game?</h2>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                It's a multiplayer taboo party game online: two teams, one clue giver per round, and a list of words you
+                It's a multiplayer party game online: two teams, one clue giver per round, and a list of forbidden words you
                 can't say. Your team guesses the secret word before time runs out. The other team watches and can call out
-                taboo violations—so it stays fair and fun. Think of it as a team word guessing game built for real
+                anathema violations—so it stays fair and fun. Think of it as a team word guessing game built for real
                 rooms: friends, parties, college events, or family game nights.
               </p>
             </div>
@@ -61,8 +61,8 @@ export default function Home() {
               <p className="text-sm font-medium text-primary">Quick summary</p>
               <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
                 <li>• Two teams take turns giving clues</li>
-                <li>• Clue giver can&apos;t say the word or taboo words (no synonyms or translations)</li>
-                <li>• Correct = +1; Skip = no change; Taboo = −1 clue team, +1 observers</li>
+                <li>• Clue giver can&apos;t say the word or forbidden words (no synonyms or translations)</li>
+                <li>• Correct = +1; Skip = no change; Anathema = −1 clue team, +1 observers</li>
                 <li>• Highest score when rounds end wins</li>
               </ul>
             </div>
@@ -114,24 +114,24 @@ export default function Home() {
             {audiences.map((a, i) => {
               const Icon = a.icon;
               return (
-              <motion.div
-                key={a.id}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.35, delay: i * 0.06 }}
-              >
-                <Card className="h-full rounded-2xl border border-border/80 bg-card/80 transition-shadow hover:shadow-md">
-                  <CardContent className="pt-6">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                      <Icon className="h-6 w-6" aria-hidden />
-                    </div>
-                    <h3 className="mt-3 font-semibold text-foreground">{a.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{a.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
+                <motion.div
+                  key={a.id}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.35, delay: i * 0.06 }}
+                >
+                  <Card className="h-full rounded-2xl border border-border/80 bg-card/80 transition-shadow hover:shadow-md">
+                    <CardContent className="pt-6">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <Icon className="h-6 w-6" aria-hidden />
+                      </div>
+                      <h3 className="mt-3 font-semibold text-foreground">{a.title}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{a.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
             })}
           </div>
         </SectionContainer>

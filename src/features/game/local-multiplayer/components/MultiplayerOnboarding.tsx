@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Smartphone, MessageCircle, Trophy, ChevronRight } from "lucide-react";
 
-const ONBOARDING_KEY = "taboo-multiplayer-onboarding-seen";
+const ONBOARDING_KEY = "anathema-multiplayer-onboarding-seen";
 
 export function hasSeenMultiplayerOnboarding(): boolean {
   if (typeof window === "undefined") return false;
@@ -22,20 +22,20 @@ const screens = [
   {
     icon: Smartphone,
     title: "Two phones setup",
-    body: "Each team uses their own phone. One device shows the card and gives clues. The other watches and can call taboo when a forbidden word is said.",
+    body: "Each team uses their own phone. One device shows the card and gives clues. The other watches and can call anathema when a forbidden word is said.",
     hint: "Create a room on one phone, join with the code on the other.",
   },
   {
     icon: MessageCircle,
-    title: "How taboo works",
-    body: "The clue giver must get their team to guess the main word using only spoken words—no gestures or sounds allowed. No breaking words, synonyms, or translations—even if a teammate has guessed. If they slip, the opposing team taps Taboo and selects which word was said.",
-    hint: "Observers must pick the exact taboo word that was spoken.",
+    title: "How anathema works",
+    body: "The clue giver must get their team to guess the main word using only spoken words—no gestures or sounds allowed. No breaking words, synonyms, or translations—even if a teammate has guessed. If they slip, the opposing team taps Anathema and selects which word was said.",
+    hint: "Observers must pick the exact forbidden word that was spoken.",
   },
   {
     icon: Trophy,
     title: "Scoring rules",
-    body: "Correct guess: +1 for the clue team. Skip: no change. Taboo: -1 for the clue team, +1 for the opponents. The team with the most points after all rounds wins.",
-    hint: "Taboo hurts the clue team and rewards the observers.",
+    body: "Correct guess: +1 for the clue team. Skip: no change. Anathema: -1 for the clue team, +1 for the opponents. The team with the most points after all rounds wins.",
+    hint: "Anathema hurts the clue team and rewards the observers.",
   },
 ];
 
@@ -85,9 +85,8 @@ export function MultiplayerOnboarding({ onComplete }: MultiplayerOnboardingProps
             {screens.map((_, i) => (
               <div
                 key={i}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === step ? "w-5 bg-primary" : "w-1.5 bg-muted"
-                }`}
+                className={`h-1.5 rounded-full transition-all ${i === step ? "w-5 bg-primary" : "w-1.5 bg-muted"
+                  }`}
               />
             ))}
           </div>

@@ -9,19 +9,19 @@ export const faqItems: FAQItem[] = [
     id: "what-is",
     question: "What is this game?",
     answer:
-      "It's a multiplayer taboo-style party game. Two teams take turns: one person gives clues to a secret word while their team guesses, and they must avoid saying certain \"taboo\" words. The other team observes and can call out violations. It's a word guessing game for groups—great for parties, friends, and family.",
+      "It's Anathema: the game of forbidden words. Two teams take turns: one person gives clues to a secret word while their team guesses, and they must avoid saying certain forbidden words. The other team observes and can call out violations. It's a word guessing game for groups—great for parties, friends, and family.",
   },
   {
     id: "similar-taboo",
     question: "Is this similar to Taboo?",
     answer:
-      "Yes. If you've played the classic Taboo board game, you'll feel right at home. Each card has a main word and a list of forbidden words. The clue giver describes the main word without saying it or any of the taboo words. We've added digital features like timers, scoring, and Team Sync mode to make it easier to play in real life with less chaos.",
+      "Yes. If you've played the classic Taboo board game, you'll feel right at home. Each card has a main word and a list of forbidden words. The clue giver describes the main word without saying it or any of the forbidden words. We've added digital features like timers, scoring, and Team Sync mode to make it easier to play in real life with less chaos.",
   },
   {
     id: "one-phone",
     question: "Can I play with one phone?",
     answer:
-      "Yes. Use Pass & Play mode: one phone is shared by everyone. When it's a team's turn, the clue giver holds the phone; when the round ends, pass it to the next team. The observer team can look at the same screen to watch for taboo violations.",
+      "Yes. Use Pass & Play mode: one phone is shared by everyone. When it's a team's turn, the clue giver holds the phone; when the round ends, pass it to the next team. The observer team can look at the same screen to watch for forbidden word violations.",
   },
   {
     id: "two-phones",
@@ -49,9 +49,9 @@ export const faqItems: FAQItem[] = [
   },
   {
     id: "taboo-word-said",
-    question: "What happens if someone says a taboo word?",
+    question: "What happens if someone says a forbidden word?",
     answer:
-      "The observing team can call it out. A taboo violation includes: saying the secret word, any taboo word, breaking words into parts, using synonyms, or using translations—even if a teammate has already guessed. The clue team loses 1 point; the observer team gains 1 point. The card is done and play continues.",
+      "The observing team can call it out. An anathema violation includes: saying the secret word, any forbidden word, breaking words into parts, using synonyms, or using translations—even if a teammate has already guessed. The clue team loses 1 point; the observer team gains 1 point. The card is done and play continues.",
   },
   {
     id: "gestures-sounds",
@@ -63,7 +63,7 @@ export const faqItems: FAQItem[] = [
     id: "scoring",
     question: "How are scores calculated?",
     answer:
-      "Correct guess: +1 for the clue team. Skip: no score change. Taboo: −1 for the clue team, +1 for the observer team. At the end of all rounds, the team with the higher score wins.",
+      "Correct guess: +1 for the clue team. Skip: no score change. Anathema: −1 for the clue team, +1 for the observer team. At the end of all rounds, the team with the higher score wins.",
   },
   {
     id: "mobile-friendly",
@@ -93,7 +93,7 @@ export const faqItems: FAQItem[] = [
     id: "observer-see-card",
     question: "Does the observer team see the same card?",
     answer:
-      "Yes. The observing team can see the same word and taboo list (on the shared screen or on their team's device in Team Sync mode) so they can fairly call out if the clue giver says a taboo word.",
+      "Yes. The observing team can see the same word and forbidden word list (on the shared screen or on their team's device in Team Sync mode) so they can fairly call out if the clue giver says a forbidden word.",
   },
   {
     id: "college-family",

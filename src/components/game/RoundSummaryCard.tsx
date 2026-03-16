@@ -14,7 +14,7 @@ export function RoundSummaryCard({ result, team, onNextRound, onHome, isGameOver
   const stats = [
     { icon: Check, label: "Correct", value: result.correct, color: "text-accent" },
     { icon: SkipForward, label: "Skipped", value: result.skipped, color: "text-muted-foreground" },
-    { icon: AlertTriangle, label: "Taboo", value: result.taboo, color: "text-destructive" },
+    { icon: AlertTriangle, label: "Anathema", value: result.taboo, color: "text-destructive" },
   ];
 
   return (
