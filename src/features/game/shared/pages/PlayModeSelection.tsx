@@ -5,6 +5,7 @@ import { useOnlineStatus } from "@/hooks/useOnlineStatus";
 import { ThemeToggle } from "@/components/game/ThemeToggle";
 import { ModeCard } from "../components/ModeCard";
 import { Home, Users, Smartphone } from "lucide-react";
+import appLogo from "@/images/applogo.png";
 
 const pageTransition = {
   initial: { opacity: 0, y: 8 },
@@ -37,6 +38,7 @@ export default function PlayModeSelection() {
             <Home className="h-4 w-4" />
           </Link>
           <div className="flex flex-1 flex-col items-center gap-1 text-center">
+            <img src={appLogo} alt="" className="h-8 w-8 rounded-lg" aria-hidden />
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
               Play Anathema
             </p>

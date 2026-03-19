@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/content/siteConfig";
 import { SITE_NAME, SITE_TAGLINE } from "@/content/siteConfig";
+import appLogo from "@/images/applogo.png";
 import { cn } from "@/lib/utils";
 
 const footerLinks = [
@@ -27,7 +28,8 @@ export function Footer({ className }: { className?: string }) {
       <div className="container mx-auto max-w-5xl px-4 sm:px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <Link to={ROUTES.home} className="text-lg font-bold text-foreground hover:text-primary transition-colors">
+            <Link to={ROUTES.home} className="flex items-center gap-2 text-lg font-bold text-foreground hover:text-primary transition-colors">
+              <img src={appLogo} alt="" className="h-8 w-8 rounded-lg" aria-hidden />
               {SITE_NAME}
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">

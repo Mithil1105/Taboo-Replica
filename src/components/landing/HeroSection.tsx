@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { ROUTES } from "@/content/siteConfig";
 import { Button } from "@/components/ui/button";
 import { AnimatedBackground } from "./AnimatedBackground";
+import appLogo from "@/images/applogo.png";
 
 interface HeroSectionProps {
   headline: string;
@@ -37,6 +38,7 @@ export function HeroSection({
     >
       <AnimatedBackground />
       <div className="relative z-10 mx-auto max-w-3xl text-center">
+        <img src={appLogo} alt="" className="mx-auto mb-6 h-16 w-16 rounded-2xl sm:h-20 sm:w-20" aria-hidden />
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
           {headline}
         </h1>

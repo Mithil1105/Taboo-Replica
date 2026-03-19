@@ -14,6 +14,7 @@ import { useTheme } from "@/hooks/useTheme";
 import { ROUTES } from "@/content/siteConfig";
 import { SITE_NAME } from "@/content/siteConfig";
 import { Menu } from "lucide-react";
+import appLogo from "@/images/applogo.png";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -32,8 +33,9 @@ export function Navbar() {
       <nav className="container mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6" aria-label="Main navigation">
         <Link
           to={ROUTES.home}
-          className="text-xl font-bold tracking-tight text-foreground hover:text-primary transition-colors"
+          className="flex items-center gap-2 text-xl font-bold tracking-tight text-foreground hover:text-primary transition-colors"
         >
+          <img src={appLogo} alt="" className="h-8 w-8 rounded-lg" aria-hidden />
           {SITE_NAME}
         </Link>
 
@@ -74,7 +76,10 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs">
               <SheetHeader>
-                <SheetTitle className="text-left font-bold">{SITE_NAME}</SheetTitle>
+                <SheetTitle className="flex items-center gap-2 text-left font-bold">
+                  <img src={appLogo} alt="" className="h-8 w-8 rounded-lg" aria-hidden />
+                  {SITE_NAME}
+                </SheetTitle>
               </SheetHeader>
               <ul className="mt-6 flex flex-col gap-1">
                 {navLinks.map(({ to, label }) => (
