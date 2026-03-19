@@ -13,9 +13,9 @@ export const faqItems: FAQItem[] = [
   },
   {
     id: "similar-taboo",
-    question: "Is this similar to Taboo?",
+    question: "Is this similar to the classic forbidden-words card game?",
     answer:
-      "Yes. If you've played the classic Taboo board game, you'll feel right at home. Each card has a main word and a list of forbidden words. The clue giver describes the main word without saying it or any of the forbidden words. We've added digital features like timers, scoring, and Team Sync mode to make it easier to play in real life with less chaos.",
+      "Yes. If you've played the classic forbidden-words card game, you'll feel right at home. Each card has a main word and a list of forbidden words. The clue giver describes the main word without saying it or any of the forbidden words. We've added digital features like timers, scoring, and Team Sync mode to make it easier to play in real life with less chaos.",
   },
   {
     id: "one-phone",

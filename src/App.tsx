@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ScrollToTop } from "@/components/common/ScrollToTop";
+import { SEOStructuredData } from "@/components/landing/SEOStructuredData";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { OfflineBanner } from "@/components/common/OfflineBanner";
@@ -11,6 +13,9 @@ import GameModes from "./pages/landing/GameModes";
 import About from "./pages/landing/About";
 import FAQ from "./pages/landing/FAQ";
 import Contact from "./pages/landing/Contact";
+import TermsOfService from "./pages/landing/TermsOfService";
+import PrivacyPolicy from "./pages/landing/PrivacyPolicy";
+import CookiePolicy from "./pages/landing/CookiePolicy";
 import Play from "./pages/Play";
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +40,8 @@ const App = () => (
       <PWAUpdatePrompt />
       <OfflineBanner />
       <BrowserRouter>
+        <ScrollToTop />
+        <SEOStructuredData />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/how-to-play" element={<HowToPlay />} />
@@ -42,6 +49,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/play" element={<Play />} />
           <Route path="/play/pass-and-play" element={<Suspense fallback={<PageFallback />}><PassAndPlay /></Suspense>} />
           <Route path="/play/local-multiplayer" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerIntro /></Suspense>} />

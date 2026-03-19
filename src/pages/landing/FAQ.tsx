@@ -13,8 +13,9 @@ export default function FAQ() {
     <>
       <SEOHead
         title="FAQ"
-        description="Frequently asked questions about the Taboo-style party game: rules, one phone vs two phones, Team Sync mode, scoring, and how to play with friends or at parties."
+        description="Taboo game FAQ: rules, one phone vs two phones, Team Sync mode, scoring, taboo rules. Frequently asked questions about the forbidden words game."
         path="/faq"
+        keywords="taboo game FAQ, taboo rules, forbidden words game, taboo game rules"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

@@ -11,8 +11,9 @@ export default function About() {
     <>
       <SEOHead
         title="About"
-        description="Anathema is a modern digital party game: the game of forbidden words. Team word guessing, fair observer play, and flexible modes. Learn about the product vision and what's next."
+        description="Anathema is the taboo game alternative—play taboo online free. Taboo word game, taboo party game. Team word guessing, fair observer play. Learn about the product vision."
         path="/about"
+        keywords="taboo game alternative, taboo online free, taboo word game, forbidden words game"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

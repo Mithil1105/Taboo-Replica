@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "prompt",
-      includeAssets: ["favicon.ico", "favicon-16x16.png", "favicon-32x32.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "og-image.png", "robots.txt"],
+      includeAssets: ["favicon.ico", "favicon-16x16.png", "favicon-32x32.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "og-image.png", "robots.txt", "sitemap.xml"],
       manifest: {
         name: "Anathema",
         short_name: "Anathema",

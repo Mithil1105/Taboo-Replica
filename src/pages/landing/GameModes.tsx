@@ -14,8 +14,9 @@ export default function GameModes() {
     <>
       <SEOHead
         title="Game Modes"
-        description="Pass & Play with one phone or Team Sync with two phones. Learn how the 2-phone team-sync party game reduces chaos and works best for larger groups."
+        description="Taboo game online: Pass & Play with one phone or Team Sync with two phones. Taboo party game modes for the forbidden words game. Works best for larger groups."
         path="/game-modes"
+        keywords="taboo game online, taboo party game, team word game, taboo game modes"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

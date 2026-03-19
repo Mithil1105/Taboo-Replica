@@ -13,8 +13,9 @@ export default function HowToPlay() {
     <>
       <SEOHead
         title="How to Play"
-        description="Learn how to play Anathema - the game of forbidden words: goal, roles (clue giver, guessers, observer team), rules, scoring, and round flow. Quick guide for first-time players."
+        description="How to play taboo: Anathema rules, roles (clue giver, guessers, observer team), taboo game rules, scoring, and round flow. Quick guide for the forbidden words game."
         path="/how-to-play"
+        keywords="taboo game rules, how to play taboo, taboo word game, taboo game rules"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

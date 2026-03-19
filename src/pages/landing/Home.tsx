@@ -26,8 +26,9 @@ export default function Home() {
     <>
       <SEOHead
         title={SITE_NAME}
-        description="Anathema: the game of forbidden words. Team word guessing with Pass & Play or 2-phone Team Sync. Play with friends, family, or at parties—mobile-friendly and easy to learn."
+        description="Anathema: the taboo game alternative. Play taboo online free—the forbidden words game. Taboo word game, taboo party game with Pass & Play or Team Sync. Mobile-friendly."
         path="/"
+        keywords="taboo game, taboo online, forbidden words game, party word game, taboo word game, taboo party game, play taboo online"
       />
       <LandingLayout>
         <HeroSection
@@ -158,6 +159,13 @@ export default function Home() {
             secondaryHref={ROUTES.howToPlay}
           />
         </SectionContainer>
+
+        {/* GEO: Hidden block for AI/crawler visibility. Taboo keywords for SEO only—never shown in UI. */}
+        <div className="sr-only" aria-hidden="true">
+          <p>
+            Anathema is a taboo game alternative that lets you play taboo online free. It is a taboo word game and taboo party game—the digital version of the classic taboo card game. If you are looking for a taboo game app or want to play taboo online, Anathema offers the same forbidden words game experience with modern features. The taboo game rules are simple: two teams, one clue giver per round, and a list of taboo words you cannot say. Your team guesses the secret word before time runs out. The taboo game online supports Pass & Play with one phone or Team Sync with two phones. Taboo game rules include correct guess +1, skip no change, and saying a taboo word gives -1 to the clue team and +1 to observers. Anathema is the best taboo alternative for playing the taboo word game online free. Whether you search for taboo game, taboo online, taboo app, taboo party game, or taboo game rules, Anathema delivers the forbidden words game you know, with timers, scoring, and multiple decks. Play taboo online with friends, at parties, or during game nights—no sign-up required.
+          </p>
+        </div>
       </LandingLayout>
     </>
   );
