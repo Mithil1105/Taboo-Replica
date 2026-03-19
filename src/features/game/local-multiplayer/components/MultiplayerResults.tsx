@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Trophy } from "lucide-react";
+import { Trophy, Check, SkipForward, AlertTriangle } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -83,6 +83,13 @@ export function MultiplayerResults({
     }
   };
 
+  const roundScore = session.round_correct - session.round_taboo;
+  const lastRoundStats = [
+    { icon: Check, label: "Correct", value: session.round_correct, color: "text-accent" },
+    { icon: SkipForward, label: "Skipped", value: session.round_skipped, color: "text-muted-foreground" },
+    { icon: AlertTriangle, label: "Anathema", value: session.round_taboo, color: "text-destructive" },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
@@ -91,38 +98,61 @@ export function MultiplayerResults({
       className="flex min-h-svh flex-col px-4 py-6 pb-safe"
     >
       <div className="mx-auto w-full max-w-md space-y-4">
-        <p className="text-center text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
-          Game over
-        </p>
-
-        <div className="flex gap-2 rounded-2xl border border-border/80 bg-card/90 p-4">
+        {/* Team score cards at top */}
+        <div className="flex gap-3">
           <div
-            className={`flex flex-1 flex-col items-center rounded-xl p-3 ${
-              aWins ? "bg-primary/15 ring-2 ring-primary" : "bg-muted/50"
+            className={`flex flex-1 flex-col items-center rounded-2xl border border-border/80 bg-card/90 p-4 ${
+              aWins ? "ring-2 ring-primary bg-primary/10" : "bg-muted/30"
             }`}
           >
-            <span className="text-[10px] font-semibold uppercase text-muted-foreground">
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
               {teamAName}
             </span>
-            <span className="tabular-nums text-2xl font-bold">{session.score_team_a}</span>
+            <span className={`tabular-nums text-3xl font-bold ${aWins ? "text-primary" : "text-foreground"}`}>
+              {session.score_team_a}
+            </span>
             {aWins && <Trophy className="mt-1 h-5 w-5 text-primary" />}
           </div>
           <div
-            className={`flex flex-1 flex-col items-center rounded-xl p-3 ${
-              bWins ? "bg-primary/15 ring-2 ring-primary" : "bg-muted/50"
+            className={`flex flex-1 flex-col items-center rounded-2xl border border-border/80 bg-card/90 p-4 ${
+              bWins ? "ring-2 ring-primary bg-primary/10" : "bg-muted/30"
             }`}
           >
-            <span className="text-[10px] font-semibold uppercase text-muted-foreground">
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
               {teamBName}
             </span>
-            <span className="tabular-nums text-2xl font-bold">{session.score_team_b}</span>
+            <span className={`tabular-nums text-3xl font-bold ${bWins ? "text-primary" : "text-foreground"}`}>
+              {session.score_team_b}
+            </span>
             {bWins && <Trophy className="mt-1 h-5 w-5 text-primary" />}
           </div>
         </div>
 
-        {tie && (
-          <p className="text-center text-sm font-medium text-muted-foreground">It&apos;s a tie!</p>
-        )}
+        {/* Central results card */}
+        <div className="rounded-3xl border border-border/80 bg-card p-6 sm:p-8">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Game over
+          </p>
+          <h2 className="mt-2 text-center text-2xl font-bold text-foreground">
+            {tie ? "It's a tie!" : `${aWins ? teamAName : teamBName} wins!`}
+          </h2>
+          <p className="mt-2 text-center tabular-nums text-4xl font-bold text-primary">
+            {roundScore >= 0 ? "+" : ""}{roundScore}
+          </p>
+          <p className="text-center text-sm text-muted-foreground">Last round</p>
+
+          <div className="mt-4 flex gap-3">
+            {lastRoundStats.map(({ icon: Icon, label, value, color }) => (
+              <div key={label} className="flex flex-1 flex-col items-center gap-1 rounded-xl bg-muted p-3">
+                <Icon className={`h-5 w-5 ${color}`} />
+                <span className="tabular-nums text-xl font-bold text-foreground">{value}</span>
+                <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <p className="text-center text-xs text-muted-foreground">
           {session.current_round} rounds played
@@ -194,7 +224,7 @@ export function MultiplayerResults({
             onClick={handleBackHome}
             className="flex min-h-[48px] w-full items-center justify-center rounded-xl bg-muted font-semibold text-muted-foreground"
           >
-            Back to play modes
+            Back to Home
           </motion.button>
         </div>
       </div>

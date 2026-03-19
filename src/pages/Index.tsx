@@ -15,6 +15,7 @@ import { ScoreBoard } from "@/components/game/ScoreBoard";
 import { TimerDisplay } from "@/components/game/TimerDisplay";
 import { ActionButtonGroup } from "@/components/game/ActionButtonGroup";
 import { RoundSummaryCard } from "@/components/game/RoundSummaryCard";
+import { GameOverCard } from "@/components/game/GameOverCard";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -586,14 +587,24 @@ export default function Index() {
               <ThemeToggle theme={theme} onToggle={toggleTheme} />
             </div>
             <div className="w-full max-w-md space-y-6">
-              <ScoreBoard teams={game.settings.teams} currentTeamIndex={game.currentTeamIndex} />
-              <RoundSummaryCard
-                result={game.roundResult}
-                team={game.settings.teams[game.roundResult.teamIndex]}
-                onNextRound={handleNextRound}
-                onHome={goHome}
-                isGameOver={game.isGameOver}
-              />
+              {game.isGameOver ? (
+                <GameOverCard
+                  teams={game.settings.teams}
+                  lastRoundResult={game.roundResult}
+                  onHome={goHome}
+                />
+              ) : (
+                <>
+                  <ScoreBoard teams={game.settings.teams} currentTeamIndex={game.currentTeamIndex} />
+                  <RoundSummaryCard
+                    result={game.roundResult}
+                    team={game.settings.teams[game.roundResult.teamIndex]}
+                    onNextRound={handleNextRound}
+                    onHome={goHome}
+                    isGameOver={false}
+                  />
+                </>
+              )}
             </div>
           </motion.div>
         )}

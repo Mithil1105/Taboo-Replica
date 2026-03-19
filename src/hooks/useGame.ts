@@ -254,9 +254,14 @@ export function useGame() {
     setRoundResult(null);
   }, [currentTeamIndex]);
 
+  // Rounds played: each team turn = 1 round. currentRound counts Team A's rounds; currentTeamIndex
+  // tells who just played. So roundsPlayed = (currentRound-1)*2 + (currentTeamIndex===0 ? 1 : 2)
+  const roundsPlayed =
+    (currentRound - 1) * 2 + (currentTeamIndex === 0 ? 1 : 2);
+
   const isGameOver =
     gameOverByScore ||
-    (currentRound > settings.totalRounds && currentTeamIndex === 0 && roundResult !== null);
+    (roundsPlayed >= settings.totalRounds && roundResult !== null);
 
   const skipsRemaining =
     settings.maxSkipsPerRound === 0
