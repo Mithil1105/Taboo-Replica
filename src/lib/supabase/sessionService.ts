@@ -179,6 +179,7 @@ export async function advanceCard(
     usedIds.push(cardId);
   } else if (action === "skip") {
     roundSkipped += 1;
+    usedIds.push(cardId);
   } else if (action === "taboo") {
     scoreA = team === "A" ? scoreA - 1 : scoreA + (team === "B" ? 1 : 0);
     scoreB = team === "B" ? scoreB - 1 : scoreB + (team === "A" ? 1 : 0);

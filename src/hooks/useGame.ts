@@ -128,9 +128,9 @@ export function useGame() {
   }, [settings.roundDuration]);
 
   /**
-   * Advance to the next card. Correct/taboo cards are in usedIds and must not
-   * appear again this game; skipped cards can repeat.
-   * @param usedIds - Set of card ids that have been answered correct or taboo (never show again)
+   * Advance to the next card. Correct/taboo/skipped cards are in usedIds and must not
+   * appear again this game.
+   * @param usedIds - Set of card ids that have been answered correct, taboo, or skipped (never show again)
    */
   const advanceCard = useCallback(
     (usedIds: Set<string>) => {
@@ -183,7 +183,9 @@ export function useGame() {
       return;
     setRoundSkipped((n) => n + 1);
     // Skip is a free pass: no score change (roundScore and team score stay the same)
-    advanceCard(usedCardIds);
+    const newUsed = new Set(usedCardIds).add(currentCard.id);
+    setUsedCardIds(newUsed);
+    advanceCard(newUsed);
     setSettings((s) => {
       const teams = [...s.teams] as [Team, Team];
       const idx = currentTeamIndex;
