@@ -100,9 +100,14 @@ export function Footer({ className }: { className?: string }) {
         {/* Bottom bar: copyright + legal quick links */}
         <div className="border-t border-border/80 py-6">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between sm:items-center">
-            <p className="text-sm text-muted-foreground order-2 sm:order-1">
-              © {year} {SITE_NAME}. All rights reserved.
-            </p>
+            <div className="flex items-center gap-2 order-2 sm:order-1">
+              <p className="text-sm text-muted-foreground">
+                © {year} {SITE_NAME}. All rights reserved.
+              </p>
+              <a href="https://clustrmaps.com/site/1c9k1" title="ClustrMaps" target="_blank" rel="noopener noreferrer" className="w-2 opacity-20 hover:opacity-100 transition-opacity">
+                <img src="//www.clustrmaps.com/map_v2.png?d=Y38fR2MA0CRIxwT7yc6gda-6w3ny0GPHuvnCA5Vto-Y&cl=ffffff" alt="Map" className="w-full h-auto" />
+              </a>
+            </div>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm order-1 sm:order-2">
               {legalLinks.map(({ to, label }) => (
                 <Link
