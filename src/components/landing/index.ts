@@ -1,4 +1,3 @@
-export { SEOHead } from "./SEOHead";
 export { Navbar } from "./Navbar";
 export { Footer } from "./Footer";
 export { LandingLayout } from "./LandingLayout";

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { PageHeader } from "@/components/landing/PageHeader";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -9,11 +9,11 @@ import { ROUTES } from "@/content/siteConfig";
 export default function About() {
   return (
     <>
-      <SEOHead
+      <SEO
         title="About"
         description="Anathema is the taboo game alternative—play taboo online free. Taboo word game, taboo party game. Team word guessing, fair observer play. Learn about the product vision."
-        path="/about"
-        keywords="taboo game alternative, taboo online free, taboo word game, forbidden words game"
+        canonicalUrl="/about"
+        keywords={["taboo game alternative", "taboo online free", "taboo word game", "forbidden words game"]}
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

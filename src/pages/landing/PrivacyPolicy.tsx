@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { PageHeader } from "@/components/landing/PageHeader";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -9,10 +9,10 @@ import { ROUTES } from "@/content/siteConfig";
 export default function PrivacyPolicy() {
   return (
     <>
-      <SEOHead
+      <SEO
         title="Privacy Policy"
         description="Privacy Policy for Anathema - the game of forbidden words. Learn how we handle your data."
-        path="/privacy-policy"
+        canonicalUrl="/privacy-policy"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

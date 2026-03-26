@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { PageHeader } from "@/components/landing/PageHeader";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -11,11 +11,11 @@ import { MessageCircle, Users, Eye, AlertCircle } from "lucide-react";
 export default function HowToPlay() {
   return (
     <>
-      <SEOHead
+      <SEO
         title="How to Play"
         description="How to play taboo: Anathema rules, roles (clue giver, guessers, observer team), taboo game rules, scoring, and round flow. Quick guide for the forbidden words game."
-        path="/how-to-play"
-        keywords="taboo game rules, how to play taboo, taboo word game, taboo game rules"
+        canonicalUrl="/how-to-play"
+        keywords={["taboo game rules", "how to play taboo", "taboo word game", "how to play forbidden words game"]}
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">
@@ -26,12 +26,9 @@ export default function HowToPlay() {
 
           <article className="space-y-16">
             <section aria-labelledby="goal-heading">
-              <h2 id="goal-heading" className="text-2xl font-bold text-foreground mb-4">Goal of the game</h2>
+              <h2 id="goal-heading" className="text-2xl font-bold text-foreground mb-4">Goal of the game (Taboo rules)</h2>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
-                Two teams compete to guess secret words. On each turn, one player (the clue giver) sees the word and a
-                list of forbidden words they cannot say. They describe the word to their team; the team tries to guess
-                before time runs out. The other team observes and can call out if a forbidden word is said. The team with
-                the most points when all rounds are over wins.
+                The objective is simple: Two teams compete to guess secret words to score the most points. On each turn, one player (the clue giver) sees the target word and a list of forbidden words they absolutely cannot say. They must describe the target word to their team; the team tries to guess before time runs out. The other team observes the card to call out any forbidden word violations.
               </p>
             </section>
 

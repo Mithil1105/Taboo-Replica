@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -24,11 +24,11 @@ const PREVIEW_FAQS = 3;
 export default function Home() {
   return (
     <>
-      <SEOHead
+      <SEO
         title={SITE_NAME}
         description="Anathema: the taboo game alternative. Play taboo online free—the forbidden words game. Taboo word game, taboo party game with Pass & Play or Team Sync. Mobile-friendly."
-        path="/"
-        keywords="taboo game, taboo online, forbidden words game, party word game, taboo word game, taboo party game, play taboo online"
+        canonicalUrl="/"
+        keywords={["taboo game", "taboo online", "forbidden words game", "party word game", "taboo word game", "taboo party game", "play taboo online"]}
       />
       <LandingLayout>
         <HeroSection
@@ -46,6 +46,17 @@ export default function Home() {
             </div>
           }
         />
+
+        <SectionContainer id="direct-answer" wrapperClassName="bg-background pt-8 pb-4">
+          <div className="mx-auto max-w-4xl rounded-xl border border-primary/20 bg-primary/5 p-6 text-center shadow-sm">
+            <h2 className="text-xl font-semibold text-foreground">Looking for a free online Taboo alternative?</h2>
+            <p className="mt-2 text-muted-foreground leading-relaxed">
+              Anathema is a free, modern <strong>Taboo game alternative</strong> you can play online. 
+              Enjoy the classic forbidden words party game using just your phones, with built-in timers, automated scoring, 
+              and diverse word decks. Perfect for game nights, parties, or remote hangouts with friends. No sign-up required.
+            </p>
+          </div>
+        </SectionContainer>
 
         <SectionContainer id="what-is" wrapperClassName="bg-muted/20">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">

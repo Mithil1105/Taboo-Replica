@@ -18,6 +18,7 @@ import PrivacyPolicy from "./pages/landing/PrivacyPolicy";
 import CookiePolicy from "./pages/landing/CookiePolicy";
 import Play from "./pages/Play";
 import NotFound from "./pages/NotFound";
+import { HelmetProvider } from "react-helmet-async";
 
 const PassAndPlay = lazy(() => import("@/features/game/pass-and-play/pages/PassAndPlay"));
 const LocalMultiplayerIntro = lazy(() => import("@/features/game/local-multiplayer/pages/Intro"));
@@ -34,36 +35,38 @@ const PageFallback = () => (
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Sonner position="bottom-center" />
-      <PWAUpdatePrompt />
-      <OfflineBanner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <SEOStructuredData />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/how-to-play" element={<HowToPlay />} />
-          <Route path="/game-modes" element={<GameModes />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/play" element={<Play />} />
-          <Route path="/play/pass-and-play" element={<Suspense fallback={<PageFallback />}><PassAndPlay /></Suspense>} />
-          <Route path="/play/local-multiplayer" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerIntro /></Suspense>} />
-          <Route path="/play/local-multiplayer/create" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerCreateRoom /></Suspense>} />
-          <Route path="/play/local-multiplayer/join" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerJoinRoom /></Suspense>} />
-          <Route path="/play/local-multiplayer/room/:roomCode" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerLobby /></Suspense>} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Sonner position="bottom-center" />
+        <PWAUpdatePrompt />
+        <OfflineBanner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <SEOStructuredData />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/how-to-play" element={<HowToPlay />} />
+            <Route path="/game-modes" element={<GameModes />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/play" element={<Play />} />
+            <Route path="/play/pass-and-play" element={<Suspense fallback={<PageFallback />}><PassAndPlay /></Suspense>} />
+            <Route path="/play/local-multiplayer" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerIntro /></Suspense>} />
+            <Route path="/play/local-multiplayer/create" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerCreateRoom /></Suspense>} />
+            <Route path="/play/local-multiplayer/join" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerJoinRoom /></Suspense>} />
+            <Route path="/play/local-multiplayer/room/:roomCode" element={<Suspense fallback={<PageFallback />}><LocalMultiplayerLobby /></Suspense>} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

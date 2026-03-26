@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://anathema.game/sitemap.xml
+Sitemap: https://anathema.byteosaurus.com/sitemap.xml

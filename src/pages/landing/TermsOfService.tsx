@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { PageHeader } from "@/components/landing/PageHeader";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -9,10 +9,10 @@ import { ROUTES } from "@/content/siteConfig";
 export default function TermsOfService() {
   return (
     <>
-      <SEOHead
+      <SEO
         title="Terms of Service"
         description="Terms of Service for Anathema - the game of forbidden words. Read our terms and conditions for using the app."
-        path="/terms-of-service"
+        canonicalUrl="/terms-of-service"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { PageHeader } from "@/components/landing/PageHeader";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -11,11 +11,11 @@ import { Mail, MessageCircle } from "lucide-react";
 export default function Contact() {
   return (
     <>
-      <SEOHead
+      <SEO
         title="Contact"
         description="Contact Anathema—the taboo game alternative. Email or WhatsApp for feedback, bug reports, or ideas. Get in touch about the forbidden words game."
-        path="/contact"
-        keywords="taboo game contact, taboo game feedback, Anathema contact"
+        canonicalUrl="/contact"
+        keywords={["taboo game contact", "taboo game feedback", "Anathema contact"]}
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

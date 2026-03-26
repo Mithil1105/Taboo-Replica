@@ -19,7 +19,7 @@ if (existsSync(envPath)) {
   }
 }
 
-const baseUrl = process.env.VITE_SITE_URL || "https://anathema.game";
+const baseUrl = process.env.VITE_SITE_URL || "https://anathema.byteosaurus.com";
 
 const routes = [
   { path: "/", priority: "1.0", changefreq: "weekly" },

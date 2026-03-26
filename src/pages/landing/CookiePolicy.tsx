@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SEOHead } from "@/components/landing/SEOHead";
+import { SEO } from "@/components/common/SEO";
 import { LandingLayout } from "@/components/landing/LandingLayout";
 import { PageHeader } from "@/components/landing/PageHeader";
 import { SectionContainer } from "@/components/landing/SectionContainer";
@@ -9,10 +9,10 @@ import { ROUTES } from "@/content/siteConfig";
 export default function CookiePolicy() {
   return (
     <>
-      <SEOHead
+      <SEO
         title="Cookie Policy"
         description="Cookie Policy for Anathema - the game of forbidden words. Learn how we use cookies and local storage."
-        path="/cookie-policy"
+        canonicalUrl="/cookie-policy"
       />
       <LandingLayout>
         <SectionContainer className="pt-12 md:pt-16">

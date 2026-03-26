@@ -1,0 +1,45 @@
+---
+description: SQL file naming for Supabase migrations
+globs: supabase/**/*.sql
+alwaysApply: false
+---
+
+# SQL File Naming
+
+All SQL files in `supabase/migrations/` must follow this naming convention.
+
+## Standard migrations
+
+Format: `DDMMYYYY_function_name.sql`
+
+- **DD** – day (2 digits)
+- **MM** – month (2 digits)
+- **YYYY** – year (4 digits)
+- **function_name** – snake_case, descriptive of the migration purpose
+
+### Examples
+
+```
+130330_stale_room_cleanup.sql
+150324_add_user_preferences.sql
+010125_rls_anon_policies.sql
+```
+
+## One-time scripts
+
+For one-off scripts (e.g. `FULL_SETUP.sql`, `QUICK_FIX_GAME_SESSIONS.sql`) that live outside migrations or are run manually:
+
+- Date prefix is **optional**
+- Use descriptive snake_case name: `descriptive_name.sql`
+
+### Examples
+
+```
+FULL_SETUP.sql
+QUICK_FIX_GAME_SESSIONS.sql
+```
+
+## Location
+
+- **Migrations** (versioned, run in order): `supabase/migrations/`
+- **One-time scripts**: `supabase/` root or a dedicated folder (e.g. `supabase/scripts/`)
