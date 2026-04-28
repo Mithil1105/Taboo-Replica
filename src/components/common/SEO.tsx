@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { SITE_NAME } from "@/content/siteConfig";
+import { getSiteUrl } from "@/lib/siteUrl";
 
 interface SEOProps {
   title?: string;
@@ -21,8 +22,6 @@ const DEFAULT_KEYWORDS = [
   "forbidden words game",
   "party game online",
 ];
-const BASE_URL = "https://anathema.byteosaurus.com";
-
 export function SEO({
   title,
   description = DEFAULT_DESCRIPTION,
@@ -31,8 +30,10 @@ export function SEO({
   ogImage = "/og-image.png",
   type = "website",
 }: SEOProps) {
+  const baseUrl = getSiteUrl();
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} – The game of forbidden words`;
-  const canonical = canonicalUrl ? `${BASE_URL}${canonicalUrl}` : BASE_URL;
+  const canonical = canonicalUrl ? `${baseUrl}${canonicalUrl}` : baseUrl;
+  const absoluteOgImage = ogImage.startsWith("http") ? ogImage : `${baseUrl}${ogImage}`;
 
   return (
     <Helmet>
@@ -46,14 +47,16 @@ export function SEO({
       <meta property="og:url" content={canonical} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`${BASE_URL}${ogImage}`} />
+      <meta property="og:image" content={absoluteOgImage} />
+      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={canonical} />
-      <meta property="twitter:title" content={fullTitle} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={`${BASE_URL}${ogImage}`} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={canonical} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={absoluteOgImage} />
     </Helmet>
   );
 }

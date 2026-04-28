@@ -49,10 +49,10 @@ export default function Home() {
 
         <SectionContainer id="direct-answer" wrapperClassName="bg-background pt-8 pb-4">
           <div className="mx-auto max-w-4xl rounded-xl border border-primary/20 bg-primary/5 p-6 text-center shadow-sm">
-            <h2 className="text-xl font-semibold text-foreground">Looking for a free online Taboo alternative?</h2>
+            <h2 className="text-xl font-semibold text-foreground">Looking for a free forbidden-words party game online?</h2>
             <p className="mt-2 text-muted-foreground leading-relaxed">
-              Anathema is a free, modern <strong>Taboo game alternative</strong> you can play online. 
-              Enjoy the classic forbidden words party game using just your phones, with built-in timers, automated scoring, 
+              Anathema is a free, modern party word game you can play online—the game of forbidden words.
+              Enjoy the classic party word-guessing format using just your phones, with built-in timers, automated scoring,
               and diverse word decks. Perfect for game nights, parties, or remote hangouts with friends. No sign-up required.
             </p>
           </div>

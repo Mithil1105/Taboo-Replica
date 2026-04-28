@@ -19,7 +19,10 @@ if (existsSync(envPath)) {
   }
 }
 
-const baseUrl = process.env.VITE_SITE_URL || "https://anathema.byteosaurus.com";
+const baseUrl = (process.env.VITE_SITE_URL || "https://anathema.byteosaurus.com").replace(
+  /\/$/,
+  ""
+);
 
 const routes = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
@@ -55,3 +58,24 @@ ${urls}
 
 writeFileSync(join(publicDir, "sitemap.xml"), sitemap);
 console.log("Generated sitemap.xml with base URL:", baseUrl);
+
+const robots = `User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: ${baseUrl}/sitemap.xml
+`;
+
+writeFileSync(join(publicDir, "robots.txt"), robots);
+console.log("Generated robots.txt with Sitemap:", `${baseUrl}/sitemap.xml`);

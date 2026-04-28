@@ -26,7 +26,7 @@ export default function HowToPlay() {
 
           <article className="space-y-16">
             <section aria-labelledby="goal-heading">
-              <h2 id="goal-heading" className="text-2xl font-bold text-foreground mb-4">Goal of the game (Taboo rules)</h2>
+              <h2 id="goal-heading" className="text-2xl font-bold text-foreground mb-4">Goal of the game (forbidden words rules)</h2>
               <p className="text-muted-foreground leading-relaxed max-w-3xl">
                 The objective is simple: Two teams compete to guess secret words to score the most points. On each turn, one player (the clue giver) sees the target word and a list of forbidden words they absolutely cannot say. They must describe the target word to their team; the team tries to guess before time runs out. The other team observes the card to call out any forbidden word violations.
               </p>

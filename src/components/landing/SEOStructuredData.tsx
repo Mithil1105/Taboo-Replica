@@ -2,13 +2,11 @@ import { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import { SITE_NAME, CONTACT, ROUTES } from "@/content/siteConfig";
 import { faqItems } from "@/content/faqItems";
-
-const getBaseUrl = () =>
-  typeof window !== "undefined" ? window.location.origin : "";
+import { getSiteUrl } from "@/lib/siteUrl";
 
 export function SEOStructuredData() {
   const { pathname } = useLocation();
-  const page =
+  const pageKey =
     pathname === "/"
       ? "home"
       : pathname === "/how-to-play"
@@ -17,7 +15,8 @@ export function SEOStructuredData() {
           ? "faq"
           : "other";
   const scripts = useMemo(() => {
-    const baseUrl = getBaseUrl();
+    const page = pageKey;
+    const baseUrl = getSiteUrl();
     const schemas: object[] = [];
 
     // WebSite - all pages
@@ -50,13 +49,13 @@ export function SEOStructuredData() {
     });
 
     if (page === "home") {
-      // Game / SoftwareApplication
+      const gameDescription =
+        "Anathema is the taboo game alternative. Play taboo online free—taboo word game, taboo party game. The forbidden words game with Pass & Play or Team Sync. Mobile-friendly taboo game app.";
       schemas.push({
         "@context": "https://schema.org",
         "@type": "Game",
         name: SITE_NAME,
-        description:
-          "Anathema is the taboo game alternative. Play taboo online free—taboo word game, taboo party game. The forbidden words game with Pass & Play or Team Sync. Mobile-friendly taboo game app.",
+        description: gameDescription,
         url: `${baseUrl}${ROUTES.play}`,
         gamePlatform: "Web",
         applicationCategory: "GameApplication",
@@ -66,6 +65,20 @@ export function SEOStructuredData() {
           priceCurrency: "USD",
         },
       });
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: SITE_NAME,
+        applicationCategory: "GameApplication",
+        operatingSystem: "Web",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        description: gameDescription,
+        url: baseUrl,
+      });
     }
 
     if (page === "faq") {
@@ -74,10 +87,10 @@ export function SEOStructuredData() {
         "@type": "FAQPage",
         mainEntity: faqItems.map((item) => ({
           "@type": "Question",
-          name: item.question,
+          name: item.schemaQuestion ?? item.question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: item.answer,
+            text: item.schemaAnswer ?? item.answer,
           },
         })),
       });
@@ -122,7 +135,7 @@ export function SEOStructuredData() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
     ));
-  }, [page]);
+  }, [pageKey]);
 
   return <>{scripts}</>;
 }

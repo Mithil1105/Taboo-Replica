@@ -2,6 +2,9 @@ export interface FAQItem {
   id: string;
   question: string;
   answer: string;
+  /** Richer taboo-focused wording for JSON-LD only (not shown in UI). */
+  schemaQuestion?: string;
+  schemaAnswer?: string;
 }
 
 export const faqItems: FAQItem[] = [
@@ -10,12 +13,18 @@ export const faqItems: FAQItem[] = [
     question: "What is this game?",
     answer:
       "It's Anathema: the game of forbidden words. Two teams take turns: one person gives clues to a secret word while their team guesses, and they must avoid saying certain forbidden words. The other team observes and can call out violations. It's a word guessing game for groups—great for parties, friends, and family.",
+    schemaQuestion: "What is the Anathema taboo game alternative?",
+    schemaAnswer:
+      "Anathema is a forbidden words game and taboo game alternative: two teams take turns with one clue giver describing a secret word without saying forbidden words, teammates guess before time runs out, and the other team observes and can call violations. It's a party word game for groups.",
   },
   {
     id: "similar-taboo",
     question: "Is this similar to the classic forbidden-words card game?",
     answer:
       "Yes. If you've played the classic forbidden-words card game, you'll feel right at home. Each card has a main word and a list of forbidden words. The clue giver describes the main word without saying it or any of the forbidden words. We've added digital features like timers, scoring, and Team Sync mode to make it easier to play in real life with less chaos.",
+    schemaQuestion: "Is this similar to the taboo word game or taboo card game?",
+    schemaAnswer:
+      "Yes. If you've played the classic taboo word game or forbidden-words card game, you'll feel right at home. Each card has a main word and forbidden words. The clue giver describes the main word without saying it or any forbidden word. Digital features include timers, scoring, and Team Sync mode for easier in-person play.",
   },
   {
     id: "one-phone",

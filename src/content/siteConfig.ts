@@ -5,7 +5,9 @@ export const SITE_DESCRIPTION =
 
 export const CONTACT = {
   email: "info@unimisk.com",
+  /** Digits only (no +) for https://wa.me/… */
   whatsapp: "918238326605",
+  whatsappDisplay: "+91 8238326605",
   /** Optional: add social links when available */
   social: [] as { label: string; href: string }[],
 };

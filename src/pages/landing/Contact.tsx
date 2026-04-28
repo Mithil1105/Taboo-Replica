@@ -44,7 +44,7 @@ export default function Contact() {
                   className="flex items-center gap-3 rounded-xl border border-border/80 bg-muted/30 px-4 py-3 text-foreground hover:bg-muted/50 transition-colors"
                 >
                   <MessageCircle className="h-5 w-5 text-primary" />
-                  <span className="font-medium">+91 8238326605</span>
+                  <span className="font-medium">{CONTACT.whatsappDisplay}</span>
                 </a>
                 {CONTACT.social.length > 0 && (
                   <div className="flex flex-wrap gap-2 pt-2">

@@ -74,6 +74,16 @@ npm run dev
 
 By default the app runs on something like `http://localhost:5173` (or the port Vite prints in your terminal).
 
+#### Production site URL (`VITE_SITE_URL`)
+
+Set `VITE_SITE_URL` in `.env` to your canonical origin **without a trailing slash** (e.g. `https://anathema.game`). It drives:
+
+- Canonical URLs, Open Graph, and Twitter meta in the `SEO` component
+- Absolute `og:image` / `twitter:image` in `index.html` at build time
+- `public/sitemap.xml` and `public/robots.txt` (generated in `prebuild` via `scripts/generate-sitemap.js`)
+
+Copy `.env.example` and adjust. In development, if unset, the app falls back to `window.location.origin` where relevant.
+
 ---
 
 ### How to Play (Rules)
