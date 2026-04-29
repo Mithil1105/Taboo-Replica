@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Minus, Plus } from "lucide-react";
+import { Lock, Minus, Plus } from "lucide-react";
 import type { DeckMeta } from "@/types";
+import { useDeckUnlocks } from "@/hooks/useDeckUnlocks";
+import { isDeckAccessible } from "@/lib/decks/access";
+import { UnlockDeckDialog } from "@/components/payments/UnlockDeckDialog";
+import { useAuth } from "@/hooks/useAuth";
 
 interface MultiplayerGameSetupProps {
   decks: DeckMeta[];
@@ -38,6 +43,9 @@ export function MultiplayerGameSetup({
   onResetSetup,
 }: MultiplayerGameSetupProps) {
   const readOnly = !isHost;
+  const { unlockedDeckIds, refresh: refreshUnlocks } = useDeckUnlocks();
+  const { role } = useAuth();
+  const [unlockTarget, setUnlockTarget] = useState<DeckMeta | null>(null);
 
   return (
     <div className="space-y-4">
@@ -65,22 +73,38 @@ export function MultiplayerGameSetup({
           )}
         </div>
         <div className="mt-3 flex flex-wrap gap-2">
-          {decks.filter((d) => d.isActive).map((deck) => (
-            <motion.button
-              key={deck.id}
-              whileTap={readOnly ? undefined : { scale: 0.97 }}
-              type="button"
-              onClick={() => !readOnly && onToggleDeck(deck.id)}
-              disabled={readOnly}
-              className={`min-h-[40px] touch-manipulation rounded-xl px-3 py-2 text-xs font-semibold transition-colors ${
-                selectedDecks.has(deck.id)
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground"
-              } ${readOnly ? "cursor-default opacity-80" : ""}`}
-            >
-              {deck.name}
-            </motion.button>
-          ))}
+          {decks.filter((d) => d.isActive).map((deck) => {
+            const locked = !isDeckAccessible(deck, unlockedDeckIds, role);
+            const showAsLockedForHost = isHost && locked;
+            return (
+              <motion.button
+                key={deck.id}
+                whileTap={readOnly ? undefined : { scale: 0.97 }}
+                type="button"
+                onClick={() => {
+                  if (readOnly) return;
+                  if (showAsLockedForHost) {
+                    setUnlockTarget(deck);
+                    return;
+                  }
+                  onToggleDeck(deck.id);
+                }}
+                disabled={readOnly}
+                className={`relative min-h-[40px] touch-manipulation rounded-xl px-3 py-2 text-xs font-semibold transition-colors ${
+                  selectedDecks.has(deck.id)
+                    ? "bg-primary text-primary-foreground"
+                    : showAsLockedForHost
+                      ? "bg-muted text-muted-foreground"
+                      : "bg-muted text-muted-foreground"
+                } ${readOnly ? "cursor-default opacity-80" : ""}`}
+              >
+                <span className="flex items-center gap-1.5">
+                  {showAsLockedForHost && <Lock className="h-3 w-3" />}
+                  {deck.name}
+                </span>
+              </motion.button>
+            );
+          })}
         </div>
       </div>
 
@@ -178,6 +202,18 @@ export function MultiplayerGameSetup({
           />
         </div>
       </div>
+
+      <UnlockDeckDialog
+        deck={unlockTarget}
+        open={Boolean(unlockTarget)}
+        onOpenChange={(o) => {
+          if (!o) setUnlockTarget(null);
+        }}
+        onUnlocked={async (deckId) => {
+          await refreshUnlocks();
+          if (!selectedDecks.has(deckId)) onToggleDeck(deckId);
+        }}
+      />
     </div>
   );
 }

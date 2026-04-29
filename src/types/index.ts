@@ -20,6 +20,8 @@ export interface DeckMeta {
   isActive: boolean;
   /** Optional age rating, e.g. "18+" */
   ageRating?: string;
+  /** Price in INR paise (e.g. 9900 = ₹99). Required for premium decks. */
+  priceInr?: number;
 }
 
 export interface Team {

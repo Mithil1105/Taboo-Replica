@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Smartphone, MessageCircle, Trophy, ChevronRight } from "lucide-react";
+import {
+  ONBOARDING_KEYS,
+  hasSeenOnboarding,
+  setOnboardingSeen,
+} from "@/lib/onboarding";
 
-const ONBOARDING_KEY = "anathema-multiplayer-onboarding-seen";
+const MULTIPLAYER_ONBOARDING_KEY = ONBOARDING_KEYS.multiplayer;
 
 export function hasSeenMultiplayerOnboarding(): boolean {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem(ONBOARDING_KEY) === "1";
+  return hasSeenOnboarding(MULTIPLAYER_ONBOARDING_KEY);
 }
 
 export function setMultiplayerOnboardingSeen(): void {
-  if (typeof window === "undefined") return;
-  localStorage.setItem(ONBOARDING_KEY, "1");
+  setOnboardingSeen(MULTIPLAYER_ONBOARDING_KEY);
 }
 
 interface MultiplayerOnboardingProps {
@@ -50,6 +53,11 @@ export function MultiplayerOnboarding({ onComplete }: MultiplayerOnboardingProps
     } else {
       setStep((s) => s + 1);
     }
+  };
+
+  const handleSkipForever = () => {
+    setMultiplayerOnboardingSeen();
+    onComplete();
   };
 
   return (
@@ -101,6 +109,14 @@ export function MultiplayerOnboarding({ onComplete }: MultiplayerOnboardingProps
         {isLast ? "Got it — Start Game" : "Next"}
         <ChevronRight className="h-4 w-4" />
       </motion.button>
+
+      <button
+        type="button"
+        onClick={handleSkipForever}
+        className="mt-2 min-h-[40px] w-full rounded-xl text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+      >
+        Skip &amp; don&apos;t show again
+      </button>
     </div>
   );
 }

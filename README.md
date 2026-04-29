@@ -291,12 +291,76 @@ No permanent match history is stored.
 
 ---
 
+### Auth & Payments (premium decks)
+
+Login is **optional**. You only need an account to unlock premium decks. Pass & Play and Local Multiplayer continue to work anonymously by `device_id`.
+
+#### Frontend env
+
+Add to `.env`:
+
+```bash
+VITE_RAZORPAY_KEY_ID=rzp_test_xxxxxxxxxxxx
+```
+
+#### Supabase setup
+
+1. **Auth providers** (Supabase Dashboard → Authentication → Providers):
+   - Enable **Email** (with email/password). Disable email confirmations in dev for faster iteration.
+   - Enable **Google** OAuth and add the redirect URL `https://yoursite.com/auth/callback` (and the localhost equivalent for dev).
+2. **Email delivery via Resend** (Supabase Dashboard → Authentication → Email / SMTP settings):
+   - Set custom SMTP provider to **Resend**.
+   - SMTP host: `smtp.resend.com`
+   - SMTP port: `465` (SSL) or `587` (STARTTLS)
+   - SMTP username: `resend`
+   - SMTP password: your Resend API key (`re_...`)
+   - Sender email/domain must be verified in Resend.
+3. **Database migration**: run `supabase/migrations/28042026_payments_and_unlocks.sql` in the SQL Editor (creates `payment_orders`, `deck_unlocks`, RLS read-own policies, triggers).
+4. **Edge Function secrets**:
+
+   ```bash
+   supabase secrets set RAZORPAY_KEY_ID=rzp_test_xxx RAZORPAY_KEY_SECRET=xxx
+   ```
+
+5. **Deploy the Edge Functions**:
+
+   ```bash
+   supabase functions deploy razorpay-create-order
+   supabase functions deploy razorpay-verify-payment
+   ```
+
+#### How payment works
+
+- The user signs in (email/password or Google), opens a locked deck, and taps Buy now.
+- The frontend calls the `razorpay-create-order` Edge Function which creates a Razorpay order using `RAZORPAY_KEY_SECRET` and inserts a `payment_orders` row.
+- Razorpay Checkout opens client-side. On success, the frontend calls `razorpay-verify-payment` which verifies the HMAC signature, marks the order paid, and inserts a `deck_unlocks` row (idempotent on `(user_id, deck_id)`).
+- Premium decks are unlocked instantly; selection is gated by `useDeckUnlocks` and `isDeckAccessible`.
+
+Test cards: see Razorpay test mode docs (`4111 1111 1111 1111` for success).
+
+#### Locked decks
+
+By default these are locked (set in `src/data/decks.json` with `isPremium: true` + `priceInr`):
+
+- `nsfw` (Midnight)
+- `nsfw2` (Midnight 2)
+- `bollywood2`
+- `hollywood2`
+
+To unlock for development without going through Razorpay, insert a `deck_unlocks` row directly:
+
+```sql
+insert into public.deck_unlocks (user_id, deck_id) values ('<your-uuid>', 'nsfw');
+```
+
+---
+
 ### Known Limitations
 
 - Local Multiplayer requires two physical devices (or two browser profiles); no bots
 - **Local Multiplayer requires internet**; Pass & Play works offline after cache is primed
 - Room codes are 6 characters; no persistence of room history
-- No authentication; device ID is the identity
+- Authentication is **optional**; device ID is the identity for anonymous play and a Supabase user is required only to unlock premium decks
 - Realtime depends on Supabase; offline multiplayer is not supported
 - Pass & Play and Local Multiplayer are separate flows; no cross-mode play
 

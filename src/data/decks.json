@@ -35,7 +35,8 @@
     "icon": "Moon",
     "cardCount": 76,
     "filePath": "/data/decks/nsfw.json",
-    "isPremium": false,
+    "isPremium": true,
+    "priceInr": 9900,
     "isActive": true,
     "ageRating": "18+"
   },
@@ -88,7 +89,8 @@
     "icon": "Clapperboard",
     "cardCount": 50,
     "filePath": "/data/decks/bollywood2.json",
-    "isPremium": false,
+    "isPremium": true,
+    "priceInr": 9900,
     "isActive": true,
     "ageRating": "18+"
   },
@@ -115,7 +117,8 @@
     "icon": "Clapperboard",
     "cardCount": 50,
     "filePath": "/data/decks/hollywood2.json",
-    "isPremium": false,
+    "isPremium": true,
+    "priceInr": 9900,
     "isActive": true,
     "ageRating": "18+"
   },
@@ -129,7 +132,8 @@
     "icon": "Moon",
     "cardCount": 31,
     "filePath": "/data/decks/nsfw2.json",
-    "isPremium": false,
+    "isPremium": true,
+    "priceInr": 9900,
     "isActive": true,
     "ageRating": "18+"
   }

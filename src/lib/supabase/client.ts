@@ -15,7 +15,11 @@ export function getSupabaseClient(): SupabaseClient {
   if (!client) {
     client = createClient(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
       auth: {
-        persistSession: false,
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true,
+        flowType: "pkce",
+        storageKey: "anathema-auth",
       },
     });
   }

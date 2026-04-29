@@ -6,6 +6,10 @@ import { useGame } from "@/hooks/useGame";
 import type { DeckMeta, GamePhase } from "@/types";
 import decksRegistry from "@/data/decks.json";
 import { getValidatedDecks } from "@/lib/deckValidation";
+import { useDeckUnlocks } from "@/hooks/useDeckUnlocks";
+import { isDeckAccessible } from "@/lib/decks/access";
+import { UnlockDeckDialog } from "@/components/payments/UnlockDeckDialog";
+import { useAuth } from "@/hooks/useAuth";
 
 import { ThemeToggle } from "@/components/game/ThemeToggle";
 import { DeckCard } from "@/components/game/DeckCard";
@@ -57,7 +61,10 @@ export default function Index() {
   const [selectedDecks, setSelectedDecks] = useState<Set<string>>(new Set());
   const [filter, setFilter] = useState("All");
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
+  const [unlockTargetDeck, setUnlockTargetDeck] = useState<DeckMeta | null>(null);
   const prevTimeLeft = useRef<number | null>(null);
+  const { unlockedDeckIds, refresh: refreshUnlocks } = useDeckUnlocks();
+  const { role } = useAuth();
 
   // Play buzzer when timer hits 0
   useEffect(() => {
@@ -82,14 +89,22 @@ export default function Index() {
     game.handleTaboo();
   }, [game.handleTaboo]);
 
-  const toggleDeck = useCallback((id: string) => {
-    setSelectedDecks((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  }, []);
+  const toggleDeck = useCallback(
+    (id: string) => {
+      const deck = allDecks.find((d) => d.id === id);
+      if (deck && !isDeckAccessible(deck, unlockedDeckIds, role)) {
+        setUnlockTargetDeck(deck);
+        return;
+      }
+      setSelectedDecks((prev) => {
+        const next = new Set(prev);
+        if (next.has(id)) next.delete(id);
+        else next.add(id);
+        return next;
+      });
+    },
+    [unlockedDeckIds, role]
+  );
 
   const filteredDecks = allDecks.filter((d) => {
     if (!d.isActive) return false;
@@ -197,6 +212,7 @@ export default function Index() {
                         <DeckCard
                           deck={deck}
                           isSelected={selectedDecks.has(deck.id)}
+                          isLocked={!isDeckAccessible(deck, unlockedDeckIds, role)}
                           onToggle={() => toggleDeck(deck.id)}
                         />
                       </motion.div>
@@ -609,6 +625,22 @@ export default function Index() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <UnlockDeckDialog
+        deck={unlockTargetDeck}
+        open={Boolean(unlockTargetDeck)}
+        onOpenChange={(open) => {
+          if (!open) setUnlockTargetDeck(null);
+        }}
+        onUnlocked={async (deckId) => {
+          await refreshUnlocks();
+          setSelectedDecks((prev) => {
+            const next = new Set(prev);
+            next.add(deckId);
+            return next;
+          });
+        }}
+      />
     </div>
   );
 }

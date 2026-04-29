@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Sparkles, Clapperboard, Lock, Moon } from "lucide-react";
+import { Sparkles, Clapperboard, Lock, Moon, Crown } from "lucide-react";
 import type { DeckMeta } from "@/types";
+import { formatInrPrice } from "@/lib/decks/access";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Sparkles,
@@ -11,10 +12,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 interface DeckCardProps {
   deck: DeckMeta;
   isSelected: boolean;
+  /** True when the deck is premium and the current user has not unlocked it. */
+  isLocked?: boolean;
   onToggle: () => void;
 }
 
-export function DeckCard({ deck, isSelected, onToggle }: DeckCardProps) {
+export function DeckCard({ deck, isSelected, isLocked = false, onToggle }: DeckCardProps) {
   const Icon = iconMap[deck.icon] || Sparkles;
   const colorClass =
     deck.colorTag === "blue"
@@ -23,26 +26,30 @@ export function DeckCard({ deck, isSelected, onToggle }: DeckCardProps) {
         ? "text-foreground"
         : "text-primary";
 
+  const price = deck.isPremium ? formatInrPrice(deck.priceInr) : "";
+
   return (
     <motion.button
       whileTap={{ scale: 0.97 }}
       onClick={onToggle}
-      disabled={deck.isPremium}
-      className={`relative flex aspect-[3/4] w-full flex-col items-center justify-center gap-3 rounded-2xl p-4 text-center transition-all duration-300 ${
-        deck.isPremium
-          ? "cursor-not-allowed opacity-50"
-          : "cursor-pointer"
-      } ${
+      className={`relative flex aspect-[3/4] w-full flex-col items-center justify-center gap-3 rounded-2xl p-4 text-center transition-all duration-300 cursor-pointer ${
         isSelected
           ? "card-shadow-hover scale-[1.02] bg-primary/5"
           : "card-shadow bg-card hover:card-shadow-elevated"
-      }`}
+      } ${isLocked ? "opacity-90" : ""}`}
+      aria-label={isLocked ? `Unlock ${deck.name}` : `Select ${deck.name}`}
     >
-      {deck.isPremium && (
-        <div className="absolute right-3 top-3">
-          <Lock className="h-4 w-4 text-muted-foreground" />
+      {isLocked ? (
+        <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-amber-500/15 px-2 py-0.5 text-[10px] font-semibold text-amber-600 dark:text-amber-400">
+          <Lock className="h-3 w-3" />
+          {price || "Locked"}
         </div>
-      )}
+      ) : deck.isPremium ? (
+        <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-primary/15 px-2 py-0.5 text-[10px] font-semibold text-primary">
+          <Crown className="h-3 w-3" />
+          Premium
+        </div>
+      ) : null}
 
       <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-muted ${colorClass}`}>
         <Icon className="h-6 w-6" />
@@ -67,7 +74,7 @@ export function DeckCard({ deck, isSelected, onToggle }: DeckCardProps) {
         </span>
       </div>
 
-      {isSelected && (
+      {isSelected && !isLocked && (
         <motion.div
           layoutId="deck-check"
           className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground"
